@@ -1,0 +1,5583 @@
+---------------------------------------------------------------------------------------------
+Output for  sample-g.txt
+---------------------------------------------------------------------------------------------
+('total number of words=', 2096932)
+('total number of distinct words=', 36767)
+('popular_threshold_word=', 1839.0)
+('common_threshold_l_word=', 17464.0)
+('common_threshold_u_word=', 19303.0)
+('rare_threshold_word=', 34928.0)
+---------------------------------------------------------------------------------------------
+
+Popular Words
++----+--------------+---------+
+|Rank|Word          |Frequency|
++----+--------------+---------+
+|1   |the           |85411    |
+|2   |and           |71399    |
+|3   |to            |57875    |
+|4   |of            |53039    |
+|5   |i             |43390    |
+|6   |a             |38326    |
+|7   |in            |30956    |
+|8   |that          |28874    |
+|9   |you           |24809    |
+|10  |it            |23428    |
+|11  |he            |21938    |
+|12  |my            |20944    |
+|13  |his           |19408    |
+|14  |for           |19288    |
+|15  |not           |18987    |
+|16  |with          |18786    |
+|17  |is            |18613    |
+|18  |as            |17222    |
+|19  |be            |17074    |
+|20  |her           |16224    |
+|21  |was           |15398    |
+|22  |me            |15259    |
+|23  |but           |13564    |
+|24  |him           |13521    |
+|25  |have          |13467    |
+|26  |this          |13016    |
+|27  |so            |11023    |
+|28  |she           |10965    |
+|29  |on            |10298    |
+|30  |your          |10177    |
+|31  |all           |10152    |
+|32  |had           |10032    |
+|33  |by            |10015    |
+|34  |at            |10004    |
+|35  |will          |8714     |
+|36  |what          |8677     |
+|37  |or            |8154     |
+|38  |if            |8052     |
+|39  |no            |7962     |
+|40  |they          |7582     |
+|41  |from          |7477     |
+|42  |are           |7164     |
+|43  |which         |7147     |
+|44  |thou          |7078     |
+|45  |do            |6830     |
+|46  |we            |6400     |
+|47  |would         |6380     |
+|48  |said          |5962     |
+|49  |them          |5842     |
+|50  |one           |5753     |
+|51  |when          |5652     |
+|52  |were          |5503     |
+|53  |there         |5393     |
+|54  |more          |5349     |
+|55  |now           |5142     |
+|56  |shall         |5045     |
+|57  |who           |4981     |
+|58  |thy           |4914     |
+|59  |good          |4913     |
+|60  |their         |4880     |
+|61  |an            |4702     |
+|62  |should        |4504     |
+|63  |our           |4494     |
+|64  |then          |4453     |
+|65  |than          |4404     |
+|66  |come          |4265     |
+|67  |out           |4237     |
+|68  |well          |4178     |
+|69  |thee          |4162     |
+|70  |am            |4103     |
+|71  |how           |4016     |
+|72  |been          |4001     |
+|73  |very          |3831     |
+|74  |such          |3813     |
+|75  |may           |3791     |
+|76  |could         |3742     |
+|77  |any           |3729     |
+|78  |man           |3687     |
+|79  |know          |3663     |
+|80  |say           |3655     |
+|81  |did           |3619     |
+|82  |must          |3610     |
+|83  |some          |3583     |
+|84  |upon          |3545     |
+|85  |up            |3515     |
+|86  |like          |3506     |
+|87  |here          |3436     |
+|88  |sir           |3389     |
+|89  |lord          |3366     |
+|90  |see           |3351     |
+|91  |let           |3282     |
+|92  |king          |3248     |
+|93  |love          |3207     |
+|94  |us            |3181     |
+|95  |go            |3121     |
+|96  |time          |3115     |
+|97  |make          |3086     |
+|98  |don           |2999     |
+|99  |can           |2928     |
+|100 |much          |2836     |
+|101 |never         |2649     |
+|102 |other         |2624     |
+|103 |has           |2601     |
+|104 |enter         |2578     |
+|105 |these         |2574     |
+|106 |give          |2572     |
+|107 |into          |2546     |
+|108 |before        |2525     |
+|109 |where         |2524     |
+|110 |made          |2519     |
+|111 |o             |2507     |
+|112 |first         |2487     |
+|113 |great         |2475     |
+|114 |too           |2451     |
+|115 |own           |2382     |
+|116 |take          |2377     |
+|117 |yet           |2364     |
+|118 |mr            |2330     |
+|119 |being         |2304     |
+|120 |most          |2254     |
+|121 |think         |2254     |
+|122 |about         |2229     |
+|123 |quixote       |2187     |
+|124 |two           |2133     |
+|125 |sancho        |2120     |
+|126 |tell          |2093     |
+|127 |hath          |2085     |
+|128 |little        |2074     |
+|129 |though        |2034     |
+|130 |himself       |2031     |
+|131 |day           |2017     |
+|132 |again         |1983     |
+|133 |might         |1948     |
+|134 |why           |1947     |
+|135 |without       |1938     |
+|136 |way           |1931     |
+|137 |only          |1901     |
+|138 |down          |1852     |
+|139 |heart         |1840     |
+|140 |hand          |1836     |
+|141 |nor           |1820     |
+|142 |every         |1819     |
+|143 |away          |1814     |
+|144 |nothing       |1796     |
+|145 |those         |1792     |
+|146 |life          |1762     |
+|147 |after         |1753     |
+|148 |mrs           |1724     |
+|149 |lady          |1698     |
+|150 |mine          |1680     |
+|151 |eyes          |1634     |
+|152 |speak         |1618     |
+|153 |master        |1615     |
+|154 |look          |1594     |
+|155 |ever          |1593     |
+|156 |even          |1586     |
+|157 |house         |1561     |
+|158 |done          |1550     |
+|159 |myself        |1533     |
+|160 |came          |1520     |
+|161 |over          |1516     |
+|162 |night         |1514     |
+|163 |father        |1512     |
+|164 |many          |1506     |
+|165 |old           |1484     |
+|166 |cannot        |1476     |
+|167 |men           |1466     |
+|168 |still         |1447     |
+|169 |god           |1443     |
+|170 |long          |1435     |
+|171 |off           |1433     |
+|172 |world         |1390     |
+|173 |thing         |1376     |
+|174 |hear          |1375     |
+|175 |another       |1368     |
+|176 |better        |1366     |
+|177 |thought       |1365     |
+|178 |head          |1350     |
+|179 |both          |1339     |
+|180 |miss          |1327     |
+|181 |name          |1326     |
+|182 |put           |1325     |
+|183 |duke          |1323     |
+|184 |true          |1307     |
+|185 |place         |1302     |
+|186 |art           |1293     |
+|187 |same          |1291     |
+|188 |saw           |1287     |
+|189 |once          |1281     |
+|190 |death         |1265     |
+|191 |while         |1250     |
+|192 |leave         |1227     |
+|193 |young         |1214     |
+|194 |back          |1200     |
+|195 |against       |1187     |
+|196 |mind          |1174     |
+|197 |part          |1171     |
+|198 |poor          |1160     |
+|199 |thus          |1158     |
+|200 |heard         |1140     |
+|201 |whom          |1133     |
+|202 |queen         |1126     |
+|203 |woman         |1120     |
+|204 |friend        |1117     |
+|205 |till          |1111     |
+|206 |fair          |1106     |
+|207 |dear          |1101     |
+|208 |doth          |1097     |
+|209 |set           |1092     |
+|210 |exeunt        |1089     |
+|211 |last          |1081     |
+|212 |its           |1075     |
+|213 |find          |1071     |
+|214 |having        |1071     |
+|215 |prince        |1060     |
+|216 |scene         |1060     |
+|217 |word          |1059     |
+|218 |found         |1054     |
+|219 |left          |1053     |
+|220 |face          |1049     |
+|221 |whose         |1033     |
+|222 |three         |1026     |
+|223 |exit          |1010     |
+|224 |words         |1008     |
+|225 |therefore     |1004     |
+|226 |herself       |1001     |
+|227 |under         |997      |
+|228 |work          |995      |
+|229 |soon          |992      |
+|230 |told          |988      |
+|231 |son           |986      |
+|232 |sweet         |983      |
+|233 |indeed        |982      |
+|234 |right         |974      |
+|235 |fear          |966      |
+|236 |took          |964      |
+|237 |going         |961      |
+|238 |gentleman     |958      |
+|239 |seen          |958      |
+|240 |through       |953      |
+|241 |full          |950      |
+|242 |things        |949      |
+|243 |wife          |949      |
+|244 |heaven        |941      |
+|245 |does          |940      |
+|246 |end           |936      |
+|247 |enough        |936      |
+|248 |keep          |935      |
+|249 |gutenberg     |931      |
+|250 |get           |927      |
+|251 |since         |926      |
+|252 |home          |924      |
+|253 |gone          |923      |
+|254 |best          |916      |
+|255 |went          |915      |
+|256 |call          |912      |
+|257 |daughter      |906      |
+|258 |hope          |906      |
+|259 |hands         |900      |
+|260 |always        |898      |
+|261 |rather        |897      |
+|262 |sure          |892      |
+|263 |second        |891      |
+|264 |project       |890      |
+|265 |blood         |889      |
+|266 |comes         |886      |
+|267 |between       |885      |
+|268 |room          |879      |
+|269 |brother       |876      |
+|270 |because       |866      |
+|271 |pray          |864      |
+|272 |gave          |861      |
+|273 |honour        |854      |
+|274 |within        |848      |
+|275 |answer        |843      |
+|276 |john          |842      |
+|277 |else          |841      |
+|278 |far           |828      |
+|279 |friends       |828      |
+|280 |bear          |820      |
+|281 |dead          |820      |
+|282 |just          |812      |
+|283 |mother        |812      |
+|284 |replied       |812      |
+|285 |hold          |811      |
+|286 |together      |801      |
+|287 |knight        |800      |
+|288 |ay            |798      |
+|289 |half          |793      |
+|290 |bring         |792      |
+|291 |present       |792      |
+|292 |quite         |789      |
+|293 |live          |787      |
+|294 |emma          |778      |
+|295 |hast          |770      |
+|296 |however       |768      |
+|297 |stand         |767      |
+|298 |show          |757      |
+|299 |kind          |755      |
+|300 |earth         |752      |
+|301 |knew          |748      |
+|302 |boy           |747      |
+|303 |truth         |745      |
+|304 |body          |744      |
+|305 |something     |743      |
+|306 |none          |740      |
+|307 |brought       |739      |
+|308 |noble         |739      |
+|309 |people        |736      |
+|310 |matter        |734      |
+|311 |rest          |731      |
+|312 |believe       |730      |
+|313 |use           |729      |
+|314 |fire          |723      |
+|315 |got           |718      |
+|316 |reason        |716      |
+|317 |wish          |716      |
+|318 |side          |713      |
+|319 |help          |709      |
+|320 |looked        |709      |
+|321 |nay           |705      |
+|322 |called        |700      |
+|323 |each          |698      |
+|324 |gloucester    |694      |
+|325 |given         |689      |
+|326 |peace         |689      |
+|327 |days          |686      |
+|328 |door          |685      |
+|329 |means         |685      |
+|330 |eye           |684      |
+|331 |joe           |682      |
+|332 |ill           |681      |
+|333 |asked         |680      |
+|334 |doubt         |674      |
+|335 |whole         |674      |
+|336 |mean          |671      |
+|337 |sister        |663      |
+|338 |grace         |661      |
+|339 |light         |657      |
+|340 |soul          |653      |
+|341 |elinor        |651      |
+|342 |new           |647      |
+|343 |forth         |646      |
+|344 |seemed        |646      |
+|345 |die           |645      |
+|346 |less          |645      |
+|347 |servant       |641      |
+|348 |husband       |640      |
+|349 |alone         |639      |
+|350 |others        |638      |
+|351 |bed           |634      |
+|352 |state         |634      |
+|353 |stay          |634      |
+|354 |read          |633      |
+|355 |coming        |631      |
+|356 |letter        |631      |
+|357 |lay           |629      |
+|358 |fortune       |626      |
+|359 |page          |626      |
+|360 |whether       |622      |
+|361 |please        |621      |
+|362 |henry         |615      |
+|363 |nature        |614      |
+|364 |want          |612      |
+|365 |pleasure      |610      |
+|366 |hour          |603      |
+|367 |power         |602      |
+|368 |felt          |600      |
+|369 |return        |599      |
+|370 |thousand      |599      |
+|371 |voice         |597      |
+|372 |falstaff      |593      |
+|373 |near          |593      |
+|374 |arms          |589      |
+|375 |cause         |589      |
+|376 |happy         |589      |
+|377 |yourself      |586      |
+|378 |person        |585      |
+|379 |thine         |585      |
+|380 |says          |583      |
+|381 |turn          |581      |
+|382 |worship       |579      |
+|383 |tongue        |578      |
+|384 |chapter       |576      |
+|385 |moment        |576      |
+|386 |aside         |575      |
+|387 |round         |575      |
+|388 |marry         |572      |
+|389 |mistress      |570      |
+|390 |morning       |567      |
+|391 |faith         |565      |
+|392 |next          |565      |
+|393 |almost        |560      |
+|394 |tm            |560      |
+|395 |care          |558      |
+|396 |makes         |557      |
+|397 |france        |556      |
+|398 |fool          |554      |
+|399 |already       |551      |
+|400 |act           |550      |
+|401 |known         |550      |
+|402 |cried         |549      |
+|403 |dost          |547      |
+|404 |taken         |547      |
+|405 |beauty        |546      |
+|406 |course        |546      |
+|407 |madam         |546      |
+|408 |began         |545      |
+|409 |themselves    |544      |
+|410 |years         |544      |
+|411 |tears         |543      |
+|412 |anything      |542      |
+|413 |four          |541      |
+|414 |business      |540      |
+|415 |high          |540      |
+|416 |times         |539      |
+|417 |edward        |538      |
+|418 |either        |538      |
+|419 |open          |532      |
+|420 |short         |529      |
+|421 |caesar        |528      |
+|422 |sword         |527      |
+|423 |fall          |524      |
+|424 |money         |524      |
+|425 |neither       |523      |
+|426 |looking       |521      |
+|427 |ask           |520      |
+|428 |returned      |515      |
+|429 |richard       |515      |
+|430 |among         |514      |
+|431 |least         |513      |
+|432 |child         |510      |
+|433 |lords         |510      |
+|434 |lost          |510      |
+|435 |answered      |509      |
+|436 |antony        |509      |
+|437 |senor         |509      |
+|438 |few           |505      |
+|439 |sent          |504      |
+|440 |women         |504      |
+|441 |desire        |501      |
+|442 |case          |498      |
+|443 |ye            |498      |
+|444 |strange       |495      |
+|445 |also          |493      |
+|446 |certain       |493      |
+|447 |white         |493      |
+|448 |gentle        |492      |
+|449 |marianne      |492      |
+|450 |fellow        |491      |
+|451 |unto          |488      |
+|452 |york          |488      |
+|453 |until         |487      |
+|454 |stood         |486      |
+|455 |air           |485      |
+|456 |meet          |485      |
+|457 |often         |485      |
+|458 |point         |485      |
+|459 |follow        |484      |
+|460 |saying        |484      |
+|461 |thoughts      |478      |
+|462 |country       |477      |
+|463 |seeing        |476      |
+|464 |yes           |476      |
+|465 |subject       |475      |
+|466 |brutus        |474      |
+|467 |purpose       |474      |
+|468 |talk          |474      |
+|469 |making        |472      |
+|470 |hamlet        |469      |
+|471 |welcome       |468      |
+|472 |lie           |467      |
+|473 |princess      |463      |
+|474 |company       |462      |
+|475 |wrong         |462      |
+|476 |feel          |461      |
+|477 |sleep         |461      |
+|478 |itself        |460      |
+|479 |above         |459      |
+|480 |morrow        |459      |
+|481 |ground        |458      |
+|482 |horse         |456      |
+|483 |news          |455      |
+|484 |general       |453      |
+|485 |wilt          |452      |
+|486 |play          |451      |
+|487 |towards       |451      |
+|488 |cold          |446      |
+|489 |remember      |444      |
+|490 |sight         |439      |
+|491 |ere           |437      |
+|492 |ready         |436      |
+|493 |hard          |435      |
+|494 |perhaps       |435      |
+|495 |free          |434      |
+|496 |bad           |432      |
+|497 |send          |432      |
+|498 |need          |431      |
+|499 |black         |430      |
+|500 |spirit        |430      |
+|501 |strong        |430      |
+|502 |question      |424      |
+|503 |knows         |423      |
+|504 |shame         |423      |
+|505 |sort          |423      |
+|506 |works         |423      |
+|507 |hence         |422      |
+|508 |bid           |420      |
+|509 |manner        |420      |
+|510 |sound         |419      |
+|511 |youth         |412      |
+|512 |heathcliff    |411      |
+|513 |account       |409      |
+|514 |arm           |409      |
+|515 |court         |409      |
+|516 |warwick       |409      |
+|517 |harriet       |408      |
+|518 |fell          |407      |
+|519 |law           |407      |
+|520 |worthy        |405      |
+|521 |foot          |404      |
+|522 |town          |404      |
+|523 |farewell      |403      |
+|524 |dare          |400      |
+|525 |devil         |399      |
+|526 |behind        |396      |
+|527 |age           |395      |
+|528 |clown         |394      |
+|529 |further       |393      |
+|530 |service       |393      |
+|531 |spoke         |393      |
+|532 |comfort       |392      |
+|533 |sit           |392      |
+|534 |worth         |392      |
+|535 |mad           |391      |
+|536 |weston        |388      |
+|537 |false         |387      |
+|538 |able          |386      |
+|539 |sea           |386      |
+|540 |book          |385      |
+|541 |thank         |385      |
+|542 |turned        |385      |
+|543 |water         |385      |
+|544 |cousin        |384      |
+|545 |small         |382      |
+|546 |lies          |381      |
+|547 |messenger     |381      |
+|548 |passed        |381      |
+|549 |prove         |380      |
+|550 |taking        |380      |
+|551 |change        |379      |
+|552 |late          |378      |
+|553 |married       |378      |
+|554 |sun           |378      |
+|555 |yours         |378      |
+|556 |opinion       |377      |
+|557 |charge        |376      |
+|558 |pass          |376      |
+|559 |gods          |375      |
+|560 |re            |375      |
+|561 |kept          |374      |
+|562 |rich          |374      |
+|563 |honest        |372      |
+|564 |gold          |370      |
+|565 |looks         |369      |
+|566 |break         |368      |
+|567 |held          |368      |
+|568 |justice       |368      |
+|569 |seek          |368      |
+|570 |glad          |367      |
+|571 |worse         |367      |
+|572 |five          |366      |
+|573 |pardon        |366      |
+|574 |understand    |366      |
+|575 |bound         |365      |
+|576 |girl          |365      |
+|577 |hair          |365      |
+|578 |shalt         |365      |
+|579 |close         |364      |
+|580 |run           |363      |
+|581 |unless        |363      |
+|582 |iago          |362      |
+|583 |seem          |361      |
+|584 |table         |360      |
+|585 |sake          |359      |
+|586 |twenty        |359      |
+|587 |wonder        |357      |
+|588 |common        |355      |
+|589 |duchess       |355      |
+|590 |sense         |355      |
+|591 |really        |354      |
+|592 |terms         |354      |
+|593 |become        |353      |
+|594 |gentlemen     |353      |
+|595 |rome          |353      |
+|596 |doing         |351      |
+|597 |knightley     |351      |
+|598 |pity          |351      |
+|599 |swear         |351      |
+|600 |third         |351      |
+|601 |mouth         |349      |
+|602 |self          |348      |
+|603 |cut           |347      |
+|604 |longer        |347      |
+|605 |wind          |347      |
+|606 |seems         |345      |
+|607 |wit           |345      |
+|608 |children      |343      |
+|609 |linton        |343      |
+|610 |low           |343      |
+|611 |save          |343      |
+|612 |fight         |341      |
+|613 |hundred       |340      |
+|614 |land          |336      |
+|615 |order         |336      |
+|616 |fit           |334      |
+|617 |fairy         |333      |
+|618 |joy           |333      |
+|619 |london        |332      |
+|620 |grave         |330      |
+|621 |catherine     |329      |
+|622 |crown         |329      |
+|623 |born          |328      |
+|624 |cry           |328      |
+|625 |uncle         |328      |
+|626 |ought         |327      |
+|627 |spirits       |327      |
+|628 |evening       |326      |
+|629 |grief         |326      |
+|630 |hither        |326      |
+|631 |othello       |326      |
+|632 |possible      |326      |
+|633 |war           |326      |
+|634 |walk          |325      |
+|635 |giving        |323      |
+|636 |ladies        |323      |
+|637 |used          |323      |
+|638 |knights       |322      |
+|639 |virtue        |322      |
+|640 |curate        |321      |
+|641 |plain         |321      |
+|642 |antonio       |320      |
+|643 |elton         |320      |
+|644 |hours         |320      |
+|645 |pretty        |320      |
+|646 |story         |319      |
+|647 |hardly        |318      |
+|648 |lips          |318      |
+|649 |past          |318      |
+|650 |deep          |317      |
+|651 |received      |317      |
+|652 |pay           |316      |
+|653 |thyself       |316      |
+|654 |england       |315      |
+|655 |lose          |315      |
+|656 |proud         |315      |
+|657 |sat           |315      |
+|658 |along         |314      |
+|659 |breath        |313      |
+|660 |fly           |313      |
+|661 |laid          |313      |
+|662 |kiss          |312      |
+|663 |goes          |311      |
+|664 |serve         |311      |
+|665 |beyond        |310      |
+|666 |music         |310      |
+|667 |timon         |310      |
+|668 |chance        |308      |
+|669 |living        |308      |
+|670 |soldier       |308      |
+|671 |suppose       |308      |
+|672 |letters       |307      |
+|673 |marriage      |307      |
+|674 |speed         |307      |
+|675 |castle        |306      |
+|676 |ear           |306      |
+|677 |quickly       |306      |
+|678 |silence       |306      |
+|679 |wise          |305      |
+|680 |de            |304      |
+|681 |holy          |304      |
+|682 |mark          |304      |
+|683 |ten           |304      |
+|684 |write         |304      |
+|685 |pip           |303      |
+|686 |eat           |302      |
+|687 |large         |302      |
+|688 |majesty       |302      |
+|689 |sorrow        |302      |
+|690 |lives         |301      |
+|691 |greater       |300      |
+|692 |draw          |299      |
+|693 |family        |299      |
+|694 |romeo         |299      |
+|695 |deal          |298      |
+|696 |feet          |298      |
+|697 |met           |298      |
+|698 |errant        |297      |
+|699 |jane          |296      |
+|700 |city          |295      |
+|701 |watch         |294      |
+|702 |fine          |293      |
+|703 |e             |292      |
+|704 |form          |292      |
+|705 |happiness     |292      |
+|706 |hearing       |292      |
+|707 |object        |292      |
+|708 |promise       |292      |
+|709 |visit         |290      |
+|710 |dinner        |289      |
+|711 |herbert       |289      |
+|712 |servants      |289      |
+|713 |heavy         |288      |
+|714 |loves         |288      |
+|715 |presently     |288      |
+|716 |foul          |287      |
+|717 |oh            |287      |
+|718 |praise        |287      |
+|719 |claudio       |286      |
+|720 |macbeth       |286      |
+|721 |sad           |286      |
+|722 |affection     |284      |
+|723 |except        |284      |
+|724 |kill          |284      |
+|725 |road          |284      |
+|726 |continued     |283      |
+|727 |following     |283      |
+|728 |ford          |283      |
+|729 |office        |283      |
+|730 |villain       |283      |
+|731 |year          |283      |
+|732 |enemy         |282      |
+|733 |everything    |282      |
+|734 |try           |282      |
+|735 |patience      |280      |
+|736 |sorry         |280      |
+|737 |ii            |279      |
+|738 |gives         |278      |
+|739 |favour        |277      |
+|740 |valiant       |277      |
+|741 |woodhouse     |277      |
+|742 |ass           |276      |
+|743 |dulcinea      |276      |
+|744 |forward       |276      |
+|745 |note          |276      |
+|746 |appeared      |275      |
+|747 |ears          |275      |
+|748 |occasion      |275      |
+|749 |danger        |273      |
+|750 |la            |273      |
+|751 |electronic    |272      |
+|752 |fault         |272      |
+|753 |command       |271      |
+|754 |dark          |271      |
+|755 |street        |271      |
+|756 |green         |270      |
+|757 |haste         |270      |
+|758 |palace        |270      |
+|759 |thanks        |270      |
+|760 |appear        |269      |
+|761 |field         |269      |
+|762 |panza         |269      |
+|763 |window        |269      |
+|764 |carry         |268      |
+|765 |idea          |268      |
+|766 |isabella      |268      |
+|767 |trust         |268      |
+|768 |besides       |267      |
+|769 |afterwards    |266      |
+|770 |ah            |266      |
+|771 |nurse         |266      |
+|772 |cleopatra     |265      |
+|773 |pocket        |265      |
+|774 |sometimes     |265      |
+|775 |books         |264      |
+|776 |duty          |264      |
+|777 |lead          |264      |
+|778 |natural       |264      |
+|779 |wanted        |264      |
+|780 |alas          |263      |
+|781 |margaret      |263      |
+|782 |red           |263      |
+|783 |rosalind      |263      |
+|784 |certainly     |262      |
+|785 |loss          |262      |
+|786 |respect       |262      |
+|787 |royal         |262      |
+|788 |carried       |260      |
+|789 |drink         |260      |
+|790 |garden        |260      |
+|791 |immediately   |260      |
+|792 |knowledge     |260      |
+|793 |shallow       |260      |
+|794 |fancy         |258      |
+|795 |particular    |257      |
+|796 |different     |256      |
+|797 |squire        |256      |
+|798 |maid          |255      |
+|799 |village       |255      |
+|800 |buckingham    |254      |
+|801 |paid          |254      |
+|802 |soldiers      |254      |
+|803 |force         |253      |
+|804 |happened      |253      |
+|805 |pain          |253      |
+|806 |wemmick       |253      |
+|807 |easy          |252      |
+|808 |french        |252      |
+|809 |public        |252      |
+|810 |struck        |252      |
+|811 |lest          |251      |
+|812 |party         |250      |
+|813 |tender        |250      |
+|814 |countenance   |249      |
+|815 |history       |249      |
+|816 |trouble       |249      |
+|817 |wear          |249      |
+|818 |evil          |248      |
+|819 |fast          |248      |
+|820 |followed      |248      |
+|821 |quiet         |248      |
+|822 |strength      |248      |
+|823 |suffolk       |248      |
+|824 |instant       |247      |
+|825 |pedro         |247      |
+|826 |ring          |247      |
+|827 |hot           |246      |
+|828 |sick          |246      |
+|829 |written       |246      |
+|830 |mercy         |245      |
+|831 |appearance    |244      |
+|832 |foundation    |244      |
+|833 |led           |244      |
+|834 |lucius        |244      |
+|835 |bloody        |243      |
+|836 |cassio        |243      |
+|837 |havisham      |243      |
+|838 |regard        |243      |
+|839 |troilus       |243      |
+|840 |attention     |242      |
+|841 |touch         |242      |
+|842 |begin         |241      |
+|843 |edgar         |241      |
+|844 |hate          |241      |
+|845 |chamber       |240      |
+|846 |presence      |240      |
+|847 |content       |239      |
+|848 |hell          |239      |
+|849 |impossible    |239      |
+|850 |passion       |239      |
+|851 |feelings      |238      |
+|852 |syracuse      |238      |
+|853 |wait          |238      |
+|854 |chair         |237      |
+|855 |straight      |237      |
+|856 |ways          |236      |
+|857 |canst         |235      |
+|858 |dog           |235      |
+|859 |thinking      |235      |
+|860 |doctor        |234      |
+|861 |meant         |234      |
+|862 |pale          |234      |
+|863 |proper        |234      |
+|864 |secret        |234      |
+|865 |suit          |234      |
+|866 |truly         |234      |
+|867 |effect        |233      |
+|868 |emilia        |233      |
+|869 |hearts        |233      |
+|870 |iii           |233      |
+|871 |receive       |233      |
+|872 |beseech       |232      |
+|873 |grey          |232      |
+|874 |lear          |232      |
+|875 |captain       |231      |
+|876 |dashwood      |231      |
+|877 |several       |231      |
+|878 |six           |231      |
+|879 |afraid        |230      |
+|880 |english       |230      |
+|881 |sin           |230      |
+|882 |speaking      |230      |
+|883 |valentine     |230      |
+|884 |clear         |229      |
+|885 |conversation  |229      |
+|886 |flame         |229      |
+|887 |satisfied     |229      |
+|888 |spite         |229      |
+|889 |health        |228      |
+|890 |turning       |228      |
+|891 |christian     |227      |
+|892 |didst         |227      |
+|893 |estella       |227      |
+|894 |judge         |227      |
+|895 |cassius       |226      |
+|896 |desdemona     |226      |
+|897 |exclaimed     |226      |
+|898 |observed      |225      |
+|899 |ho            |224      |
+|900 |dromio        |223      |
+|901 |feeling       |223      |
+|902 |frank         |223      |
+|903 |gracious      |223      |
+|904 |paper         |223      |
+|905 |added         |222      |
+|906 |rose          |222      |
+|907 |takes         |222      |
+|908 |offer         |221      |
+|909 |beginning     |220      |
+|910 |antipholus    |219      |
+|911 |parts         |219      |
+|912 |piece         |219      |
+|913 |proteus       |219      |
+|914 |whatever      |219      |
+|915 |breast        |218      |
+|916 |consider      |218      |
+|917 |ourselves     |218      |
+|918 |speech        |218      |
+|919 |view          |218      |
+|920 |former        |217      |
+|921 |palamon       |217      |
+|922 |pleased       |217      |
+|923 |entered       |216      |
+|924 |fresh         |216      |
+|925 |greatest      |216      |
+|926 |ran           |216      |
+|927 |smile         |216      |
+|928 |coriolanus    |215      |
+|929 |knowing       |215      |
+|930 |wherein       |215      |
+|931 |behold        |214      |
+|932 |conscience    |214      |
+|933 |gate          |214      |
+|934 |soft          |214      |
+|935 |titus         |214      |
+|936 |wished        |214      |
+|937 |acquaintance  |213      |
+|938 |base          |213      |
+|939 |excellent     |213      |
+|940 |lover         |213      |
+|941 |simple        |213      |
+|942 |wine          |213      |
+|943 |biddy         |212      |
+|944 |equal         |212      |
+|945 |strike        |212      |
+|946 |taste         |212      |
+|947 |allow         |211      |
+|948 |died          |211      |
+|949 |noise         |211      |
+|950 |revenge       |211      |
+|951 |stop          |211      |
+|952 |according     |210      |
+|953 |angelo        |210      |
+|954 |fairfax       |210      |
+|955 |weep          |210      |
+|956 |lucy          |209      |
+|957 |opportunity   |209      |
+|958 |safe          |209      |
+|959 |wall          |209      |
+|960 |bardolph      |208      |
+|961 |deeds         |208      |
+|962 |governor      |208      |
+|963 |moon          |208      |
+|964 |yield         |208      |
+|965 |adventure     |207      |
+|966 |character     |207      |
+|967 |colonel       |207      |
+|968 |early         |207      |
+|969 |inn           |207      |
+|970 |jaggers       |207      |
+|971 |merry         |207      |
+|972 |petruchio     |207      |
+|973 |remain        |207      |
+|974 |toby          |207      |
+|975 |battle        |206      |
+|976 |brave         |206      |
+|977 |nobody        |206      |
+|978 |number        |206      |
+|979 |warrant       |206      |
+|980 |confess       |205      |
+|981 |drew          |205      |
+|982 |ha            |205      |
+|983 |shut          |205      |
+|984 |sing          |205      |
+|985 |citizen       |204      |
+|986 |pride         |204      |
+|987 |clarence      |203      |
+|988 |flesh         |203      |
+|989 |forget        |203      |
+|990 |notice        |203      |
+|991 |sons          |203      |
+|992 |standing      |203      |
+|993 |arcite        |202      |
+|994 |bastard       |202      |
+|995 |friar         |202      |
+|996 |hector        |202      |
+|997 |angry         |201      |
+|998 |likely        |201      |
+|999 |oath          |201      |
+|1000|reached       |201      |
+|1001|sitting       |201      |
+|1002|agreement     |200      |
+|1003|hang          |200      |
+|1004|report        |200      |
+|1005|talking       |200      |
+|1006|benedick      |199      |
+|1007|mighty        |199      |
+|1008|pompey        |199      |
+|1009|host          |198      |
+|1010|jennings      |198      |
+|1011|kindness      |197      |
+|1012|yea           |197      |
+|1013|berowne       |196      |
+|1014|bold          |196      |
+|1015|calling       |196      |
+|1016|companion     |196      |
+|1017|creature      |196      |
+|1018|deny          |196      |
+|1019|dress         |196      |
+|1020|juliet        |196      |
+|1021|kingdom       |196      |
+|1022|menenius      |196      |
+|1023|quick         |196      |
+|1024|willoughby    |196      |
+|1025|judgment      |195      |
+|1026|manners       |195      |
+|1027|bosom         |194      |
+|1028|changed       |194      |
+|1029|delight       |194      |
+|1030|gain          |194      |
+|1031|helena        |194      |
+|1032|leaving       |194      |
+|1033|meaning       |194      |
+|1034|satisfaction  |194      |
+|1035|weak          |194      |
+|1036|wild          |194      |
+|1037|beautiful     |193      |
+|1038|became        |193      |
+|1039|churchill     |193      |
+|1040|dull          |193      |
+|1041|grow          |193      |
+|1042|kent          |193      |
+|1043|laugh         |193      |
+|1044|pistol        |193      |
+|1045|waiting       |193      |
+|1046|deed          |192      |
+|1047|interest      |192      |
+|1048|acquainted    |191      |
+|1049|attendants    |191      |
+|1050|expected      |191      |
+|1051|length        |191      |
+|1052|resolved      |191      |
+|1053|single        |191      |
+|1054|attend        |190      |
+|1055|silent        |190      |
+|1056|stands        |190      |
+|1057|woe           |190      |
+|1058|conduct       |189      |
+|1059|consent       |189      |
+|1060|harm          |189      |
+|1061|humour        |189      |
+|1062|spoken        |189      |
+|1063|directly      |188      |
+|1064|hurt          |188      |
+|1065|reply         |188      |
+|1066|rise          |188      |
+|1067|wealth        |188      |
+|1068|spent         |187      |
+|1069|tried         |187      |
+|1070|wouldst       |187      |
+|1071|broken        |186      |
+|1072|church        |186      |
+|1073|easily        |186      |
+|1074|entirely      |186      |
+|1075|grant         |186      |
+|1076|iv            |186      |
+|1077|anne          |185      |
+|1078|fact          |185      |
+|1079|famous        |185      |
+|1080|fashion       |185      |
+|1081|fond          |185      |
+|1082|instead       |185      |
+|1083|pericles      |185      |
+|1084|rage          |185      |
+|1085|states        |185      |
+|1086|advantage     |184      |
+|1087|bright        |184      |
+|1088|settled       |184      |
+|1089|witness       |184      |
+|1090|cast          |183      |
+|1091|engaged       |183      |
+|1092|finding       |183      |
+|1093|language      |183      |
+|1094|learn         |183      |
+|1095|obliged       |183      |
+|1096|putting       |183      |
+|1097|usual         |183      |
+|1098|action        |182      |
+|1099|assure        |182      |
+|1100|ephesus       |182      |
+|1101|pandarus      |182      |
+|1102|due           |181      |
+|1103|prithee       |181      |
+|1104|remained      |181      |
+|1105|seat          |181      |
+|1106|vain          |181      |
+|1107|walked        |181      |
+|1108|anyone        |180      |
+|1109|beat          |180      |
+|1110|blow          |180      |
+|1111|cressida      |180      |
+|1112|distance      |180      |
+|1113|farther       |180      |
+|1114|figure        |180      |
+|1115|heavens       |180      |
+|1116|highness      |180      |
+|1117|rocinante     |180      |
+|1118|beard         |179      |
+|1119|beg           |179      |
+|1120|guard         |179      |
+|1121|loved         |179      |
+|1122|months        |179      |
+|1123|private       |179      |
+|1124|journey       |178      |
+|1125|move          |178      |
+|1126|seven         |178      |
+|1127|fixed         |177      |
+|1128|honourable    |177      |
+|1129|necessary     |177      |
+|1130|perceive      |177      |
+|1131|neck          |176      |
+|1132|portia        |176      |
+|1133|suffer        |176      |
+|1134|tale          |176      |
+|1135|bolingbroke   |175      |
+|1136|chivalry      |175      |
+|1137|liberty       |175      |
+|1138|memory        |175      |
+|1139|parolles      |175      |
+|1140|sudden        |175      |
+|1141|worst         |175      |
+|1142|entreat       |174      |
+|1143|excuse        |174      |
+|1144|fetch         |174      |
+|1145|kings         |174      |
+|1146|laws          |174      |
+|1147|meeting       |174      |
+|1148|pure          |174      |
+|1149|speaks        |174      |
+|1150|choose        |173      |
+|1151|knave         |173      |
+|1152|post          |173      |
+|1153|shepherd      |173      |
+|1154|chief         |172      |
+|1155|condition     |172      |
+|1156|future        |172      |
+|1157|hide          |172      |
+|1158|needs         |172      |
+|1159|prison        |172      |
+|1160|shows         |172      |
+|1161|teeth         |172      |
+|1162|win           |172      |
+|1163|believed      |171      |
+|1164|counsel       |171      |
+|1165|cross         |171      |
+|1166|measure       |171      |
+|1167|although      |170      |
+|1168|drawn         |170      |
+|1169|dream         |170      |
+|1170|learned       |170      |
+|1171|proof         |170      |
+|1172|determined    |169      |
+|1173|enemies       |169      |
+|1174|follows       |169      |
+|1175|glass         |169      |
+|1176|mentioned     |169      |
+|1177|minutes       |169      |
+|1178|offence       |169      |
+|1179|orlando       |169      |
+|1180|paris         |169      |
+|1181|telling       |169      |
+|1182|throw         |169      |
+|1183|alive         |168      |
+|1184|attempt       |168      |
+|1185|barber        |168      |
+|1186|joseph        |168      |
+|1187|match         |168      |
+|1188|mere          |168      |
+|1189|society       |168      |
+|1190|theseus       |168      |
+|1191|aid           |167      |
+|1192|birth         |167      |
+|1193|copyright     |167      |
+|1194|during        |167      |
+|1195|slave         |167      |
+|1196|top           |167      |
+|1197|count         |166      |
+|1198|fame          |166      |
+|1199|information   |166      |
+|1200|pleasant      |166      |
+|1201|suddenly      |166      |
+|1202|teach         |166      |
+|1203|united        |166      |
+|1204|moor          |165      |
+|1205|raised        |165      |
+|1206|reading       |165      |
+|1207|wicked        |165      |
+|1208|writing       |165      |
+|1209|circumstances |164      |
+|1210|degree        |164      |
+|1211|loving        |164      |
+|1212|perfectly     |164      |
+|1213|advice        |163      |
+|1214|asleep        |163      |
+|1215|demetrius     |163      |
+|1216|embrace       |163      |
+|1217|hers          |163      |
+|1218|horses        |163      |
+|1219|imogen        |163      |
+|1220|island        |163      |
+|1221|saint         |163      |
+|1222|folly         |162      |
+|1223|leonato       |162      |
+|1224|achilles      |161      |
+|1225|bless         |161      |
+|1226|blind         |161      |
+|1227|mancha        |161      |
+|1228|shadow        |161      |
+|1229|sovereign     |161      |
+|1230|virtuous      |161      |
+|1231|wishes        |161      |
+|1232|beatrice      |160      |
+|1233|expect        |160      |
+|1234|fie           |160      |
+|1235|fortunes      |160      |
+|1236|hareton       |160      |
+|1237|keeping       |160      |
+|1238|northumberland|160      |
+|1239|oft           |160      |
+|1240|title         |160      |
+|1241|foolish       |159      |
+|1242|hartfield     |159      |
+|1243|merely        |159      |
+|1244|otherwise     |159      |
+|1245|proceed       |159      |
+|1246|real          |159      |
+|1247|supposed      |159      |
+|1248|tree          |159      |
+|1249|wretched      |159      |
+|1250|government    |158      |
+|1251|hark          |158      |
+|1252|license       |158      |
+|1253|flying        |157      |
+|1254|heads         |157      |
+|1255|imagine       |157      |
+|1256|legs          |157      |
+|1257|melancholy    |157      |
+|1258|opened        |157      |
+|1259|slain         |157      |
+|1260|talbot        |157      |
+|1261|twice         |157      |
+|1262|ease          |156      |
+|1263|hopes         |156      |
+|1264|methinks      |156      |
+|1265|quarrel       |156      |
+|1266|shake         |156      |
+|1267|stone         |156      |
+|1268|anger         |155      |
+|1269|camilla       |155      |
+|1270|countess      |155      |
+|1271|fare          |155      |
+|1272|forgive       |155      |
+|1273|horatio       |155      |
+|1274|march         |155      |
+|1275|persons       |155      |
+|1276|toboso        |155      |
+|1277|wives         |155      |
+|1278|won           |155      |
+|1279|bottom        |154      |
+|1280|calls         |154      |
+|1281|deserve       |154      |
+|1282|enobarbus     |154      |
+|1283|madness       |154      |
+|1284|rain          |154      |
+|1285|sworn         |154      |
+|1286|temper        |154      |
+|1287|absence       |153      |
+|1288|across        |153      |
+|1289|caught        |153      |
+|1290|deliver       |153      |
+|1291|earl          |153      |
+|1292|exactly       |153      |
+|1293|getting       |153      |
+|1294|minute        |153      |
+|1295|particularly  |153      |
+|1296|placed        |153      |
+|1297|promised      |153      |
+|1298|stir          |153      |
+|1299|talked        |153      |
+|1300|copy          |152      |
+|1301|cruel         |152      |
+|1302|escape        |152      |
+|1303|loud          |152      |
+|1304|places        |152      |
+|1305|rate          |152      |
+|1306|week          |152      |
+|1307|wherefore     |152      |
+|1308|agree         |151      |
+|1309|difference    |151      |
+|1310|glory         |151      |
+|1311|repeated      |151      |
+|1312|summer        |151      |
+|1313|ago           |150      |
+|1314|blame         |150      |
+|1315|choice        |150      |
+|1316|courage       |150      |
+|1317|donations     |150      |
+|1318|edmund        |150      |
+|1319|leontes       |150      |
+|1320|lived         |150      |
+|1321|niece         |150      |
+|1322|ones          |150      |
+|1323|scarcely      |150      |
+|1324|valour        |150      |
+|1325|vile          |150      |
+|1326|weary         |150      |
+|1327|wide          |150      |
+|1328|ancient       |149      |
+|1329|bears         |149      |
+|1330|behaviour     |149      |
+|1331|cardinal      |149      |
+|1332|carriage      |149      |
+|1333|considered    |149      |
+|1334|contrary      |149      |
+|1335|disposition   |149      |
+|1336|leaves        |149      |
+|1337|nose          |149      |
+|1338|roman         |149      |
+|1339|v             |149      |
+|1340|widow         |149      |
+|1341|withal        |149      |
+|1342|bearing       |148      |
+|1343|broke         |148      |
+|1344|flowers       |148      |
+|1345|kitchen       |148      |
+|1346|matters       |148      |
+|1347|pains         |148      |
+|1348|perceived     |148      |
+|1349|sport         |148      |
+|1350|traitor       |148      |
+|1351|bade          |147      |
+|1352|below         |147      |
+|1353|drawing       |147      |
+|1354|dread         |147      |
+|1355|fingers       |147      |
+|1356|perfect       |147      |
+|1357|shape         |147      |
+|1358|trees         |147      |
+|1359|clothes       |146      |
+|1360|colour        |146      |
+|1361|confidence    |146      |
+|1362|especially    |146      |
+|1363|faults        |146      |
+|1364|golden        |146      |
+|1365|hastings      |146      |
+|1366|issue         |146      |
+|1367|line          |146      |
+|1368|olivia        |146      |
+|1369|spring        |146      |
+|1370|stopped       |146      |
+|1371|supper        |146      |
+|1372|wars          |146      |
+|1373|wisdom        |146      |
+|1374|dance         |145      |
+|1375|lying         |145      |
+|1376|mortal        |145      |
+|1377|salisbury     |145      |
+|1378|somerset      |145      |
+|1379|walls         |145      |
+|1380|buy           |144      |
+|1381|dry           |144      |
+|1382|hostess       |144      |
+|1383|julia         |144      |
+|1384|murder        |144      |
+|1385|sirrah        |144      |
+|1386|armour        |143      |
+|1387|princes       |143      |
+|1388|property      |143      |
+|1389|provided      |143      |
+|1390|anon          |142      |
+|1391|approach      |142      |
+|1392|cave          |142      |
+|1393|friendship    |142      |
+|1394|middle        |142      |
+|1395|sharp         |142      |
+|1396|smoke         |142      |
+|1397|thinks        |142      |
+|1398|viola         |142      |
+|1399|william       |142      |
+|1400|allowed       |141      |
+|1401|capulet       |141      |
+|1402|corner        |141      |
+|1403|enjoy         |141      |
+|1404|liege         |141      |
+|1405|prospero      |141      |
+|1406|reach         |141      |
+|1407|removed       |141      |
+|1408|spot          |141      |
+|1409|tranio        |141      |
+|1410|understood    |141      |
+|1411|author        |140      |
+|1412|bachelor      |140      |
+|1413|beast         |140      |
+|1414|dangerous     |140      |
+|1415|desires       |140      |
+|1416|precious      |140      |
+|1417|resolution    |140      |
+|1418|rough         |140      |
+|1419|sebastian     |140      |
+|1420|wound         |140      |
+|1421|borne         |139      |
+|1422|emperor       |139      |
+|1423|finger        |139      |
+|1424|marcius       |139      |
+|1425|marcus        |139      |
+|1426|miserable     |139      |
+|1427|unhappy       |139      |
+|1428|wood          |139      |
+|1429|flourish      |138      |
+|1430|ours          |138      |
+|1431|saddle        |138      |
+|1432|sicinius      |138      |
+|1433|warm          |138      |
+|1434|wits          |138      |
+|1435|bates         |137      |
+|1436|female        |137      |
+|1437|idle          |137      |
+|1438|pair          |137      |
+|1439|pumblechook   |137      |
+|1440|showed        |137      |
+|1441|situation     |137      |
+|1442|spare         |137      |
+|1443|style         |137      |
+|1444|access        |136      |
+|1445|food          |136      |
+|1446|grew          |136      |
+|1447|heir          |136      |
+|1448|labour        |136      |
+|1449|literary      |136      |
+|1450|request       |136      |
+|1451|senses        |136      |
+|1452|share         |136      |
+|1453|shoulders     |136      |
+|1454|sign          |136      |
+|1455|signior       |136      |
+|1456|walking       |136      |
+|1457|witch         |136      |
+|1458|bertram       |135      |
+|1459|blessed       |135      |
+|1460|boys          |135      |
+|1461|burning       |135      |
+|1462|endure        |135      |
+|1463|forgot        |135      |
+|1464|human         |135      |
+|1465|knees         |135      |
+|1466|masters       |135      |
+|1467|officers      |135      |
+|1468|prevent       |135      |
+|1469|shoulder      |135      |
+|1470|whence        |135      |
+|1471|cheek         |134      |
+|1472|clifford      |134      |
+|1473|eight         |134      |
+|1474|gates         |134      |
+|1475|lordship      |134      |
+|1476|nine          |134      |
+|1477|souls         |134      |
+|1478|support       |134      |
+|1479|unable        |134      |
+|1480|adventures    |133      |
+|1481|anxious       |133      |
+|1482|catch         |133      |
+|1483|fail          |133      |
+|1484|fate          |133      |
+|1485|handsome      |133      |
+|1486|jest          |133      |
+|1487|lend          |133      |
+|1488|lucio         |133      |
+|1489|apemantus     |132      |
+|1490|brandon       |132      |
+|1491|charles       |132      |
+|1492|constant      |132      |
+|1493|doors         |132      |
+|1494|drop          |132      |
+|1495|loose         |132      |
+|1496|misery        |132      |
+|1497|poet          |132      |
+|1498|scorn         |132      |
+|1499|convinced     |131      |
+|1500|curse         |131      |
+|1501|dies          |131      |
+|1502|hero          |131      |
+|1503|join          |131      |
+|1504|passing       |131      |
+|1505|raise         |131      |
+|1506|sooner        |131      |
+|1507|spend         |131      |
+|1508|stranger      |131      |
+|1509|affairs       |130      |
+|1510|archive       |130      |
+|1511|cost          |130      |
+|1512|earnest       |130      |
+|1513|filled        |130      |
+|1514|guess         |130      |
+|1515|signs         |130      |
+|1516|wounds        |130      |
+|1517|brief         |129      |
+|1518|caius         |129      |
+|1519|dreadful      |129      |
+|1520|dying         |129      |
+|1521|fears         |129      |
+|1522|freely        |129      |
+|1523|lothario      |129      |
+|1524|norfolk       |129      |
+|1525|possession    |129      |
+|1526|probably      |129      |
+|1527|purse         |129      |
+|1528|weather       |129      |
+|1529|beside        |128      |
+|1530|bringing      |128      |
+|1531|officer       |128      |
+|1532|posthumus     |128      |
+|1533|silver        |128      |
+|1534|step          |128      |
+|1535|tear          |128      |
+|1536|agreed        |127      |
+|1537|anselmo       |127      |
+|1538|bitter        |127      |
+|1539|double        |127      |
+|1540|elizabeth     |127      |
+|1541|humble        |127      |
+|1542|laughed       |127      |
+|1543|mounted       |127      |
+|1544|search        |127      |
+|1545|thence        |127      |
+|1546|appears       |126      |
+|1547|awake         |126      |
+|1548|bread         |126      |
+|1549|celia         |126      |
+|1550|couple        |126      |
+|1551|credit        |126      |
+|1552|cure          |126      |
+|1553|enchanted     |126      |
+|1554|nearly        |126      |
+|1555|obey          |126      |
+|1556|patient       |126      |
+|1557|permission    |126      |
+|1558|produced      |126      |
+|1559|sides         |126      |
+|1560|sigh          |126      |
+|1561|toward        |126      |
+|1562|wert          |126      |
+|1563|avoid         |125      |
+|1564|front         |125      |
+|1565|heat          |125      |
+|1566|landlord      |125      |
+|1567|moved         |125      |
+|1568|pluck         |125      |
+|1569|twelve        |125      |
+|1570|whilst        |125      |
+|1571|ajax          |124      |
+|1572|camillo       |124      |
+|1573|cheeks        |124      |
+|1574|difficulty    |124      |
+|1575|extremely     |124      |
+|1576|feast         |124      |
+|1577|fernando      |124      |
+|1578|highbury      |124      |
+|1579|rank          |124      |
+|1580|stars         |124      |
+|1581|suspicion     |124      |
+|1582|thersites     |124      |
+|1583|weeping       |124      |
+|1584|armado        |123      |
+|1585|authority     |123      |
+|1586|bent          |123      |
+|1587|discourse     |123      |
+|1588|f             |123      |
+|1589|fools         |123      |
+|1590|footnote      |123      |
+|1591|guilty        |123      |
+|1592|holds         |123      |
+|1593|malvolio      |123      |
+|1594|maria         |123      |
+|1595|observe       |123      |
+|1596|offered       |123      |
+|1597|provide       |123      |
+|1598|safety        |123      |
+|1599|silvia        |123      |
+|1600|understanding |123      |
+|1601|whither       |123      |
+|1602|agreeable     |122      |
+|1603|bred          |122      |
+|1604|dust          |122      |
+|1605|falls         |122      |
+|1606|hotspur       |122      |
+|1607|jack          |122      |
+|1608|lovers        |122      |
+|1609|lucentio      |122      |
+|1610|moreover      |122      |
+|1611|prisoner      |122      |
+|1612|study         |122      |
+|1613|verses        |122      |
+|1614|wants         |122      |
+|1615|yesterday     |122      |
+|1616|arrived       |121      |
+|1617|buried        |121      |
+|1618|cries         |121      |
+|1619|del           |121      |
+|1620|delay         |121      |
+|1621|fearful       |121      |
+|1622|iron          |121      |
+|1623|latter        |121      |
+|1624|paragraph     |121      |
+|1625|remembrance   |121      |
+|1626|seated        |121      |
+|1627|stairs        |121      |
+|1628|troy          |121      |
+|1629|whenever      |121      |
+|1630|bassanio      |120      |
+|1631|becomes       |120      |
+|1632|blows         |120      |
+|1633|commend       |120      |
+|1634|costard       |120      |
+|1635|courtesy      |120      |
+|1636|crowns        |120      |
+|1637|grown         |120      |
+|1638|hortensio     |120      |
+|1639|persuaded     |120      |
+|1640|polonius      |120      |
+|1641|shown         |120      |
+|1642|throat        |120      |
+|1643|various       |120      |
+|1644|writ          |120      |
+|1645|altogether    |119      |
+|1646|aware         |119      |
+|1647|bare          |119      |
+|1648|cervantes     |119      |
+|1649|claim         |119      |
+|1650|express       |119      |
+|1651|ignorant      |119      |
+|1652|keeper        |119      |
+|1653|lack          |119      |
+|1654|serious       |119      |
+|1655|song          |119      |
+|1656|army          |118      |
+|1657|brain         |118      |
+|1658|faces         |118      |
+|1659|fee           |118      |
+|1660|hadst         |118      |
+|1661|lafeu         |118      |
+|1662|owner         |118      |
+|1663|park          |118      |
+|1664|reasons       |118      |
+|1665|ulysses       |118      |
+|1666|breakfast     |117      |
+|1667|distress      |117      |
+|1668|instantly     |117      |
+|1669|lion          |117      |
+|1670|outside       |117      |
+|1671|owe           |117      |
+|1672|prayers       |117      |
+|1673|slender       |117      |
+|1674|soot          |117      |
+|1675|surprise      |117      |
+|1676|wanting       |117      |
+|1677|willing       |117      |
+|1678|attended      |116      |
+|1679|luck          |116      |
+|1680|murderer      |116      |
+|1681|provost       |116      |
+|1682|quoth         |116      |
+|1683|stones        |116      |
+|1684|afternoon     |115      |
+|1685|citizens      |115      |
+|1686|described     |115      |
+|1687|despair       |115      |
+|1688|earnshaw      |115      |
+|1689|mistake       |115      |
+|1690|thither       |115      |
+|1691|threw         |115      |
+|1692|winter        |115      |
+|1693|add           |114      |
+|1694|burn          |114      |
+|1695|burst         |114      |
+|1696|curiosity     |114      |
+|1697|dressed       |114      |
+|1698|drum          |114      |
+|1699|fled          |114      |
+|1700|odd           |114      |
+|1701|practice      |114      |
+|1702|quarter       |114      |
+|1703|shook         |114      |
+|1704|spain         |114      |
+|1705|abroad        |113      |
+|1706|affair        |113      |
+|1707|cathy         |113      |
+|1708|exeter        |113      |
+|1709|ferrars       |113      |
+|1710|harry         |113      |
+|1711|kinds         |113      |
+|1712|merit         |113      |
+|1713|plague        |113      |
+|1714|remedy        |113      |
+|1715|river         |113      |
+|1716|slowly        |113      |
+|1717|smith         |113      |
+|1718|adieu         |112      |
+|1719|awhile        |112      |
+|1720|bianca        |112      |
+|1721|bones         |112      |
+|1722|circumstance  |112      |
+|1723|demand        |112      |
+|1724|holding       |112      |
+|1725|housekeeper   |112      |
+|1726|intelligence  |112      |
+|1727|katherina     |112      |
+|1728|leisure       |112      |
+|1729|names         |112      |
+|1730|remove        |112      |
+|1731|suspect       |112      |
+|1732|troth         |112      |
+|1733|yonder        |112      |
+|1734|begged        |111      |
+|1735|bow           |111      |
+|1736|complete      |111      |
+|1737|dapple        |111      |
+|1738|ebook         |111      |
+|1739|ends          |111      |
+|1740|feed          |111      |
+|1741|fury          |111      |
+|1742|grove         |111      |
+|1743|habit         |111      |
+|1744|motion        |111      |
+|1745|opposite      |111      |
+|1746|persuade      |111      |
+|1747|picture       |111      |
+|1748|proved        |111      |
+|1749|radiance      |111      |
+|1750|skill         |111      |
+|1751|blessing      |110      |
+|1752|cymbeline     |110      |
+|1753|fill          |110      |
+|1754|gallant       |110      |
+|1755|ghost         |110      |
+|1756|laughing      |110      |
+|1757|lorenzo       |110      |
+|1758|misfortune    |110      |
+|1759|powers        |110      |
+|1760|sentence      |110      |
+|1761|sighs         |110      |
+|1762|start         |110      |
+|1763|subjects      |110      |
+|1764|tied          |110      |
+|1765|baptista      |109      |
+|1766|chain         |109      |
+|1767|comfortable   |109      |
+|1768|consequence   |109      |
+|1769|defend        |109      |
+|1770|goodness      |109      |
+|1771|hit           |109      |
+|1772|katharine     |109      |
+|1773|likewise      |109      |
+|1774|macduff       |109      |
+|1775|mention       |109      |
+|1776|plan          |109      |
+|1777|poins         |109      |
+|1778|possessed     |109      |
+|1779|shore         |109      |
+|1780|sought        |109      |
+|1781|tent          |109      |
+|1782|thrown        |109      |
+|1783|tone          |109      |
+|1784|turns         |109      |
+|1785|yard          |109      |
+|1786|darkness      |108      |
+|1787|faint         |108      |
+|1788|fallen        |108      |
+|1789|kate          |108      |
+|1790|knee          |108      |
+|1791|rare          |108      |
+|1792|snow          |108      |
+|1793|terror        |108      |
+|1794|tonight       |108      |
+|1795|tutor         |108      |
+|1796|discovered    |107      |
+|1797|doe           |107      |
+|1798|evans         |107      |
+|1799|flower        |107      |
+|1800|forced        |107      |
+|1801|ignorance     |107      |
+|1802|pieces        |107      |
+|1803|prepare       |107      |
+|1804|required      |107      |
+|1805|stick         |107      |
+|1806|thick         |107      |
+|1807|aloud         |106      |
+|1808|bore          |106      |
+|1809|brothers      |106      |
+|1810|cheer         |106      |
+|1811|coach         |106      |
+|1812|daughters     |106      |
+|1813|eternal       |106      |
+|1814|expression    |106      |
+|1815|finished      |106      |
+|1816|laertes       |106      |
+|1817|mischief      |106      |
+|1818|plainly       |106      |
+|1819|regan         |106      |
+|1820|roderigo      |106      |
+|1821|rude          |106      |
+|1822|running       |106      |
+|1823|smiling       |106      |
+|1824|thief         |106      |
+|1825|box           |105      |
+|1826|conclusion    |105      |
+|1827|coward        |105      |
+|1828|crying        |105      |
+|1829|dorothea      |105      |
+|1830|fairies       |105      |
+|1831|greatness     |105      |
+|1832|hanging       |105      |
+|1833|hoped         |105      |
+|1834|hung          |105      |
+|1835|influence     |105      |
+|1836|listen        |105      |
+|1837|moth          |105      |
+|1838|quality       |105      |
+|1839|shylock       |105      |
++----+--------------+---------+
+
+Common Word
++-----+-----------------+---------+
+|Rank |Word             |Frequency|
++-----+-----------------+---------+
+|17464|frivolity        |3        |
+|17465|frownes          |3        |
+|17466|fumbling         |3        |
+|17467|funerall         |3        |
+|17468|fungus           |3        |
+|17469|furlongs         |3        |
+|17470|furtherance      |3        |
+|17471|furze            |3        |
+|17472|fusty            |3        |
+|17473|gabble           |3        |
+|17474|gaberdine        |3        |
+|17475|gadding          |3        |
+|17476|gads             |3        |
+|17477|gaeta            |3        |
+|17478|gaine            |3        |
+|17479|gainer           |3        |
+|17480|gaited           |3        |
+|17481|gala             |3        |
+|17482|galatea          |3        |
+|17483|gallon           |3        |
+|17484|gallons          |3        |
+|17485|gambol           |3        |
+|17486|gamesome         |3        |
+|17487|gandharva        |3        |
+|17488|ganelon          |3        |
+|17489|gangs            |3        |
+|17490|gardening        |3        |
+|17491|garnish          |3        |
+|17492|gascon           |3        |
+|17493|gawds            |3        |
+|17494|gayest           |3        |
+|17495|gazer            |3        |
+|17496|gazers           |3        |
+|17497|gazeth           |3        |
+|17498|genesis          |3        |
+|17499|genitive         |3        |
+|17500|gens             |3        |
+|17501|gent             |3        |
+|17502|gentiles         |3        |
+|17503|geographical     |3        |
+|17504|gerard           |3        |
+|17505|gerfalcon        |3        |
+|17506|giantess         |3        |
+|17507|gibberish        |3        |
+|17508|gibbets          |3        |
+|17509|giddiness        |3        |
+|17510|gig              |3        |
+|17511|gills            |3        |
+|17512|gingerbread      |3        |
+|17513|giralda          |3        |
+|17514|girdles          |3        |
+|17515|girth            |3        |
+|17516|girthed          |3        |
+|17517|gladden          |3        |
+|17518|glazed           |3        |
+|17519|gleaned          |3        |
+|17520|glimmered        |3        |
+|17521|glimpses         |3        |
+|17522|glisters         |3        |
+|17523|glittered        |3        |
+|17524|glorified        |3        |
+|17525|gloriously       |3        |
+|17526|glossed          |3        |
+|17527|gloze            |3        |
+|17528|glued            |3        |
+|17529|godfathers       |3        |
+|17530|godhead          |3        |
+|17531|goers            |3        |
+|17532|goffe            |3        |
+|17533|gonzago          |3        |
+|17534|gonzalez         |3        |
+|17535|goodliest        |3        |
+|17536|goodnesse        |3        |
+|17537|gored            |3        |
+|17538|gorges           |3        |
+|17539|gory             |3        |
+|17540|gossiping        |3        |
+|17541|gouts            |3        |
+|17542|gouty            |3        |
+|17543|grab             |3        |
+|17544|gracefully       |3        |
+|17545|gracefulness     |3        |
+|17546|gramercies       |3        |
+|17547|granddaughter    |3        |
+|17548|grandest         |3        |
+|17549|grasps           |3        |
+|17550|grates           |3        |
+|17551|graven           |3        |
+|17552|gravesend        |3        |
+|17553|gravest          |3        |
+|17554|greens           |3        |
+|17555|greife           |3        |
+|17556|grimy            |3        |
+|17557|gripes           |3        |
+|17558|griping          |3        |
+|17559|grovel           |3        |
+|17560|grub             |3        |
+|17561|grubs            |3        |
+|17562|grudged          |3        |
+|17563|gruffly          |3        |
+|17564|grumble          |3        |
+|17565|grunt            |3        |
+|17566|grunting         |3        |
+|17567|guesses          |3        |
+|17568|guillermo        |3        |
+|17569|guisando         |3        |
+|17570|gules            |3        |
+|17571|hackneys         |3        |
+|17572|hae              |3        |
+|17573|hahse            |3        |
+|17574|haile            |3        |
+|17575|haire            |3        |
+|17576|halcyon          |3        |
+|17577|haled            |3        |
+|17578|hales            |3        |
+|17579|hallooing        |3        |
+|17580|halters          |3        |
+|17581|ham              |3        |
+|17582|hams             |3        |
+|17583|handfuls         |3        |
+|17584|handles          |3        |
+|17585|harbours         |3        |
+|17586|harcourt         |3        |
+|17587|hardihood        |3        |
+|17588|hardiment        |3        |
+|17589|hardiness        |3        |
+|17590|harlots          |3        |
+|17591|harts            |3        |
+|17592|hatchet          |3        |
+|17593|hater            |3        |
+|17594|haters           |3        |
+|17595|haught           |3        |
+|17596|haughtiness      |3        |
+|17597|haunch           |3        |
+|17598|hawke            |3        |
+|17599|hazle            |3        |
+|17600|hazy             |3        |
+|17601|heades           |3        |
+|17602|headforemost     |3        |
+|17603|headpiece        |3        |
+|17604|headsman         |3        |
+|17605|heaped           |3        |
+|17606|hearkens         |3        |
+|17607|hearses          |3        |
+|17608|heartiness       |3        |
+|17609|heathens         |3        |
+|17610|heats            |3        |
+|17611|hectors          |3        |
+|17612|heeded           |3        |
+|17613|heedlessness     |3        |
+|17614|hees             |3        |
+|17615|heifers          |3        |
+|17616|helper           |3        |
+|17617|helplessly       |3        |
+|17618|helpmate         |3        |
+|17619|hemlock          |3        |
+|17620|hems             |3        |
+|17621|hent             |3        |
+|17622|heretofore       |3        |
+|17623|heritage         |3        |
+|17624|hernandez        |3        |
+|17625|heroism          |3        |
+|17626|herrings         |3        |
+|17627|hest             |3        |
+|17628|hews             |3        |
+|17629|highborn         |3        |
+|17630|hillock          |3        |
+|17631|hillside         |3        |
+|17632|hindmost         |3        |
+|17633|hinting          |3        |
+|17634|hissed           |3        |
+|17635|hitch            |3        |
+|17636|hoary            |3        |
+|17637|hobble           |3        |
+|17638|hobgoblin        |3        |
+|17639|hoc              |3        |
+|17640|hogs             |3        |
+|17641|holidame         |3        |
+|17642|holier           |3        |
+|17643|holily           |3        |
+|17644|hollows          |3        |
+|17645|homespun         |3        |
+|17646|homily           |3        |
+|17647|honeysuckle      |3        |
+|17648|honeysuckles     |3        |
+|17649|hooded           |3        |
+|17650|hoods            |3        |
+|17651|hoodwink         |3        |
+|17652|hoof             |3        |
+|17653|hooked           |3        |
+|17654|hoot             |3        |
+|17655|hooted           |3        |
+|17656|hopefully        |3        |
+|17657|hopped           |3        |
+|17658|horizontal       |3        |
+|17659|horridly         |3        |
+|17660|horsemanship     |3        |
+|17661|hostage          |3        |
+|17662|hostel           |3        |
+|17663|houndsditch      |3        |
+|17664|houseless        |3        |
+|17665|housewives       |3        |
+|17666|howsever         |3        |
+|17667|hu               |3        |
+|17668|hubbub           |3        |
+|17669|hued             |3        |
+|17670|hugged           |3        |
+|17671|hughes           |3        |
+|17672|humanely         |3        |
+|17673|hummums          |3        |
+|17674|humph            |3        |
+|17675|hums             |3        |
+|17676|hungerly         |3        |
+|17677|huntress         |3        |
+|17678|hurling          |3        |
+|17679|hurries          |3        |
+|17680|hyperion         |3        |
+|17681|hypolita         |3        |
+|17682|hysterical       |3        |
+|17683|ibat             |3        |
+|17684|icarus           |3        |
+|17685|icicle           |3        |
+|17686|icicles          |3        |
+|17687|identified       |3        |
+|17688|idolized         |3        |
+|17689|ignominy         |3        |
+|17690|illi             |3        |
+|17691|imagines         |3        |
+|17692|imbecility       |3        |
+|17693|imbibed          |3        |
+|17694|immaterial       |3        |
+|17695|immodesty        |3        |
+|17696|impartiality     |3        |
+|17697|impassable       |3        |
+|17698|impenetrable     |3        |
+|17699|imperative       |3        |
+|17700|imperceptibly    |3        |
+|17701|impertinently    |3        |
+|17702|implicitly       |3        |
+|17703|implies          |3        |
+|17704|impostors        |3        |
+|17705|impotence        |3        |
+|17706|impressure       |3        |
+|17707|improperly       |3        |
+|17708|improves         |3        |
+|17709|improvident      |3        |
+|17710|impurity         |3        |
+|17711|inability        |3        |
+|17712|inaccessible     |3        |
+|17713|inadequate       |3        |
+|17714|inadvertence     |3        |
+|17715|inc              |3        |
+|17716|incapacitated    |3        |
+|17717|incessantly      |3        |
+|17718|inclusive        |3        |
+|17719|incontinence     |3        |
+|17720|incontinency     |3        |
+|17721|incorrect        |3        |
+|17722|incredulity      |3        |
+|17723|indecorous       |3        |
+|17724|indeede          |3        |
+|17725|indians          |3        |
+|17726|indigest         |3        |
+|17727|individuality    |3        |
+|17728|indolent         |3        |
+|17729|indued           |3        |
+|17730|inexperienced    |3        |
+|17731|inexpressibly    |3        |
+|17732|inferiors        |3        |
+|17733|inflicts         |3        |
+|17734|informant        |3        |
+|17735|infringed        |3        |
+|17736|infusion         |3        |
+|17737|inhabited        |3        |
+|17738|injudicious      |3        |
+|17739|injunctions      |3        |
+|17740|injuring         |3        |
+|17741|inkhorn          |3        |
+|17742|inkstand         |3        |
+|17743|inmate           |3        |
+|17744|innovation       |3        |
+|17745|inordinate       |3        |
+|17746|inroads          |3        |
+|17747|inscrutable      |3        |
+|17748|insects          |3        |
+|17749|insides          |3        |
+|17750|insidious        |3        |
+|17751|insignificant    |3        |
+|17752|insincere        |3        |
+|17753|insinuation      |3        |
+|17754|insinuations     |3        |
+|17755|inspected        |3        |
+|17756|inspecting       |3        |
+|17757|instigate        |3        |
+|17758|instigated       |3        |
+|17759|institute        |3        |
+|17760|instituted       |3        |
+|17761|instrumental     |3        |
+|17762|insufficiency    |3        |
+|17763|insuperable      |3        |
+|17764|insuring         |3        |
+|17765|intemperance     |3        |
+|17766|intendment       |3        |
+|17767|interchanged     |3        |
+|17768|interdict        |3        |
+|17769|intermediate     |3        |
+|17770|intermingle      |3        |
+|17771|interposing      |3        |
+|17772|interpreters     |3        |
+|17773|interprets       |3        |
+|17774|interruptions    |3        |
+|17775|intervening      |3        |
+|17776|intervention     |3        |
+|17777|intruded         |3        |
+|17778|invade           |3        |
+|17779|invaluable       |3        |
+|17780|inverness        |3        |
+|17781|invert           |3        |
+|17782|investments      |3        |
+|17783|inviolable       |3        |
+|17784|invocate         |3        |
+|17785|iove             |3        |
+|17786|ipse             |3        |
+|17787|irishman         |3        |
+|17788|irreligious      |3        |
+|17789|irritate         |3        |
+|17790|irritating       |3        |
+|17791|items            |3        |
+|17792|iteration        |3        |
+|17793|iwis             |3        |
+|17794|jackasses        |3        |
+|17795|jaded            |3        |
+|17796|jailor           |3        |
+|17797|jails            |3        |
+|17798|jarteer          |3        |
+|17799|jasmine          |3        |
+|17800|jeopardy         |3        |
+|17801|jephthah         |3        |
+|17802|jerez            |3        |
+|17803|jerkins          |3        |
+|17804|jeronima         |3        |
+|17805|jewellery        |3        |
+|17806|jewish           |3        |
+|17807|jiggered         |3        |
+|17808|jineta           |3        |
+|17809|jingling         |3        |
+|17810|jocose           |3        |
+|17811|jorge            |3        |
+|17812|journeying       |3        |
+|17813|joyless          |3        |
+|17814|juggler          |3        |
+|17815|jugs             |3        |
+|17816|jule             |3        |
+|17817|jumbled          |3        |
+|17818|justicer         |3        |
+|17819|justifying       |3        |
+|17820|jutting          |3        |
+|17821|keech            |3        |
+|17822|kentish          |3        |
+|17823|kerchief         |3        |
+|17824|kernel           |3        |
+|17825|kersey           |3        |
+|17826|kichaka          |3        |
+|17827|killer           |3        |
+|17828|kimbolton        |3        |
+|17829|kine             |3        |
+|17830|kinesmen         |3        |
+|17831|kinswoman        |3        |
+|17832|kirkyard         |3        |
+|17833|kitten           |3        |
+|17834|kneading         |3        |
+|17835|knog             |3        |
+|17836|knowingly        |3        |
+|17837|laborious        |3        |
+|17838|lac              |3        |
+|17839|lachrymose       |3        |
+|17840|lagging          |3        |
+|17841|lair             |3        |
+|17842|laissez          |3        |
+|17843|lameness         |3        |
+|17844|lammas           |3        |
+|17845|landmarks        |3        |
+|17846|langage          |3        |
+|17847|languishing      |3        |
+|17848|languishment     |3        |
+|17849|lapice           |3        |
+|17850|lapsed           |3        |
+|17851|larch            |3        |
+|17852|latharuth        |3        |
+|17853|lauded           |3        |
+|17854|laura            |3        |
+|17855|layer            |3        |
+|17856|lazar            |3        |
+|17857|leafy            |3        |
+|17858|leagued          |3        |
+|17859|leak             |3        |
+|17860|leaky            |3        |
+|17861|learnedly        |3        |
+|17862|leas             |3        |
+|17863|leash            |3        |
+|17864|leeches          |3        |
+|17865|leeds            |3        |
+|17866|legacies         |3        |
+|17867|legible          |3        |
+|17868|leicester        |3        |
+|17869|leisures         |3        |
+|17870|lena             |3        |
+|17871|lengthen         |3        |
+|17872|lengthens        |3        |
+|17873|leniently        |3        |
+|17874|lenten           |3        |
+|17875|leonati          |3        |
+|17876|leopard          |3        |
+|17877|lesse            |3        |
+|17878|lessening        |3        |
+|17879|levies           |3        |
+|17880|levying          |3        |
+|17881|lexicon          |3        |
+|17882|libels           |3        |
+|17883|libraries        |3        |
+|17884|libya            |3        |
+|17885|licking          |3        |
+|17886|lictors          |3        |
+|17887|liii             |3        |
+|17888|likeliest        |3        |
+|17889|likest           |3        |
+|17890|limed            |3        |
+|17891|limes            |3        |
+|17892|limped           |3        |
+|17893|ling             |3        |
+|17894|lisp             |3        |
+|17895|listed           |3        |
+|17896|listless         |3        |
+|17897|liv              |3        |
+|17898|livelong         |3        |
+|17899|liveth           |3        |
+|17900|llana            |3        |
+|17901|llc              |3        |
+|17902|loads            |3        |
+|17903|loathly          |3        |
+|17904|loathness        |3        |
+|17905|loftiest         |3        |
+|17906|loftiness        |3        |
+|17907|logic            |3        |
+|17908|lombardy         |3        |
+|17909|longings         |3        |
+|17910|lookd            |3        |
+|17911|lookee           |3        |
+|17912|lookers          |3        |
+|17913|lookout          |3        |
+|17914|loop             |3        |
+|17915|loosened         |3        |
+|17916|looses           |3        |
+|17917|loquacity        |3        |
+|17918|losest           |3        |
+|17919|loseth           |3        |
+|17920|louring          |3        |
+|17921|lubber           |3        |
+|17922|luces            |3        |
+|17923|lucianus         |3        |
+|17924|lucina           |3        |
+|17925|lucretius        |3        |
+|17926|ludlow           |3        |
+|17927|lumber           |3        |
+|17928|lunatics         |3        |
+|17929|lurked           |3        |
+|17930|lustier          |3        |
+|17931|lustrous         |3        |
+|17932|lutes            |3        |
+|17933|luxuries         |3        |
+|17934|lv               |3        |
+|17935|lvi              |3        |
+|17936|lvii             |3        |
+|17937|lviii            |3        |
+|17938|ly               |3        |
+|17939|lyes             |3        |
+|17940|machiavel        |3        |
+|17941|machinations     |3        |
+|17942|madded           |3        |
+|17943|maddened         |3        |
+|17944|maddening        |3        |
+|17945|madnes           |3        |
+|17946|magazine         |3        |
+|17947|magisterial      |3        |
+|17948|magnificently    |3        |
+|17949|magnified        |3        |
+|17950|magnifying       |3        |
+|17951|maguncia         |3        |
+|17952|maharashtra      |3        |
+|17953|maidenheads      |3        |
+|17954|maidenhood       |3        |
+|17955|maidenly         |3        |
+|17956|mailing          |3        |
+|17957|maimed           |3        |
+|17958|malcontents      |3        |
+|17959|maliciously      |3        |
+|17960|mall             |3        |
+|17961|mambrino         |3        |
+|17962|manacled         |3        |
+|17963|managers         |3        |
+|17964|manfully         |3        |
+|17965|mangle           |3        |
+|17966|mania            |3        |
+|17967|manifests        |3        |
+|17968|mannish          |3        |
+|17969|manors           |3        |
+|17970|manuel           |3        |
+|17971|maravedi         |3        |
+|17972|marine           |3        |
+|17973|marlborough      |3        |
+|17974|marsis           |3        |
+|17975|martyrs          |3        |
+|17976|marvelling       |3        |
+|17977|masques          |3        |
+|17978|masterpiece      |3        |
+|17979|mastership       |3        |
+|17980|mater            |3        |
+|17981|maternal         |3        |
+|17982|mathematical     |3        |
+|17983|matrimonial      |3        |
+|17984|maturity         |3        |
+|17985|maugre           |3        |
+|17986|mazes            |3        |
+|17987|mealy            |3        |
+|17988|meats            |3        |
+|17989|mechanic         |3        |
+|17990|meddler          |3        |
+|17991|medea            |3        |
+|17992|medicinal        |3        |
+|17993|meditate         |3        |
+|17994|medlars          |3        |
+|17995|medoro           |3        |
+|17996|meekly           |3        |
+|17997|mellencholly     |3        |
+|17998|menaces          |3        |
+|17999|mends            |3        |
+|18000|mentally         |3        |
+|18001|merchantability  |3        |
+|18002|merriest         |3        |
+|18003|metals           |3        |
+|18004|metaphysics      |3        |
+|18005|metre            |3        |
+|18006|mexico           |3        |
+|18007|mihi             |3        |
+|18008|mildew           |3        |
+|18009|mildewed         |3        |
+|18010|millstones       |3        |
+|18011|mimic            |3        |
+|18012|mineral          |3        |
+|18013|minerva          |3        |
+|18014|mingo            |3        |
+|18015|minos            |3        |
+|18016|minstrelsy       |3        |
+|18017|minuteness       |3        |
+|18018|minx             |3        |
+|18019|miry             |3        |
+|18020|misconception    |3        |
+|18021|misdeed          |3        |
+|18022|misenum          |3        |
+|18023|misers           |3        |
+|18024|missionary       |3        |
+|18025|missive          |3        |
+|18026|misused          |3        |
+|18027|mitch            |3        |
+|18028|mitigation       |3        |
+|18029|mitres           |3        |
+|18030|mockeries        |3        |
+|18031|molehill         |3        |
+|18032|molest           |3        |
+|18033|molten           |3        |
+|18034|monger           |3        |
+|18035|monosyllable     |3        |
+|18036|montemayor       |3        |
+|18037|moodily          |3        |
+|18038|morgante         |3        |
+|18039|morsels          |3        |
+|18040|mortifications   |3        |
+|18041|mosen            |3        |
+|18042|motioning        |3        |
+|18043|mottoes          |3        |
+|18044|mountaineers     |3        |
+|18045|mountainous      |3        |
+|18046|mountebank       |3        |
+|18047|mountebanks      |3        |
+|18048|movables         |3        |
+|18049|moveable         |3        |
+|18050|mover            |3        |
+|18051|mrigi            |3        |
+|18052|muddied          |3        |
+|18053|muffin           |3        |
+|18054|muffle           |3        |
+|18055|multiply         |3        |
+|18056|murcher          |3        |
+|18057|murky            |3        |
+|18058|murrain          |3        |
+|18059|murray           |3        |
+|18060|murtherous       |3        |
+|18061|muscular         |3        |
+|18062|mustang          |3        |
+|18063|mustered         |3        |
+|18064|mustering        |3        |
+|18065|myrabolans       |3        |
+|18066|nab              |3        |
+|18067|nandi            |3        |
+|18068|nape             |3        |
+|18069|napping          |3        |
+|18070|narbon           |3        |
+|18071|naturalised      |3        |
+|18072|nave             |3        |
+|18073|nayikas          |3        |
+|18074|neare            |3        |
+|18075|neared           |3        |
+|18076|neatness         |3        |
+|18077|nec              |3        |
+|18078|needing          |3        |
+|18079|neglection       |3        |
+|18080|negotiations     |3        |
+|18081|nel              |3        |
+|18082|nemean           |3        |
+|18083|nesciunt         |3        |
+|18084|neutral          |3        |
+|18085|nevils           |3        |
+|18086|newt             |3        |
+|18087|nicanor          |3        |
+|18088|nickname         |3        |
+|18089|nightwork        |3        |
+|18090|nimbler          |3        |
+|18091|nipple           |3        |
+|18092|nips             |3        |
+|18093|nob              |3        |
+|18094|nominate         |3        |
+|18095|nominated        |3        |
+|18096|nomination       |3        |
+|18097|nonce            |3        |
+|18098|noodles          |3        |
+|18099|nooks            |3        |
+|18100|noose            |3        |
+|18101|normans          |3        |
+|18102|northampton      |3        |
+|18103|norweyan         |3        |
+|18104|nosegays         |3        |
+|18105|notify           |3        |
+|18106|notoriously      |3        |
+|18107|nouns            |3        |
+|18108|nous             |3        |
+|18109|numb             |3        |
+|18110|numbered         |3        |
+|18111|nutmeg           |3        |
+|18112|nutshell         |3        |
+|18113|obduracy         |3        |
+|18114|objecting        |3        |
+|18115|objurgations     |3        |
+|18116|oblations        |3        |
+|18117|oblivious        |3        |
+|18118|observable       |3        |
+|18119|observances      |3        |
+|18120|obstructions     |3        |
+|18121|occupying        |3        |
+|18122|occurring        |3        |
+|18123|oceans           |3        |
+|18124|ode              |3        |
+|18125|odorous          |3        |
+|18126|offal            |3        |
+|18127|officials        |3        |
+|18128|ohio             |3        |
+|18129|olden            |3        |
+|18130|ollas            |3        |
+|18131|omened           |3        |
+|18132|onnecessary      |3        |
+|18133|onslaught        |3        |
+|18134|operate          |3        |
+|18135|operations       |3        |
+|18136|oppen            |3        |
+|18137|oracles          |3        |
+|18138|oranges          |3        |
+|18139|orbed            |3        |
+|18140|organization     |3        |
+|18141|orpheus          |3        |
+|18142|osiers           |3        |
+|18143|ostensible       |3        |
+|18144|ostent           |3        |
+|18145|otter            |3        |
+|18146|ottomites        |3        |
+|18147|ounces           |3        |
+|18148|outlives         |3        |
+|18149|outruns          |3        |
+|18150|outset           |3        |
+|18151|outstrip         |3        |
+|18152|outworn          |3        |
+|18153|overblown        |3        |
+|18154|overcast         |3        |
+|18155|overnight        |3        |
+|18156|overplus         |3        |
+|18157|overspread       |3        |
+|18158|overthrew        |3        |
+|18159|overwhelm        |3        |
+|18160|owgh             |3        |
+|18161|oxlips           |3        |
+|18162|oysters          |3        |
+|18163|pachivedas       |3        |
+|18164|pah              |3        |
+|18165|painstaking      |3        |
+|18166|paintings        |3        |
+|18167|paints           |3        |
+|18168|paire            |3        |
+|18169|palpably         |3        |
+|18170|palsy            |3        |
+|18171|paly             |3        |
+|18172|pancakes         |3        |
+|18173|pandafilando     |3        |
+|18174|pane             |3        |
+|18175|panic            |3        |
+|18176|panoply          |3        |
+|18177|pant             |3        |
+|18178|pantheon         |3        |
+|18179|panther          |3        |
+|18180|pantler          |3        |
+|18181|paphos           |3        |
+|18182|paradox          |3        |
+|18183|paramount        |3        |
+|18184|parasite         |3        |
+|18185|parasites        |3        |
+|18186|pardoning        |3        |
+|18187|paring           |3        |
+|18188|parishioners     |3        |
+|18189|parks            |3        |
+|18190|parlours         |3        |
+|18191|parlous          |3        |
+|18192|partaker         |3        |
+|18193|participate      |3        |
+|18194|passado          |3        |
+|18195|passport         |3        |
+|18196|pastimes         |3        |
+|18197|pastor           |3        |
+|18198|pastorals        |3        |
+|18199|pastures         |3        |
+|18200|pataliputra      |3        |
+|18201|patents          |3        |
+|18202|paternosters     |3        |
+|18203|pathetical       |3        |
+|18204|pathetically     |3        |
+|18205|patna            |3        |
+|18206|patronize        |3        |
+|18207|patted           |3        |
+|18208|pea              |3        |
+|18209|peacocks         |3        |
+|18210|peak             |3        |
+|18211|peaks            |3        |
+|18212|pearly           |3        |
+|18213|peeces           |3        |
+|18214|peel             |3        |
+|18215|peeps            |3        |
+|18216|peevishly        |3        |
+|18217|pelf             |3        |
+|18218|pelican          |3        |
+|18219|pellets          |3        |
+|18220|penetrable       |3        |
+|18221|penetrates       |3        |
+|18222|penitently       |3        |
+|18223|pentecost        |3        |
+|18224|penthouse        |3        |
+|18225|peoples          |3        |
+|18226|perceave         |3        |
+|18227|perched          |3        |
+|18228|perdu            |3        |
+|18229|perdy            |3        |
+|18230|performer        |3        |
+|18231|perfuming        |3        |
+|18232|perlerines       |3        |
+|18233|permanently      |3        |
+|18234|perpetrated      |3        |
+|18235|perrys           |3        |
+|18236|persecuting      |3        |
+|18237|persecutions     |3        |
+|18238|persecutors      |3        |
+|18239|perseus          |3        |
+|18240|persia           |3        |
+|18241|persistence      |3        |
+|18242|persistent       |3        |
+|18243|persisting       |3        |
+|18244|persists         |3        |
+|18245|pertinacity      |3        |
+|18246|pertly           |3        |
+|18247|perusing         |3        |
+|18248|perverted        |3        |
+|18249|petulantly       |3        |
+|18250|pharamond        |3        |
+|18251|phases           |3        |
+|18252|pheasant         |3        |
+|18253|phenomenon       |3        |
+|18254|phillips         |3        |
+|18255|philosophic      |3        |
+|18256|philoten         |3        |
+|18257|phoebe           |3        |
+|18258|phraseology      |3        |
+|18259|phrygia          |3        |
+|18260|phut             |3        |
+|18261|physically       |3        |
+|18262|pia              |3        |
+|18263|picardy          |3        |
+|18264|pieced           |3        |
+|18265|pight            |3        |
+|18266|pilfering        |3        |
+|18267|pinnace          |3        |
+|18268|piped            |3        |
+|18269|piping           |3        |
+|18270|pitfall          |3        |
+|18271|placidly         |3        |
+|18272|plackets         |3        |
+|18273|plaint           |3        |
+|18274|plaintiff        |3        |
+|18275|plaited          |3        |
+|18276|planks           |3        |
+|18277|plashy           |3        |
+|18278|plastering       |3        |
+|18279|platonic         |3        |
+|18280|plausible        |3        |
+|18281|plausive         |3        |
+|18282|playfellows      |3        |
+|18283|pledging         |3        |
+|18284|plodding         |3        |
+|18285|plotting         |3        |
+|18286|ploughboy        |3        |
+|18287|ploughed         |3        |
+|18288|plunges          |3        |
+|18289|poetic           |3        |
+|18290|poised           |3        |
+|18291|poising          |3        |
+|18292|poisoner         |3        |
+|18293|poisoning        |3        |
+|18294|pollards         |3        |
+|18295|pollution        |3        |
+|18296|polo             |3        |
+|18297|poniards         |3        |
+|18298|ponies           |3        |
+|18299|porn             |3        |
+|18300|portends         |3        |
+|18301|porters          |3        |
+|18302|posies           |3        |
+|18303|posset           |3        |
+|18304|postboy          |3        |
+|18305|posterns         |3        |
+|18306|posy             |3        |
+|18307|potatoes         |3        |
+|18308|potentates       |3        |
+|18309|potential        |3        |
+|18310|poultice         |3        |
+|18311|pounding         |3        |
+|18312|powders          |3        |
+|18313|powered          |3        |
+|18314|prains           |3        |
+|18315|prancing         |3        |
+|18316|prattling        |3        |
+|18317|preachers        |3        |
+|18318|preaches         |3        |
+|18319|precept          |3        |
+|18320|precipitation    |3        |
+|18321|predict          |3        |
+|18322|predominance     |3        |
+|18323|preferring       |3        |
+|18324|prefers          |3        |
+|18325|prejudicial      |3        |
+|18326|premature        |3        |
+|18327|premium          |3        |
+|18328|prentices        |3        |
+|18329|prepossessing    |3        |
+|18330|prepossession    |3        |
+|18331|presentable      |3        |
+|18332|presiding        |3        |
+|18333|prester          |3        |
+|18334|pretences        |3        |
+|18335|priami           |3        |
+|18336|primary          |3        |
+|18337|prodding         |3        |
+|18338|prodigality      |3        |
+|18339|profanation      |3        |
+|18340|profile          |3        |
+|18341|profitless       |3        |
+|18342|projected        |3        |
+|18343|prolix           |3        |
+|18344|prolixity        |3        |
+|18345|prologues        |3        |
+|18346|prolonging       |3        |
+|18347|promethean       |3        |
+|18348|promiseth        |3        |
+|18349|promotions       |3        |
+|18350|prompting        |3        |
+|18351|pronouns         |3        |
+|18352|propertied       |3        |
+|18353|prophetically    |3        |
+|18354|propitiate       |3        |
+|18355|propositions     |3        |
+|18356|proscription     |3        |
+|18357|protectors       |3        |
+|18358|protectorship    |3        |
+|18359|protract         |3        |
+|18360|provides         |3        |
+|18361|prowling         |3        |
+|18362|proximity        |3        |
+|18363|prune            |3        |
+|18364|publication      |3        |
+|18365|publishing       |3        |
+|18366|puddings         |3        |
+|18367|puerto           |3        |
+|18368|puffs            |3        |
+|18369|pullet           |3        |
+|18370|pummelling       |3        |
+|18371|pumps            |3        |
+|18372|punctuality      |3        |
+|18373|punctuation      |3        |
+|18374|pundits          |3        |
+|18375|pup              |3        |
+|18376|purged           |3        |
+|18377|purging          |3        |
+|18378|purposing        |3        |
+|18379|pythagoras       |3        |
+|18380|quagmire         |3        |
+|18381|qualification    |3        |
+|18382|quam             |3        |
+|18383|quarts           |3        |
+|18384|queasy           |3        |
+|18385|queller          |3        |
+|18386|quenching        |3        |
+|18387|querist          |3        |
+|18388|questioner       |3        |
+|18389|quieted          |3        |
+|18390|quills           |3        |
+|18391|quilt            |3        |
+|18392|quintessence     |3        |
+|18393|quotes           |3        |
+|18394|races            |3        |
+|18395|rachel           |3        |
+|18396|radish           |3        |
+|18397|ragozine         |3        |
+|18398|railed           |3        |
+|18399|railings         |3        |
+|18400|rainbows         |3        |
+|18401|raking           |3        |
+|18402|rallied          |3        |
+|18403|ralph            |3        |
+|18404|ramping          |3        |
+|18405|ranker           |3        |
+|18406|ransacked        |3        |
+|18407|rapes            |3        |
+|18408|rapiers          |3        |
+|18409|rapine           |3        |
+|18410|raps             |3        |
+|18411|rareness         |3        |
+|18412|rascalities      |3        |
+|18413|ratsbane         |3        |
+|18414|ravening         |3        |
+|18415|ravenspurg       |3        |
+|18416|raves            |3        |
+|18417|ravin            |3        |
+|18418|ravines          |3        |
+|18419|rawness          |3        |
+|18420|reaction         |3        |
+|18421|reade            |3        |
+|18422|reaped           |3        |
+|18423|reappear         |3        |
+|18424|reappearance     |3        |
+|18425|reappearing      |3        |
+|18426|reassuring       |3        |
+|18427|receptacle       |3        |
+|18428|reclining        |3        |
+|18429|recoiling        |3        |
+|18430|recommends       |3        |
+|18431|recording        |3        |
+|18432|recounting       |3        |
+|18433|recur            |3        |
+|18434|recurred         |3        |
+|18435|recurrence       |3        |
+|18436|recurring        |3        |
+|18437|reddish          |3        |
+|18438|redeemed         |3        |
+|18439|redeems          |3        |
+|18440|redressed        |3        |
+|18441|reechy           |3        |
+|18442|refers           |3        |
+|18443|refinements      |3        |
+|18444|refreshments     |3        |
+|18445|refuted          |3        |
+|18446|regia            |3        |
+|18447|regularity       |3        |
+|18448|regulate         |3        |
+|18449|reigning         |3        |
+|18450|reining          |3        |
+|18451|reinstate        |3        |
+|18452|reiterating      |3        |
+|18453|rejection        |3        |
+|18454|rejoices         |3        |
+|18455|rejoin           |3        |
+|18456|relented         |3        |
+|18457|reliance         |3        |
+|18458|relieves         |3        |
+|18459|relinquish       |3        |
+|18460|remainders       |3        |
+|18461|remaineth        |3        |
+|18462|rememberest      |3        |
+|18463|remissness       |3        |
+|18464|remonstrances    |3        |
+|18465|rencontre        |3        |
+|18466|renounced        |3        |
+|18467|repaying         |3        |
+|18468|repays           |3        |
+|18469|repeals          |3        |
+|18470|repine           |3        |
+|18471|repletion        |3        |
+|18472|reporting        |3        |
+|18473|representative   |3        |
+|18474|repressing       |3        |
+|18475|reproaching      |3        |
+|18476|reproofs         |3        |
+|18477|republic         |3        |
+|18478|requisites       |3        |
+|18479|rescues          |3        |
+|18480|rescuing         |3        |
+|18481|researches       |3        |
+|18482|resolves         |3        |
+|18483|resounding       |3        |
+|18484|resounds         |3        |
+|18485|respectability   |3        |
+|18486|respectably      |3        |
+|18487|respectively     |3        |
+|18488|respond          |3        |
+|18489|responsive       |3        |
+|18490|resteth          |3        |
+|18491|restlessly       |3        |
+|18492|restrains        |3        |
+|18493|restricted       |3        |
+|18494|resty            |3        |
+|18495|retainers        |3        |
+|18496|retentio         |3        |
+|18497|reticence        |3        |
+|18498|reticent         |3        |
+|18499|retorts          |3        |
+|18500|retrace          |3        |
+|18501|retribution      |3        |
+|18502|returnest        |3        |
+|18503|rheims           |3        |
+|18504|riband           |3        |
+|18505|ribbed           |3        |
+|18506|richardson       |3        |
+|18507|riddance         |3        |
+|18508|riddling         |3        |
+|18509|rift             |3        |
+|18510|rig              |3        |
+|18511|rigging          |3        |
+|18512|righteousness    |3        |
+|18513|rigorous         |3        |
+|18514|rinaldo          |3        |
+|18515|ripen            |3        |
+|18516|ripeness         |3        |
+|18517|ripens           |3        |
+|18518|riper            |3        |
+|18519|risking          |3        |
+|18520|rivalry          |3        |
+|18521|robles           |3        |
+|18522|roca             |3        |
+|18523|rochester        |3        |
+|18524|roi              |3        |
+|18525|rooks            |3        |
+|18526|rottenness       |3        |
+|18527|rove             |3        |
+|18528|roy              |3        |
+|18529|ruby             |3        |
+|18530|ruder            |3        |
+|18531|ruffs            |3        |
+|18532|ruinate          |3        |
+|18533|ruine            |3        |
+|18534|rumple           |3        |
+|18535|runagate         |3        |
+|18536|rural            |3        |
+|18537|russet           |3        |
+|18538|russia           |3        |
+|18539|ruthful          |3        |
+|18540|rye              |3        |
+|18541|sacripante       |3        |
+|18542|saddler          |3        |
+|18543|sagittary        |3        |
+|18544|saies            |3        |
+|18545|sala             |3        |
+|18546|salaams          |3        |
+|18547|salamancan       |3        |
+|18548|salamander       |3        |
+|18549|sallets          |3        |
+|18550|sallowness       |3        |
+|18551|sanctimonious    |3        |
+|18552|sanctimony       |3        |
+|18553|sanguinary       |3        |
+|18554|sansuena         |3        |
+|18555|sapient          |3        |
+|18556|sapless          |3        |
+|18557|sapling          |3        |
+|18558|sarcastic        |3        |
+|18559|sardonically     |3        |
+|18560|sarra            |3        |
+|18561|satires          |3        |
+|18562|saturated        |3        |
+|18563|saturdays        |3        |
+|18564|satyr            |3        |
+|18565|satyrs           |3        |
+|18566|saucepan         |3        |
+|18567|saucers          |3        |
+|18568|sauces           |3        |
+|18569|saunder          |3        |
+|18570|savageness       |3        |
+|18571|savory           |3        |
+|18572|scaling          |3        |
+|18573|scambling        |3        |
+|18574|scapes           |3        |
+|18575|scatters         |3        |
+|18576|scents           |3        |
+|18577|schooling        |3        |
+|18578|schoolmasters    |3        |
+|18579|scoffer          |3        |
+|18580|scoffs           |3        |
+|18581|sconces          |3        |
+|18582|scone            |3        |
+|18583|scorch           |3        |
+|18584|scorne           |3        |
+|18585|scowling         |3        |
+|18586|scrawled         |3        |
+|18587|screws           |3        |
+|18588|scrip            |3        |
+|18589|scrubbed         |3        |
+|18590|scurrility       |3        |
+|18591|scythian         |3        |
+|18592|seacoal          |3        |
+|18593|seale            |3        |
+|18594|seaman           |3        |
+|18595|seaport          |3        |
+|18596|seared           |3        |
+|18597|seashore         |3        |
+|18598|seasonably       |3        |
+|18599|seasoning        |3        |
+|18600|secresy          |3        |
+|18601|sedition         |3        |
+|18602|seel             |3        |
+|18603|seguidillas      |3        |
+|18604|sellers          |3        |
+|18605|semblances       |3        |
+|18606|semiramis        |3        |
+|18607|senis            |3        |
+|18608|sensational      |3        |
+|18609|sequestration    |3        |
+|18610|seriousness      |3        |
+|18611|serle            |3        |
+|18612|sesamum          |3        |
+|18613|sessa            |3        |
+|18614|severall         |3        |
+|18615|severals         |3        |
+|18616|severed          |3        |
+|18617|sewer            |3        |
+|18618|shaddow          |3        |
+|18619|shadowing        |3        |
+|18620|shag             |3        |
+|18621|shallows         |3        |
+|18622|shaming          |3        |
+|18623|sharpers         |3        |
+|18624|shatter          |3        |
+|18625|sheathing        |3        |
+|18626|sheepskin        |3        |
+|18627|shelters         |3        |
+|18628|shershel         |3        |
+|18629|shielded         |3        |
+|18630|shipmaster       |3        |
+|18631|shoeing          |3        |
+|18632|shoon            |3        |
+|18633|shooter          |3        |
+|18634|shortens         |3        |
+|18635|shortsighted     |3        |
+|18636|shots            |3        |
+|18637|shotten          |3        |
+|18638|shouldering      |3        |
+|18639|showt            |3        |
+|18640|shrivelled       |3        |
+|18641|shrouds          |3        |
+|18642|shrub            |3        |
+|18643|shudders         |3        |
+|18644|shvadaushtra     |3        |
+|18645|sicyon           |3        |
+|18646|sigeia           |3        |
+|18647|sigismunda       |3        |
+|18648|signes           |3        |
+|18649|significance     |3        |
+|18650|signifying       |3        |
+|18651|signiors         |3        |
+|18652|signories        |3        |
+|18653|silliness        |3        |
+|18654|silva            |3        |
+|18655|simois           |3        |
+|18656|simplest         |3        |
+|18657|simpletons       |3        |
+|18658|simplicities     |3        |
+|18659|singed           |3        |
+|18660|singes           |3        |
+|18661|singleness       |3        |
+|18662|singularity      |3        |
+|18663|siren            |3        |
+|18664|sitter           |3        |
+|18665|situate          |3        |
+|18666|sizes            |3        |
+|18667|sketched         |3        |
+|18668|skills           |3        |
+|18669|skipped          |3        |
+|18670|slackened        |3        |
+|18671|slandered        |3        |
+|18672|slashed          |3        |
+|18673|sleeplessness    |3        |
+|18674|sleight          |3        |
+|18675|slid             |3        |
+|18676|sliding          |3        |
+|18677|slighting        |3        |
+|18678|slightingly      |3        |
+|18679|slights          |3        |
+|18680|slings           |3        |
+|18681|slink            |3        |
+|18682|sliver           |3        |
+|18683|slug             |3        |
+|18684|sluices          |3        |
+|18685|slyly            |3        |
+|18686|smarting         |3        |
+|18687|smashing         |3        |
+|18688|smite            |3        |
+|18689|smiting          |3        |
+|18690|smoother         |3        |
+|18691|smothering       |3        |
+|18692|smug             |3        |
+|18693|snapped          |3        |
+|18694|snappishly       |3        |
+|18695|sneers           |3        |
+|18696|sneeze           |3        |
+|18697|snip             |3        |
+|18698|snivelling       |3        |
+|18699|snore            |3        |
+|18700|snoring          |3        |
+|18701|snowed           |3        |
+|18702|snowing          |3        |
+|18703|snows            |3        |
+|18704|snowy            |3        |
+|18705|snub             |3        |
+|18706|snuffers         |3        |
+|18707|soaking          |3        |
+|18708|sobriety         |3        |
+|18709|sobrino          |3        |
+|18710|socinianism      |3        |
+|18711|socks            |3        |
+|18712|solicitor        |3        |
+|18713|solicits         |3        |
+|18714|soliloquised     |3        |
+|18715|solution         |3        |
+|18716|somewheres       |3        |
+|18717|sont             |3        |
+|18718|sophy            |3        |
+|18719|sops             |3        |
+|18720|sorcerer         |3        |
+|18721|sorcerers        |3        |
+|18722|sorel            |3        |
+|18723|sorrier          |3        |
+|18724|soundness        |3        |
+|18725|southward        |3        |
+|18726|sowing           |3        |
+|18727|sparta           |3        |
+|18728|spartan          |3        |
+|18729|spasm            |3        |
+|18730|speakes          |3        |
+|18731|speaketh         |3        |
+|18732|speck            |3        |
+|18733|speckled         |3        |
+|18734|spectator        |3        |
+|18735|speculative      |3        |
+|18736|speeded          |3        |
+|18737|speediest        |3        |
+|18738|spherical        |3        |
+|18739|spital           |3        |
+|18740|spites           |3        |
+|18741|spitted          |3        |
+|18742|splashing        |3        |
+|18743|spleens          |3        |
+|18744|splinters        |3        |
+|18745|splits           |3        |
+|18746|spokes           |3        |
+|18747|spokesman        |3        |
+|18748|spotty           |3        |
+|18749|spouts           |3        |
+|18750|spray            |3        |
+|18751|sprays           |3        |
+|18752|spreads          |3        |
+|18753|sprout           |3        |
+|18754|spying           |3        |
+|18755|squash           |3        |
+|18756|squeezing        |3        |
+|18757|stagger          |3        |
+|18758|staggering       |3        |
+|18759|stalking         |3        |
+|18760|stalled          |3        |
+|18761|stammer          |3        |
+|18762|standeth         |3        |
+|18763|stanhill         |3        |
+|18764|stanza           |3        |
+|18765|starlight        |3        |
+|18766|starred          |3        |
+|18767|steadfastly      |3        |
+|18768|steadier         |3        |
+|18769|steered          |3        |
+|18770|stept            |3        |
+|18771|sterility        |3        |
+|18772|sterne           |3        |
+|18773|sterner          |3        |
+|18774|steterat         |3        |
+|18775|stewed           |3        |
+|18776|stifling         |3        |
+|18777|stimulate        |3        |
+|18778|stipulate        |3        |
+|18779|stipulated       |3        |
+|18780|stocked          |3        |
+|18781|stolidity        |3        |
+|18782|storming         |3        |
+|18783|stoup            |3        |
+|18784|stoutest         |3        |
+|18785|stove            |3        |
+|18786|stragglers       |3        |
+|18787|stranded         |3        |
+|18788|strangling       |3        |
+|18789|strawberry       |3        |
+|18790|strays           |3        |
+|18791|streame          |3        |
+|18792|strengthening    |3        |
+|18793|strenuous        |3        |
+|18794|strewed          |3        |
+|18795|striding         |3        |
+|18796|strifes          |3        |
+|18797|strikingly       |3        |
+|18798|strutting        |3        |
+|18799|stubble          |3        |
+|18800|stubbornly       |3        |
+|18801|stubbornness     |3        |
+|18802|stunted          |3        |
+|18803|stupidities      |3        |
+|18804|submissively     |3        |
+|18805|suborned         |3        |
+|18806|subscribes       |3        |
+|18807|subside          |3        |
+|18808|substituted      |3        |
+|18809|substitution     |3        |
+|18810|subterfuge       |3        |
+|18811|successes        |3        |
+|18812|succouring       |3        |
+|18813|suffices         |3        |
+|18814|suicide          |3        |
+|18815|suing            |3        |
+|18816|sullenly         |3        |
+|18817|summits          |3        |
+|18818|summoning        |3        |
+|18819|sumptuously      |3        |
+|18820|sunburnt         |3        |
+|18821|sunshades        |3        |
+|18822|super            |3        |
+|18823|superficial      |3        |
+|18824|superiors        |3        |
+|18825|suppliants       |3        |
+|18826|surcoat          |3        |
+|18827|sureties         |3        |
+|18828|surmount         |3        |
+|18829|surmounted       |3        |
+|18830|surplice         |3        |
+|18831|surplus          |3        |
+|18832|susan            |3        |
+|18833|suspension       |3        |
+|18834|sustenance       |3        |
+|18835|sut              |3        |
+|18836|swaddling        |3        |
+|18837|swaggerers       |3        |
+|18838|swains           |3        |
+|18839|swarming         |3        |
+|18840|swathing         |3        |
+|18841|swayed           |3        |
+|18842|swearers         |3        |
+|18843|sweeps           |3        |
+|18844|swerving         |3        |
+|18845|swims            |3        |
+|18846|swindlers        |3        |
+|18847|swindling        |3        |
+|18848|swinge           |3        |
+|18849|swoln            |3        |
+|18850|sycamore         |3        |
+|18851|symmetrical      |3        |
+|18852|sympathised      |3        |
+|18853|systematic       |3        |
+|18854|systems          |3        |
+|18855|tacit            |3        |
+|18856|taffety          |3        |
+|18857|tag              |3        |
+|18858|tagarin          |3        |
+|18859|taile            |3        |
+|18860|tainting         |3        |
+|18861|taker            |3        |
+|18862|tam              |3        |
+|18863|tamely           |3        |
+|18864|tameness         |3        |
+|18865|tang             |3        |
+|18866|tanks            |3        |
+|18867|targets          |3        |
+|18868|tarnished        |3        |
+|18869|tarquinius       |3        |
+|18870|tarquins         |3        |
+|18871|tarre            |3        |
+|18872|tartly           |3        |
+|18873|teacheth         |3        |
+|18874|teacups          |3        |
+|18875|tediously        |3        |
+|18876|teem             |3        |
+|18877|telegraph        |3        |
+|18878|telegraphed      |3        |
+|18879|tellers          |3        |
+|18880|temporize        |3        |
+|18881|tempter          |3        |
+|18882|tenderer         |3        |
+|18883|tenfold          |3        |
+|18884|tenor            |3        |
+|18885|terrestrial      |3        |
+|18886|tester           |3        |
+|18887|testimonies      |3        |
+|18888|testing          |3        |
+|18889|tetchy           |3        |
+|18890|tetter           |3        |
+|18891|tetuan           |3        |
+|18892|thankes          |3        |
+|18893|thankings        |3        |
+|18894|thanksgiving     |3        |
+|18895|thankye          |3        |
+|18896|theatrical       |3        |
+|18897|thefts           |3        |
+|18898|thenceforward    |3        |
+|18899|theoric          |3        |
+|18900|theories         |3        |
+|18901|ther             |3        |
+|18902|thereunto        |3        |
+|18903|thessaly         |3        |
+|18904|thetis           |3        |
+|18905|thews            |3        |
+|18906|thickening       |3        |
+|18907|thimble          |3        |
+|18908|thinkings        |3        |
+|18909|thinly           |3        |
+|18910|thirdly          |3        |
+|18911|thirteenth       |3        |
+|18912|thistle          |3        |
+|18913|thistles         |3        |
+|18914|tho              |3        |
+|18915|thoughtlessness  |3        |
+|18916|threepence       |3        |
+|18917|throttled        |3        |
+|18918|throttler        |3        |
+|18919|thumbs           |3        |
+|18920|thwack           |3        |
+|18921|thwacks          |3        |
+|18922|thyme            |3        |
+|18923|ticked           |3        |
+|18924|tightened        |3        |
+|18925|tilts            |3        |
+|18926|timidity         |3        |
+|18927|tincture         |3        |
+|18928|tinkers          |3        |
+|18929|tippell          |3        |
+|18930|tips             |3        |
+|18931|tiresomely       |3        |
+|18932|tisick           |3        |
+|18933|tissue           |3        |
+|18934|toady            |3        |
+|18935|tobias           |3        |
+|18936|toll             |3        |
+|18937|tolling          |3        |
+|18938|toned            |3        |
+|18939|toothsome        |3        |
+|18940|topple           |3        |
+|18941|torquay          |3        |
+|18942|torrellas        |3        |
+|18943|tortoise         |3        |
+|18944|torturing        |3        |
+|18945|totter           |3        |
+|18946|tottered         |3        |
+|18947|tours            |3        |
+|18948|towelling        |3        |
+|18949|towered          |3        |
+|18950|towne            |3        |
+|18951|tracts           |3        |
+|18952|tradesman        |3        |
+|18953|tramped          |3        |
+|18954|tranquillised    |3        |
+|18955|transfixed       |3        |
+|18956|transient        |3        |
+|18957|translators      |3        |
+|18958|transpired       |3        |
+|18959|transporting     |3        |
+|18960|transports       |3        |
+|18961|trapobana        |3        |
+|18962|traveler         |3        |
+|18963|travelers        |3        |
+|18964|traytor          |3        |
+|18965|treasonous       |3        |
+|18966|trebizond        |3        |
+|18967|trebles          |3        |
+|18968|tremblest        |3        |
+|18969|tremendously     |3        |
+|18970|tremulous        |3        |
+|18971|tressel          |3        |
+|18972|tricke           |3        |
+|18973|tricked          |3        |
+|18974|tricking         |3        |
+|18975|trident          |3        |
+|18976|trinity          |3        |
+|18977|tripolis         |3        |
+|18978|trips            |3        |
+|18979|triumphed        |3        |
+|18980|trotting         |3        |
+|18981|troughs          |3        |
+|18982|trout            |3        |
+|18983|trowest          |3        |
+|18984|truckle          |3        |
+|18985|trumpeter        |3        |
+|18986|tryall           |3        |
+|18987|tuck             |3        |
+|18988|tun              |3        |
+|18989|tunic            |3        |
+|18990|tuning           |3        |
+|18991|turbans          |3        |
+|18992|turbulent        |3        |
+|18993|turkeys          |3        |
+|18994|turnip           |3        |
+|18995|turret           |3        |
+|18996|tus              |3        |
+|18997|tusks            |3        |
+|18998|tutored          |3        |
+|18999|twaine           |3        |
+|19000|tweene           |3        |
+|19001|twelfth          |3        |
+|19002|twine            |3        |
+|19003|twined           |3        |
+|19004|twinkle          |3        |
+|19005|tye              |3        |
+|19006|ulcerous         |3        |
+|19007|ultimately       |3        |
+|19008|unadvised        |3        |
+|19009|unanimously      |3        |
+|19010|unanswerable     |3        |
+|19011|unanswered       |3        |
+|19012|unarmed          |3        |
+|19013|unaware          |3        |
+|19014|unbated          |3        |
+|19015|unbend           |3        |
+|19016|unbruised        |3        |
+|19017|unburied         |3        |
+|19018|unbuttoning      |3        |
+|19019|uncalled         |3        |
+|19020|unceremoniously  |3        |
+|19021|unchangeable     |3        |
+|19022|unchanging       |3        |
+|19023|uncheerful       |3        |
+|19024|uncleanness      |3        |
+|19025|unconcerned      |3        |
+|19026|unconnected      |3        |
+|19027|unconstrained    |3        |
+|19028|uncontrollable   |3        |
+|19029|uncouple         |3        |
+|19030|uncurrent        |3        |
+|19031|undeceived       |3        |
+|19032|undeniable       |3        |
+|19033|undergoes        |3        |
+|19034|underprop        |3        |
+|19035|undervalue       |3        |
+|19036|underwent        |3        |
+|19037|undeserving      |3        |
+|19038|undesignedly     |3        |
+|19039|undesirable      |3        |
+|19040|undiscerning     |3        |
+|19041|undismayed       |3        |
+|19042|undistinguishable|3        |
+|19043|undivided        |3        |
+|19044|undutiful        |3        |
+|19045|unemployed       |3        |
+|19046|unfix            |3        |
+|19047|unfolds          |3        |
+|19048|ungently         |3        |
+|19049|ungodly          |3        |
+|19050|unhealthy        |3        |
+|19051|unhindered       |3        |
+|19052|unhurt           |3        |
+|19053|unicorn          |3        |
+|19054|unintentional    |3        |
+|19055|unlace           |3        |
+|19056|unlacing         |3        |
+|19057|unlawfully       |3        |
+|19058|unlearned        |3        |
+|19059|unlettered       |3        |
+|19060|unloading        |3        |
+|19061|unmasking        |3        |
+|19062|unmerited        |3        |
+|19063|unnoted          |3        |
+|19064|unobtrusive      |3        |
+|19065|unperceived      |3        |
+|19066|unpersuadable    |3        |
+|19067|unplumed         |3        |
+|19068|unpolished       |3        |
+|19069|unquenchable     |3        |
+|19070|unready          |3        |
+|19071|unreserved       |3        |
+|19072|unreverend       |3        |
+|19073|unreverent       |3        |
+|19074|unsaid           |3        |
+|19075|unsanctified     |3        |
+|19076|unsheathe        |3        |
+|19077|unskilful        |3        |
+|19078|unsociable       |3        |
+|19079|unsounded        |3        |
+|19080|unstable         |3        |
+|19081|unstaid          |3        |
+|19082|unsteady         |3        |
+|19083|unsubstantial    |3        |
+|19084|unswept          |3        |
+|19085|untamed          |3        |
+|19086|untasted         |3        |
+|19087|unthankful       |3        |
+|19088|unthrift         |3        |
+|19089|untutored        |3        |
+|19090|untying          |3        |
+|19091|unwise           |3        |
+|19092|unworthily       |3        |
+|19093|unwounded        |3        |
+|19094|upbraiding       |3        |
+|19095|upbraids         |3        |
+|19096|uppermost        |3        |
+|19097|uproars          |3        |
+|19098|ups              |3        |
+|19099|upsetting        |3        |
+|19100|urchin           |3        |
+|19101|urine            |3        |
+|19102|usance           |3        |
+|19103|ushers           |3        |
+|19104|usurers          |3        |
+|19105|usurpation       |3        |
+|19106|vacantly         |3        |
+|19107|vagabonds        |3        |
+|19108|vainglorious     |3        |
+|19109|valid            |3        |
+|19110|valladolid       |3        |
+|19111|valuation        |3        |
+|19112|valueless        |3        |
+|19113|vaporous         |3        |
+|19114|vapors           |3        |
+|19115|vargas           |3        |
+|19116|variance         |3        |
+|19117|vaunted          |3        |
+|19118|vaunting         |3        |
+|19119|vedas            |3        |
+|19120|vegetables       |3        |
+|19121|vehemency        |3        |
+|19122|velez            |3        |
+|19123|vellido          |3        |
+|19124|velutus          |3        |
+|19125|veneration       |3        |
+|19126|venetians        |3        |
+|19127|vengeful         |3        |
+|19128|vented           |3        |
+|19129|vents            |3        |
+|19130|venuto           |3        |
+|19131|verb             |3        |
+|19132|vermilion        |3        |
+|19133|vermin           |3        |
+|19134|vertue           |3        |
+|19135|vertuous         |3        |
+|19136|vestige          |3        |
+|19137|vestments        |3        |
+|19138|vexatious        |3        |
+|19139|vexes            |3        |
+|19140|victual          |3        |
+|19141|vidushaka        |3        |
+|19142|vigil            |3        |
+|19143|vigils           |3        |
+|19144|viperous         |3        |
+|19145|vipers           |3        |
+|19146|virginal         |3        |
+|19147|visards          |3        |
+|19148|visitations      |3        |
+|19149|vitas            |3        |
+|19150|voce             |3        |
+|19151|volubility       |3        |
+|19152|vomiting         |3        |
+|19153|vomits           |3        |
+|19154|vor              |3        |
+|19155|votes            |3        |
+|19156|vouches          |3        |
+|19157|voulez           |3        |
+|19158|vulcan           |3        |
+|19159|wade             |3        |
+|19160|waded            |3        |
+|19161|wafer            |3        |
+|19162|waggish          |3        |
+|19163|waggoner         |3        |
+|19164|wags             |3        |
+|19165|wails            |3        |
+|19166|wainscot         |3        |
+|19167|walker           |3        |
+|19168|wallis           |3        |
+|19169|walloon          |3        |
+|19170|wane             |3        |
+|19171|wantonly         |3        |
+|19172|warded           |3        |
+|19173|warfare          |3        |
+|19174|warily           |3        |
+|19175|warns            |3        |
+|19176|wassail          |3        |
+|19177|watchfulness     |3        |
+|19178|watchtower       |3        |
+|19179|waver            |3        |
+|19180|wavered          |3        |
+|19181|waxes            |3        |
+|19182|wayside          |3        |
+|19183|waywardness      |3        |
+|19184|weake            |3        |
+|19185|weakening        |3        |
+|19186|weaknesses       |3        |
+|19187|wearers          |3        |
+|19188|wearisomeness    |3        |
+|19189|wedge            |3        |
+|19190|wee              |3        |
+|19191|weeke            |3        |
+|19192|weekly           |3        |
+|19193|weightier        |3        |
+|19194|wend             |3        |
+|19195|whenas           |3        |
+|19196|wheresoever      |3        |
+|19197|whimsical        |3        |
+|19198|whirlwind        |3        |
+|19199|whirlwinds       |3        |
+|19200|whitewash        |3        |
+|19201|whooping         |3        |
+|19202|wickedly         |3        |
+|19203|widen            |3        |
+|19204|wilder           |3        |
+|19205|willoughbys      |3        |
+|19206|wince            |3        |
+|19207|windes           |3        |
+|19208|wines            |3        |
+|19209|winked           |3        |
+|19210|wintry           |3        |
+|19211|wiry             |3        |
+|19212|wisher           |3        |
+|19213|wishful          |3        |
+|19214|wistly           |3        |
+|19215|withstood        |3        |
+|19216|witless          |3        |
+|19217|wolvish          |3        |
+|19218|wombs            |3        |
+|19219|wondrously       |3        |
+|19220|woodbine         |3        |
+|19221|woodhouses       |3        |
+|19222|wooe             |3        |
+|19223|wooes            |3        |
+|19224|workings         |3        |
+|19225|worries          |3        |
+|19226|worshipped       |3        |
+|19227|worshippers      |3        |
+|19228|worsted          |3        |
+|19229|wos              |3        |
+|19230|wots             |3        |
+|19231|wrapping         |3        |
+|19232|wreathe          |3        |
+|19233|wreathed         |3        |
+|19234|writhed          |3        |
+|19235|wroth            |3        |
+|19236|wye              |3        |
+|19237|yce              |3        |
+|19238|yearn            |3        |
+|19239|yearns           |3        |
+|19240|yeomen           |3        |
+|19241|youngling        |3        |
+|19242|younker          |3        |
+|19243|z                |3        |
+|19244|zamora           |3        |
+|19245|zebra            |3        |
+|19246|zion             |3        |
+|19247|abandons         |2        |
+|19248|abase            |2        |
+|19249|abbots           |2        |
+|19250|abbreviated      |2        |
+|19251|abear            |2        |
+|19252|abernuncio       |2        |
+|19253|abet             |2        |
+|19254|abhira           |2        |
+|19255|abhorrent        |2        |
+|19256|abjects          |2        |
+|19257|ablest           |2        |
+|19258|abominably       |2        |
+|19259|abominate        |2        |
+|19260|abomination      |2        |
+|19261|abominations     |2        |
+|19262|abounded         |2        |
+|19263|abounding        |2        |
+|19264|abounds          |2        |
+|19265|abroade          |2        |
+|19266|absented         |2        |
+|19267|absolve          |2        |
+|19268|absolved         |2        |
+|19269|abstracting      |2        |
+|19270|abstracts        |2        |
+|19271|aby              |2        |
+|19272|academes         |2        |
+|19273|academicians     |2        |
+|19274|accession        |2        |
+|19275|accomplices      |2        |
+|19276|accomplishes     |2        |
+|19277|accounting       |2        |
+|19278|accoutrement     |2        |
+|19279|accumulate       |2        |
+|19280|accumulating     |2        |
+|19281|accumulation     |2        |
+|19282|accumulations    |2        |
+|19283|accusativo       |2        |
+|19284|ached            |2        |
+|19285|acolyte          |2        |
+|19286|acquisitions     |2        |
+|19287|actively         |2        |
+|19288|adage            |2        |
+|19289|adamantine       |2        |
+|19290|adapting         |2        |
+|19291|addiction        |2        |
+|19292|addled           |2        |
+|19293|addrest          |2        |
+|19294|adelaide         |2        |
+|19295|adhering         |2        |
+|19296|adiew            |2        |
+|19297|adjoined         |2        |
+|19298|adjourned        |2        |
+|19299|adjuncts         |2        |
+|19300|adjuration       |2        |
+|19301|adjured          |2        |
+|19302|administering    |2        |
+|19303|admiralty        |2        |
++-----+-----------------+---------+
+
+Rare Words
++-----+-----------------+---------+
+|Rank |Word             |Frequency|
++-----+-----------------+---------+
+|34928|tenedos          |1        |
+|34929|tenements        |1        |
+|34930|tenens           |1        |
+|34931|tenner           |1        |
+|34932|tenorio          |1        |
+|34933|tenours          |1        |
+|34934|tense            |1        |
+|34935|tension          |1        |
+|34936|tented           |1        |
+|34937|tenths           |1        |
+|34938|tenures          |1        |
+|34939|ter              |1        |
+|34940|tercel           |1        |
+|34941|terebinth        |1        |
+|34942|terence          |1        |
+|34943|teresaina        |1        |
+|34944|teresona         |1        |
+|34945|terme            |1        |
+|34946|terminate        |1        |
+|34947|terminations     |1        |
+|34948|termless         |1        |
+|34949|termth           |1        |
+|34950|ternateea        |1        |
+|34951|terram           |1        |
+|34952|terraqueous      |1        |
+|34953|terras           |1        |
+|34954|terre            |1        |
+|34955|terriers         |1        |
+|34956|terrifically     |1        |
+|34957|terrour          |1        |
+|34958|tertian          |1        |
+|34959|tertio           |1        |
+|34960|testators        |1        |
+|34961|testifies        |1        |
+|34962|testimonials     |1        |
+|34963|testimonied      |1        |
+|34964|testiness        |1        |
+|34965|testril          |1        |
+|34966|tests            |1        |
+|34967|tethered         |1        |
+|34968|tevil            |1        |
+|34969|textual          |1        |
+|34970|textured         |1        |
+|34971|thaes            |1        |
+|34972|thanckes         |1        |
+|34973|thankee          |1        |
+|34974|thanker          |1        |
+|34975|thanklessness    |1        |
+|34976|thanksgivings    |1        |
+|34977|thassos          |1        |
+|34978|thawd            |1        |
+|34979|thawing          |1        |
+|34980|thaws            |1        |
+|34981|thay             |1        |
+|34982|theagenes        |1        |
+|34983|theame           |1        |
+|34984|theefe           |1        |
+|34985|theerfore        |1        |
+|34986|theirseln        |1        |
+|34987|theise           |1        |
+|34988|theodore         |1        |
+|34989|theoretically    |1        |
+|34990|theorize         |1        |
+|34991|thereabout       |1        |
+|34992|thermodon        |1        |
+|34993|thes             |1        |
+|34994|thesius          |1        |
+|34995|thessalian       |1        |
+|34996|thible           |1        |
+|34997|thicken          |1        |
+|34998|thickheaded      |1        |
+|34999|thickness        |1        |
+|35000|thickskin        |1        |
+|35001|thide            |1        |
+|35002|thimbles         |1        |
+|35003|thimbraeus       |1        |
+|35004|thinker          |1        |
+|35005|thirstier        |1        |
+|35006|thirstiest       |1        |
+|35007|thirsts          |1        |
+|35008|thirtie          |1        |
+|35009|thirtieth        |1        |
+|35010|thisne           |1        |
+|35011|thith            |1        |
+|35012|thitherward      |1        |
+|35013|thoas            |1        |
+|35014|thomases         |1        |
+|35015|thomson          |1        |
+|35016|thornier         |1        |
+|35017|thoroughbred     |1        |
+|35018|thoroughfare     |1        |
+|35019|thoroughfares    |1        |
+|35020|thoroughness     |1        |
+|35021|thoughten        |1        |
+|35022|thoughtlessly    |1        |
+|35023|thowels          |1        |
+|35024|thralled         |1        |
+|35025|thralls          |1        |
+|35026|thrashings       |1        |
+|35027|threashd         |1        |
+|35028|threatenings     |1        |
+|35029|threates         |1        |
+|35030|threatest        |1        |
+|35031|threepile        |1        |
+|35032|threne           |1        |
+|35033|threnos          |1        |
+|35034|thresher         |1        |
+|35035|thresholds       |1        |
+|35036|thrifts          |1        |
+|35037|thrills          |1        |
+|35038|thrivers         |1        |
+|35039|thriveth         |1        |
+|35040|throate          |1        |
+|35041|throbs           |1        |
+|35042|throca           |1        |
+|35043|throe            |1        |
+|35044|thromuldo        |1        |
+|35045|throstles        |1        |
+|35046|throttle         |1        |
+|35047|throttling       |1        |
+|35048|throughfare      |1        |
+|35049|throughfares     |1        |
+|35050|throughont       |1        |
+|35051|throwest         |1        |
+|35052|thrum            |1        |
+|35053|thrumming        |1        |
+|35054|thrusteth        |1        |
+|35055|thud             |1        |
+|35056|thugs            |1        |
+|35057|thumping         |1        |
+|35058|thumps           |1        |
+|35059|thunderstroke    |1        |
+|35060|thuperior        |1        |
+|35061|thuthpithion     |1        |
+|35062|thwartings       |1        |
+|35063|thymus           |1        |
+|35064|thyrsis          |1        |
+|35065|tia              |1        |
+|35066|tib              |1        |
+|35067|tibar            |1        |
+|35068|tiberio          |1        |
+|35069|tibey            |1        |
+|35070|tibullus         |1        |
+|35071|ticket           |1        |
+|35072|ticknor          |1        |
+|35073|ticks            |1        |
+|35074|tiddle           |1        |
+|35075|tidemarks        |1        |
+|35076|tiding           |1        |
+|35077|tiff             |1        |
+|35078|tightest         |1        |
+|35079|tights           |1        |
+|35080|tigress          |1        |
+|35081|tila             |1        |
+|35082|tiles            |1        |
+|35083|tillageland      |1        |
+|35084|tiltyard         |1        |
+|35085|timantes         |1        |
+|35086|timelier         |1        |
+|35087|timerous         |1        |
+|35088|timonel          |1        |
+|35089|timor            |1        |
+|35090|timorously       |1        |
+|35091|timothy          |1        |
+|35092|tinctures        |1        |
+|35093|tingle           |1        |
+|35094|tiniest          |1        |
+|35095|tinkle           |1        |
+|35096|tinkled          |1        |
+|35097|tinsel           |1        |
+|35098|tint             |1        |
+|35099|tinted           |1        |
+|35100|tints            |1        |
+|35101|tiopieyo         |1        |
+|35102|tippling         |1        |
+|35103|tipstaff         |1        |
+|35104|tipsum           |1        |
+|35105|tipsy            |1        |
+|35106|tiptoed          |1        |
+|35107|tiquitoc         |1        |
+|35108|tirantes         |1        |
+|35109|tiresomeness     |1        |
+|35110|tirest           |1        |
+|35111|tirhoot          |1        |
+|35112|tirra            |1        |
+|35113|tirrits          |1        |
+|35114|tissues          |1        |
+|35115|tit              |1        |
+|35116|tithed           |1        |
+|35117|titleless        |1        |
+|35118|titter           |1        |
+|35119|tittered         |1        |
+|35120|tittles          |1        |
+|35121|titular          |1        |
+|35122|tityus           |1        |
+|35123|tizona           |1        |
+|35124|toadstool        |1        |
+|35125|toaze            |1        |
+|35126|tocho            |1        |
+|35127|tod              |1        |
+|35128|toddled          |1        |
+|35129|todpole          |1        |
+|35130|tofana           |1        |
+|35131|toge             |1        |
+|35132|toged            |1        |
+|35133|togither         |1        |
+|35134|toilet           |1        |
+|35135|toilette         |1        |
+|35136|toledan          |1        |
+|35137|tomas            |1        |
+|35138|tomasillo        |1        |
+|35139|tombe            |1        |
+|35140|tombed           |1        |
+|35141|tombless         |1        |
+|35142|tomboy           |1        |
+|35143|tomboys          |1        |
+|35144|tome             |1        |
+|35145|tomillas         |1        |
+|35146|tomyris          |1        |
+|35147|tons             |1        |
+|35148|tonsure          |1        |
+|35149|tooby            |1        |
+|35150|toole            |1        |
+|35151|toothless        |1        |
+|35152|toothpicker      |1        |
+|35153|topazes          |1        |
+|35154|topful           |1        |
+|35155|topgallant       |1        |
+|35156|topless          |1        |
+|35157|topon            |1        |
+|35158|topsail          |1        |
+|35159|topsy            |1        |
+|35160|toraquis         |1        |
+|35161|torchbearer      |1        |
+|35162|torcher          |1        |
+|35163|tordesillesque   |1        |
+|35164|tormenta         |1        |
+|35165|tormente         |1        |
+|35166|tormenteth       |1        |
+|35167|tormentor        |1        |
+|35168|torne            |1        |
+|35169|torpid           |1        |
+|35170|torpor           |1        |
+|35171|torre            |1        |
+|35172|torso            |1        |
+|35173|tortive          |1        |
+|35174|tortolites       |1        |
+|35175|torturers        |1        |
+|35176|torturest        |1        |
+|35177|tosseth          |1        |
+|35178|tostado          |1        |
+|35179|totters          |1        |
+|35180|tottring         |1        |
+|35181|toughest         |1        |
+|35182|toughness        |1        |
+|35183|toujours         |1        |
+|35184|touze            |1        |
+|35185|towardly         |1        |
+|35186|towelled         |1        |
+|35187|towing           |1        |
+|35188|townsfolk        |1        |
+|35189|township         |1        |
+|35190|towsy            |1        |
+|35191|towton           |1        |
+|35192|toxicologist     |1        |
+|35193|tra              |1        |
+|35194|trabajos         |1        |
+|35195|trackless        |1        |
+|35196|tradespeople     |1        |
+|35197|trading          |1        |
+|35198|traduced         |1        |
+|35199|traducement      |1        |
+|35200|traducer         |1        |
+|35201|traffickers      |1        |
+|35202|traffics         |1        |
+|35203|tragedian        |1        |
+|35204|tragically       |1        |
+|35205|traind           |1        |
+|35206|traitorly        |1        |
+|35207|trajan           |1        |
+|35208|traject          |1        |
+|35209|trammel          |1        |
+|35210|tramontana       |1        |
+|35211|trampers         |1        |
+|35212|tramps           |1        |
+|35213|trances          |1        |
+|35214|tranquility      |1        |
+|35215|tranquilize      |1        |
+|35216|trans            |1        |
+|35217|transcendence    |1        |
+|35218|transcendent     |1        |
+|35219|transcendental   |1        |
+|35220|transcriber      |1        |
+|35221|transcript       |1        |
+|35222|transfigured     |1        |
+|35223|transfix         |1        |
+|35224|transfixing      |1        |
+|35225|transforms       |1        |
+|35226|transgresses     |1        |
+|35227|translates       |1        |
+|35228|transmigrates    |1        |
+|35229|transmit         |1        |
+|35230|transmitted      |1        |
+|35231|transmogrified   |1        |
+|35232|transmutation    |1        |
+|35233|transmuted       |1        |
+|35234|transplantation  |1        |
+|35235|transportance    |1        |
+|35236|transportation   |1        |
+|35237|transylvanian    |1        |
+|35238|trapped          |1        |
+|35239|trapper          |1        |
+|35240|trary            |1        |
+|35241|trashy           |1        |
+|35242|trato            |1        |
+|35243|travellest       |1        |
+|35244|traverses        |1        |
+|35245|travestied       |1        |
+|35246|treacherie       |1        |
+|35247|treachers        |1        |
+|35248|treasonably      |1        |
+|35249|treasuries       |1        |
+|35250|treasuring       |1        |
+|35251|treaties         |1        |
+|35252|trebled          |1        |
+|35253|trecherie        |1        |
+|35254|tremblings       |1        |
+|35255|tremenjous       |1        |
+|35256|tremour          |1        |
+|35257|trempling        |1        |
+|35258|tremulously      |1        |
+|35259|trench           |1        |
+|35260|trenchering      |1        |
+|35261|trenchers        |1        |
+|35262|trenching        |1        |
+|35263|trespasse        |1        |
+|35264|trespassed       |1        |
+|35265|trespassing      |1        |
+|35266|trestles         |1        |
+|35267|trey             |1        |
+|35268|treys            |1        |
+|35269|tria             |1        |
+|35270|triad            |1        |
+|35271|triana           |1        |
+|35272|triangular       |1        |
+|35273|tributes         |1        |
+|35274|trickle          |1        |
+|35275|trickster        |1        |
+|35276|tricky           |1        |
+|35277|trier            |1        |
+|35278|trigger          |1        |
+|35279|trigon           |1        |
+|35280|trimly           |1        |
+|35281|trims            |1        |
+|35282|trinculos        |1        |
+|35283|trinitarian      |1        |
+|35284|trinket          |1        |
+|35285|trio             |1        |
+|35286|tripartite       |1        |
+|35287|triplex          |1        |
+|35288|tripoli          |1        |
+|35289|tristram         |1        |
+|35290|tritheist        |1        |
+|35291|triton           |1        |
+|35292|triumpher        |1        |
+|35293|triumphers       |1        |
+|35294|triumphes        |1        |
+|35295|triumvir         |1        |
+|35296|triumvirate      |1        |
+|35297|triumvirs        |1        |
+|35298|triumviry        |1        |
+|35299|triune           |1        |
+|35300|troat            |1        |
+|35301|troglodytes      |1        |
+|35302|troiant          |1        |
+|35303|troien           |1        |
+|35304|troiluses        |1        |
+|35305|trombone         |1        |
+|35306|trombones        |1        |
+|35307|tromperies       |1        |
+|35308|trompet          |1        |
+|35309|trompets         |1        |
+|35310|troope           |1        |
+|35311|troopers         |1        |
+|35312|troopes          |1        |
+|35313|troopship        |1        |
+|35314|trop             |1        |
+|35315|tropically       |1        |
+|35316|trothed          |1        |
+|35317|troths           |1        |
+|35318|troubadour       |1        |
+|35319|troublesomely    |1        |
+|35320|troublest        |1        |
+|35321|trouser          |1        |
+|35322|trouts           |1        |
+|35323|trouve           |1        |
+|35324|trovato          |1        |
+|35325|trove            |1        |
+|35326|trubner          |1        |
+|35327|truculent        |1        |
+|35328|trueborn         |1        |
+|35329|truepenny        |1        |
+|35330|truie            |1        |
+|35331|truism           |1        |
+|35332|trujillo         |1        |
+|35333|trulls           |1        |
+|35334|trumped          |1        |
+|35335|trumps           |1        |
+|35336|truncheoners     |1        |
+|35337|trundle          |1        |
+|35338|trussed          |1        |
+|35339|trustees         |1        |
+|35340|truster          |1        |
+|35341|trustfulness     |1        |
+|35342|trustless        |1        |
+|35343|truthfully       |1        |
+|35344|truthfulness     |1        |
+|35345|tryalls          |1        |
+|35346|trymme           |1        |
+|35347|ttme             |1        |
+|35348|tua              |1        |
+|35349|tuae             |1        |
+|35350|tubes            |1        |
+|35351|tubs             |1        |
+|35352|tubular          |1        |
+|35353|tucke            |1        |
+|35354|tucking          |1        |
+|35355|tudesqui         |1        |
+|35356|tugged           |1        |
+|35357|tugging          |1        |
+|35358|tuh              |1        |
+|35359|tullius          |1        |
+|35360|tumbi            |1        |
+|35361|tumblerfuls      |1        |
+|35362|tumblers         |1        |
+|35363|tumults          |1        |
+|35364|tumultuously     |1        |
+|35365|tunbridge        |1        |
+|35366|tuners           |1        |
+|35367|tunics           |1        |
+|35368|tunnel           |1        |
+|35369|tupman           |1        |
+|35370|tupmans          |1        |
+|35371|tupping          |1        |
+|35372|turban           |1        |
+|35373|turbulence       |1        |
+|35374|turd             |1        |
+|35375|turfy            |1        |
+|35376|turlygod         |1        |
+|35377|turmoil          |1        |
+|35378|turmoiled        |1        |
+|35379|turnbull         |1        |
+|35380|turncoat         |1        |
+|35381|turncoats        |1        |
+|35382|turnd            |1        |
+|35383|turneth          |1        |
+|35384|turph            |1        |
+|35385|turquesco        |1        |
+|35386|turquoise        |1        |
+|35387|turres           |1        |
+|35388|turvy            |1        |
+|35389|tuscany          |1        |
+|35390|tuskd            |1        |
+|35391|tusked           |1        |
+|35392|tussle           |1        |
+|35393|tuto             |1        |
+|35394|tutto            |1        |
+|35395|twaddle          |1        |
+|35396|tway             |1        |
+|35397|tweaks           |1        |
+|35398|twentie          |1        |
+|35399|twenties         |1        |
+|35400|twiggen          |1        |
+|35401|twilled          |1        |
+|35402|twinckling       |1        |
+|35403|twind            |1        |
+|35404|twines           |1        |
+|35405|twinge           |1        |
+|35406|twinges          |1        |
+|35407|twire            |1        |
+|35408|twists           |1        |
+|35409|twitch           |1        |
+|35410|twitches         |1        |
+|35411|twits            |1        |
+|35412|twitted          |1        |
+|35413|twitting         |1        |
+|35414|twold            |1        |
+|35415|twopences        |1        |
+|35416|twyning          |1        |
+|35417|twyns            |1        |
+|35418|tybalts          |1        |
+|35419|tyburn           |1        |
+|35420|tyde             |1        |
+|35421|tydings          |1        |
+|35422|tyes             |1        |
+|35423|tymbria          |1        |
+|35424|typhon           |1        |
+|35425|typified         |1        |
+|35426|typography       |1        |
+|35427|tyrannic         |1        |
+|35428|tyrannies        |1        |
+|35429|tyrians          |1        |
+|35430|tytlers          |1        |
+|35431|tytles           |1        |
+|35432|ubique           |1        |
+|35433|uchchata         |1        |
+|35434|udakakashvedika  |1        |
+|35435|uddalika         |1        |
+|35436|udder            |1        |
+|35437|udders           |1        |
+|35438|uddvalaka        |1        |
+|35439|udge             |1        |
+|35440|uds              |1        |
+|35441|ue               |1        |
+|35442|ulcer            |1        |
+|35443|ulcerated        |1        |
+|35444|ulcers           |1        |
+|35445|ulster           |1        |
+|35446|ult              |1        |
+|35447|ulterior         |1        |
+|35448|ultra            |1        |
+|35449|um               |1        |
+|35450|umber            |1        |
+|35451|umbilical        |1        |
+|35452|umbra            |1        |
+|35453|umfrevile        |1        |
+|35454|umpires          |1        |
+|35455|unacceptabobble  |1        |
+|35456|unaccommodated   |1        |
+|35457|unaccountably    |1        |
+|35458|unaccustomed     |1        |
+|35459|unachieved       |1        |
+|35460|unaching         |1        |
+|35461|unacknowledged   |1        |
+|35462|unacted          |1        |
+|35463|unactive         |1        |
+|35464|unaffectedly     |1        |
+|35465|unagreeable      |1        |
+|35466|unaimiable       |1        |
+|35467|unalterably      |1        |
+|35468|unamiable        |1        |
+|35469|unannoyed        |1        |
+|35470|unapproached     |1        |
+|35471|unapproved       |1        |
+|35472|unaptness        |1        |
+|35473|unarmd           |1        |
+|35474|unarms           |1        |
+|35475|unartistic       |1        |
+|35476|unasked          |1        |
+|35477|unassailable     |1        |
+|35478|unassailed       |1        |
+|35479|unassertive      |1        |
+|35480|unassisted       |1        |
+|35481|unattained       |1        |
+|35482|unattainted      |1        |
+|35483|unattempted      |1        |
+|35484|unauspicious     |1        |
+|35485|unauthorized     |1        |
+|35486|unavenged        |1        |
+|35487|unbanded         |1        |
+|35488|unbarred         |1        |
+|35489|unbashful        |1        |
+|35490|unbefitting      |1        |
+|35491|unbegot          |1        |
+|35492|unbegotten       |1        |
+|35493|unbeknown        |1        |
+|35494|unbelaboured     |1        |
+|35495|unbelieved       |1        |
+|35496|unbeliever       |1        |
+|35497|unbelieving      |1        |
+|35498|unbid            |1        |
+|35499|unbitted         |1        |
+|35500|unbleached       |1        |
+|35501|unblemished      |1        |
+|35502|unbless          |1        |
+|35503|unbloodied       |1        |
+|35504|unblown          |1        |
+|35505|unbodied         |1        |
+|35506|unbookish        |1        |
+|35507|unborne          |1        |
+|35508|unbowed          |1        |
+|35509|unbraided        |1        |
+|35510|unbreathed       |1        |
+|35511|unbred           |1        |
+|35512|unbroke          |1        |
+|35513|unbuckles        |1        |
+|35514|unbuckling       |1        |
+|35515|unbuild          |1        |
+|35516|unburden         |1        |
+|35517|unburdens        |1        |
+|35518|unburnt          |1        |
+|35519|unbutton         |1        |
+|35520|uncandied        |1        |
+|35521|uncape           |1        |
+|35522|uncared          |1        |
+|35523|uncarpeted       |1        |
+|35524|uncase           |1        |
+|35525|uncasing         |1        |
+|35526|unceremoniousness|1        |
+|35527|uncertified      |1        |
+|35528|uncharge         |1        |
+|35529|uncharged        |1        |
+|35530|uncharitable     |1        |
+|35531|uncharitably     |1        |
+|35532|unchary          |1        |
+|35533|unchilded        |1        |
+|35534|unclad           |1        |
+|35535|unclasped        |1        |
+|35536|uncleanliness    |1        |
+|35537|uncleared        |1        |
+|35538|unclenched       |1        |
+|35539|unclew           |1        |
+|35540|unclog           |1        |
+|35541|unclose          |1        |
+|35542|unclosing        |1        |
+|35543|uncoil           |1        |
+|35544|uncoined         |1        |
+|35545|uncolonial       |1        |
+|35546|uncolted         |1        |
+|35547|uncombed         |1        |
+|35548|uncomeliness     |1        |
+|35549|uncomfortably    |1        |
+|35550|uncompassionate  |1        |
+|35551|uncomplaining    |1        |
+|35552|uncompromising   |1        |
+|35553|unconcernedly    |1        |
+|35554|unconditional    |1        |
+|35555|unconfinable     |1        |
+|35556|uncongenial      |1        |
+|35557|unconquerable    |1        |
+|35558|unconvinced      |1        |
+|35559|uncordial        |1        |
+|35560|uncorrected      |1        |
+|35561|uncountable      |1        |
+|35562|uncounted        |1        |
+|35563|uncourteous      |1        |
+|35564|uncouthness      |1        |
+|35565|uncovering       |1        |
+|35566|uncoveted        |1        |
+|35567|uncritical       |1        |
+|35568|uncropped        |1        |
+|35569|unctuous         |1        |
+|35570|uncuckolded      |1        |
+|35571|uncultured       |1        |
+|35572|uncurbable       |1        |
+|35573|uncurbed         |1        |
+|35574|uncurled         |1        |
+|35575|uncurls          |1        |
+|35576|uncurse          |1        |
+|35577|uncurtained      |1        |
+|35578|undeaf           |1        |
+|35579|undeceiving      |1        |
+|35580|undeeded         |1        |
+|35581|undelightful     |1        |
+|35582|underbearing     |1        |
+|35583|underborne       |1        |
+|35584|underbred        |1        |
+|35585|undercrest       |1        |
+|35586|underfed         |1        |
+|35587|underlet         |1        |
+|35588|underlined       |1        |
+|35589|underlying       |1        |
+|35590|undermined       |1        |
+|35591|underminers      |1        |
+|35592|undermining      |1        |
+|35593|underpaid        |1        |
+|35594|underprizing     |1        |
+|35595|underscore       |1        |
+|35596|underscores      |1        |
+|35597|undersized       |1        |
+|35598|understander     |1        |
+|35599|understandeth    |1        |
+|35600|undertakeing     |1        |
+|35601|undertone        |1        |
+|35602|underwrit        |1        |
+|35603|underwrite       |1        |
+|35604|undescried       |1        |
+|35605|undeservers      |1        |
+|35606|undesigned       |1        |
+|35607|undesigning      |1        |
+|35608|undeterred       |1        |
+|35609|undiminished     |1        |
+|35610|undimmed         |1        |
+|35611|undinted         |1        |
+|35612|undiscerned      |1        |
+|35613|undiscernible    |1        |
+|35614|undiscussible    |1        |
+|35615|undishonoured    |1        |
+|35616|undisputed       |1        |
+|35617|undistinguished  |1        |
+|35618|undistinguishing |1        |
+|35619|undividable      |1        |
+|35620|undoe            |1        |
+|35621|undoubting       |1        |
+|35622|undoubtingly     |1        |
+|35623|undressing       |1        |
+|35624|undulating       |1        |
+|35625|unduteous        |1        |
+|35626|uneared          |1        |
+|35627|unearned         |1        |
+|35628|uneasines        |1        |
+|35629|uneath           |1        |
+|35630|uneducated       |1        |
+|35631|uneffectual      |1        |
+|35632|unelected        |1        |
+|35633|unembarrassed    |1        |
+|35634|unenforced       |1        |
+|35635|unequivocally    |1        |
+|35636|unerring         |1        |
+|35637|unevenness       |1        |
+|35638|unexceptionably  |1        |
+|35639|unexceptional    |1        |
+|35640|unexecuted       |1        |
+|35641|unexhilarating   |1        |
+|35642|unexpensively    |1        |
+|35643|unexperienced    |1        |
+|35644|unexperient      |1        |
+|35645|unexplained      |1        |
+|35646|unexpressive     |1        |
+|35647|unextinguishable |1        |
+|35648|unfailingly      |1        |
+|35649|unfainedly       |1        |
+|35650|unfallible       |1        |
+|35651|unfamiliar       |1        |
+|35652|unfasten         |1        |
+|35653|unfastened       |1        |
+|35654|unfastidious     |1        |
+|35655|unfatherly       |1        |
+|35656|unfathomable     |1        |
+|35657|unfavorable      |1        |
+|35658|unfeard          |1        |
+|35659|unfed            |1        |
+|35660|unfeelingly      |1        |
+|35661|unfellowed       |1        |
+|35662|unfenced         |1        |
+|35663|unfilial         |1        |
+|35664|unfitness        |1        |
+|35665|unfitted         |1        |
+|35666|unfledged        |1        |
+|35667|unflinching      |1        |
+|35668|unfoldeth        |1        |
+|35669|unfool           |1        |
+|35670|unforfeited      |1        |
+|35671|unformed         |1        |
+|35672|unfortified      |1        |
+|35673|unfought         |1        |
+|35674|unfrequently     |1        |
+|35675|unfruitful       |1        |
+|35676|unfrustrable     |1        |
+|35677|unfurnish        |1        |
+|35678|ungallant        |1        |
+|35679|ungenial         |1        |
+|35680|ungenteel        |1        |
+|35681|ungentleness     |1        |
+|35682|ungird           |1        |
+|35683|ungot            |1        |
+|35684|ungotten         |1        |
+|35685|ungovernable     |1        |
+|35686|ungoverned       |1        |
+|35687|ungratefull      |1        |
+|35688|ungravely        |1        |
+|35689|ungrudgingly     |1        |
+|35690|unguem           |1        |
+|35691|unguided         |1        |
+|35692|unhair           |1        |
+|35693|unhand           |1        |
+|35694|unhappied        |1        |
+|35695|unharassed       |1        |
+|35696|unhardened       |1        |
+|35697|unhardned        |1        |
+|35698|unhasp           |1        |
+|35699|unhearts         |1        |
+|35700|unheeded         |1        |
+|35701|unheedfully      |1        |
+|35702|unheeding        |1        |
+|35703|unheedy          |1        |
+|35704|unhelpful        |1        |
+|35705|unhesitatingly   |1        |
+|35706|unhidden         |1        |
+|35707|unhinge          |1        |
+|35708|unhooked         |1        |
+|35709|unhooped         |1        |
+|35710|unhopefullest    |1        |
+|35711|unhorse          |1        |
+|35712|unhorsed         |1        |
+|35713|unhospitable     |1        |
+|35714|unhurtful        |1        |
+|35715|unimpeded        |1        |
+|35716|unimproved       |1        |
+|35717|uninfluenced     |1        |
+|35718|uninhabitable    |1        |
+|35719|uninitiated      |1        |
+|35720|uninjured        |1        |
+|35721|unintelligent    |1        |
+|35722|unintentionally  |1        |
+|35723|uninteresting    |1        |
+|35724|uninterrupted    |1        |
+|35725|uninterruptedly  |1        |
+|35726|unitarians       |1        |
+|35727|unitedly         |1        |
+|35728|unites           |1        |
+|35729|unjointed        |1        |
+|35730|unjustice        |1        |
+|35731|unkinde          |1        |
+|35732|unkinglike       |1        |
+|35733|unkiss           |1        |
+|35734|unkissed         |1        |
+|35735|unknotted        |1        |
+|35736|unknowing        |1        |
+|35737|unknowingly      |1        |
+|35738|unlaced          |1        |
+|35739|unles            |1        |
+|35740|unlesse          |1        |
+|35741|unlicensed       |1        |
+|35742|unlineal         |1        |
+|35743|unloads          |1        |
+|35744|unlocking        |1        |
+|35745|unlocks          |1        |
+|35746|unloosed         |1        |
+|35747|unloosing        |1        |
+|35748|unlover          |1        |
+|35749|unloving         |1        |
+|35750|unmannerd        |1        |
+|35751|unmarked         |1        |
+|35752|unmellowed       |1        |
+|35753|unmerciful       |1        |
+|35754|unmercifully     |1        |
+|35755|unmeriting       |1        |
+|35756|unminded         |1        |
+|35757|unmindful        |1        |
+|35758|unmindfull       |1        |
+|35759|unmirthful       |1        |
+|35760|unmistakably     |1        |
+|35761|unmitigable      |1        |
+|35762|unmodulated      |1        |
+|35763|unmoving         |1        |
+|35764|unmuffles        |1        |
+|35765|unmusical        |1        |
+|35766|unmuzzle         |1        |
+|35767|unmuzzled        |1        |
+|35768|unnamed          |1        |
+|35769|unnapped         |1        |
+|35770|unnaturalness    |1        |
+|35771|unneighbourly    |1        |
+|35772|unnerving        |1        |
+|35773|unnoble          |1        |
+|35774|unnosed          |1        |
+|35775|unobjectionable  |1        |
+|35776|unobstructed     |1        |
+|35777|unobtainable     |1        |
+|35778|unobtrusiveness  |1        |
+|35779|unoffending      |1        |
+|35780|unofficial       |1        |
+|35781|unopened         |1        |
+|35782|unorthodox       |1        |
+|35783|unostentatious   |1        |
+|35784|unowed           |1        |
+|35785|unpacked         |1        |
+|35786|unpacking        |1        |
+|35787|unpanged         |1        |
+|35788|unparagoned      |1        |
+|35789|unpardonably     |1        |
+|35790|unpardoned       |1        |
+|35791|unpartial        |1        |
+|35792|unpaved          |1        |
+|35793|unpay            |1        |
+|35794|unpeaceable      |1        |
+|35795|unpeg            |1        |
+|35796|unperfect        |1        |
+|35797|unperfectness    |1        |
+|35798|unperilous       |1        |
+|35799|unpermitted      |1        |
+|35800|unpitifully      |1        |
+|35801|unplausive       |1        |
+|35802|unpleasantest    |1        |
+|35803|unpolicied       |1        |
+|35804|unpolite         |1        |
+|35805|unpolluted       |1        |
+|35806|unpossessed      |1        |
+|35807|unpossessing     |1        |
+|35808|unpossible       |1        |
+|35809|unposted         |1        |
+|35810|unprejudiced     |1        |
+|35811|unpretty         |1        |
+|35812|unprevailing     |1        |
+|35813|unprevented      |1        |
+|35814|unprofessional   |1        |
+|35815|unprofited       |1        |
+|35816|unpromoted       |1        |
+|35817|unproper         |1        |
+|35818|unproperly       |1        |
+|35819|unprovide        |1        |
+|35820|unprovident      |1        |
+|35821|unprovokes       |1        |
+|35822|unpunctual       |1        |
+|35823|unpunished       |1        |
+|35824|unpurged         |1        |
+|35825|unqualitied      |1        |
+|35826|unquestionable   |1        |
+|35827|unquestioning    |1        |
+|35828|unquietly        |1        |
+|35829|unraised         |1        |
+|35830|unreached        |1        |
+|35831|unreasond        |1        |
+|35832|unreasoning      |1        |
+|35833|unrecalling      |1        |
+|35834|unrecognised     |1        |
+|35835|unreconciliable  |1        |
+|35836|unrecounted      |1        |
+|35837|unrecuring       |1        |
+|35838|unrefreshed      |1        |
+|35839|unregarded       |1        |
+|35840|unremitting      |1        |
+|35841|unremovable      |1        |
+|35842|unremovably      |1        |
+|35843|unremunerative   |1        |
+|35844|unreprievable    |1        |
+|35845|unrequited       |1        |
+|35846|unresponsive     |1        |
+|35847|unrestrainedly   |1        |
+|35848|unrewarded       |1        |
+|35849|unrightful       |1        |
+|35850|unripped         |1        |
+|35851|unroll           |1        |
+|35852|unroosted        |1        |
+|35853|unroot           |1        |
+|35854|unrough          |1        |
+|35855|unsaddled        |1        |
+|35856|unsalted         |1        |
+|35857|unsaluted        |1        |
+|35858|unsated          |1        |
+|35859|unsatiable       |1        |
+|35860|unsatisfactorily |1        |
+|35861|unscalable       |1        |
+|35862|unscissored      |1        |
+|35863|unscriptural     |1        |
+|35864|unscrupulous     |1        |
+|35865|unseasonableness |1        |
+|35866|unseasoned       |1        |
+|35867|unseated         |1        |
+|35868|unseconded       |1        |
+|35869|unsecret         |1        |
+|35870|unseeming        |1        |
+|35871|unseemly         |1        |
+|35872|unselfish        |1        |
+|35873|unsentimental    |1        |
+|35874|unseparable      |1        |
+|35875|unserviceable    |1        |
+|35876|unset            |1        |
+|35877|unsetled         |1        |
+|35878|unsettling       |1        |
+|35879|unsex            |1        |
+|35880|unshaped         |1        |
+|35881|unshapes         |1        |
+|35882|unshared         |1        |
+|35883|unshorn          |1        |
+|35884|unshout          |1        |
+|35885|unshown          |1        |
+|35886|unshrinking      |1        |
+|35887|unshunnable      |1        |
+|35888|unsifted         |1        |
+|35889|unsightly        |1        |
+|35890|unsisting        |1        |
+|35891|unskillful       |1        |
+|35892|unslipping       |1        |
+|35893|unsmirched       |1        |
+|35894|unsolved         |1        |
+|35895|unsorted         |1        |
+|35896|unsound          |1        |
+|35897|unspeak          |1        |
+|35898|unspeakably      |1        |
+|35899|unspeaking       |1        |
+|35900|unspent          |1        |
+|35901|unsphere         |1        |
+|35902|unspoke          |1        |
+|35903|unspoken         |1        |
+|35904|unsteadfast      |1        |
+|35905|unsteadily       |1        |
+|35906|unstinting       |1        |
+|35907|unstooping       |1        |
+|35908|unstrapping      |1        |
+|35909|unstringed       |1        |
+|35910|unstudied        |1        |
+|35911|unsubdued        |1        |
+|35912|unsuccessfully   |1        |
+|35913|unsuitableness   |1        |
+|35914|unsuiting        |1        |
+|35915|unsummoned       |1        |
+|35916|unsurpassable    |1        |
+|35917|unsuspecting     |1        |
+|35918|unsuspectingly   |1        |
+|35919|unsuspiciously   |1        |
+|35920|unsustained      |1        |
+|35921|unswayable       |1        |
+|35922|unswayed         |1        |
+|35923|unswerving       |1        |
+|35924|unswervingly     |1        |
+|35925|unsworn          |1        |
+|35926|unsympathetically|1        |
+|35927|unsystematic     |1        |
+|35928|untangle         |1        |
+|35929|untangled        |1        |
+|35930|untarnished      |1        |
+|35931|untempering      |1        |
+|35932|untenable        |1        |
+|35933|untenanted       |1        |
+|35934|untent           |1        |
+|35935|unthink          |1        |
+|35936|unthread         |1        |
+|35937|untill           |1        |
+|35938|untirable        |1        |
+|35939|untired          |1        |
+|35940|untitled         |1        |
+|35941|untoe            |1        |
+|35942|untraded         |1        |
+|35943|untrained        |1        |
+|35944|untranslatable   |1        |
+|35945|untranslated     |1        |
+|35946|untreads         |1        |
+|35947|untrod           |1        |
+|35948|untrodden        |1        |
+|35949|untruss          |1        |
+|35950|untruthfulness   |1        |
+|35951|untucked         |1        |
+|35952|untune           |1        |
+|35953|unturned         |1        |
+|35954|unutterably      |1        |
+|35955|unvanquished     |1        |
+|35956|unvarying        |1        |
+|35957|unveiled         |1        |
+|35958|unvenerable      |1        |
+|35959|unviolated       |1        |
+|35960|unvirtuous       |1        |
+|35961|unvisited        |1        |
+|35962|unvulnerable     |1        |
+|35963|unwalletted      |1        |
+|35964|unwares          |1        |
+|35965|unwarrantable    |1        |
+|35966|unwary           |1        |
+|35967|unwashed         |1        |
+|35968|unwaveringly     |1        |
+|35969|unweaves         |1        |
+|35970|unwed            |1        |
+|35971|unwedgeable      |1        |
+|35972|unweeded         |1        |
+|35973|unweighed        |1        |
+|35974|unweighing       |1        |
+|35975|unwelcomed       |1        |
+|35976|unwholly         |1        |
+|35977|unwiped          |1        |
+|35978|unwished         |1        |
+|35979|unwitnessed      |1        |
+|35980|unwitted         |1        |
+|35981|unwooed          |1        |
+|35982|unworthie        |1        |
+|35983|unworthier       |1        |
+|35984|unwove           |1        |
+|35985|unwrapped        |1        |
+|35986|unwrapping       |1        |
+|35987|unwritten        |1        |
+|35988|unwrung          |1        |
+|35989|upborne          |1        |
+|35990|upfill           |1        |
+|35991|uphill           |1        |
+|35992|uphoarded        |1        |
+|35993|upholder         |1        |
+|35994|upholdeth        |1        |
+|35995|upholding        |1        |
+|35996|upholsterer      |1        |
+|35997|upholstery       |1        |
+|35998|uplands          |1        |
+|35999|uplong           |1        |
+|36000|upmost           |1        |
+|36001|upraised         |1        |
+|36002|uprear           |1        |
+|36003|upreared         |1        |
+|36004|uprighteously    |1        |
+|36005|uprightness      |1        |
+|36006|uprising         |1        |
+|36007|uprose           |1        |
+|36008|upshoot          |1        |
+|36009|upspring         |1        |
+|36010|upstair          |1        |
+|36011|upstarts         |1        |
+|36012|upstroke         |1        |
+|36013|uptown           |1        |
+|36014|uptowning        |1        |
+|36015|upturned         |1        |
+|36016|urbanus          |1        |
+|36017|urbina           |1        |
+|36018|urchinfield      |1        |
+|36019|urinary          |1        |
+|36020|urne             |1        |
+|36021|urns             |1        |
+|36022|urraca           |1        |
+|36023|urreas           |1        |
+|36024|ursa             |1        |
+|36025|ursala           |1        |
+|36026|usances          |1        |
+|36027|usd              |1        |
+|36028|useable          |1        |
+|36029|usefulness       |1        |
+|36030|uselessly        |1        |
+|36031|uselessness      |1        |
+|36032|ushering         |1        |
+|36033|usuald           |1        |
+|36034|usurpingly       |1        |
+|36035|utensil          |1        |
+|36036|utrecht          |1        |
+|36037|utrique          |1        |
+|36038|utruvio          |1        |
+|36039|uttereth         |1        |
+|36040|va               |1        |
+|36041|vacancies        |1        |
+|36042|vacate           |1        |
+|36043|vacated          |1        |
+|36044|vacating         |1        |
+|36045|vacillating      |1        |
+|36046|vadawa           |1        |
+|36047|vadeth           |1        |
+|36048|vagram           |1        |
+|36049|vagrancy         |1        |
+|36050|vagrant          |1        |
+|36051|vagrants         |1        |
+|36052|vagrom           |1        |
+|36053|vaihasaka        |1        |
+|36054|vailed           |1        |
+|36055|vailes           |1        |
+|36056|vaillant         |1        |
+|36057|vainer           |1        |
+|36058|vais             |1        |
+|36059|vaisika          |1        |
+|36060|vajnasunhi       |1        |
+|36061|valance          |1        |
+|36062|valaya           |1        |
+|36063|valdes           |1        |
+|36064|valedictory      |1        |
+|36065|valence          |1        |
+|36066|valentio         |1        |
+|36067|vales            |1        |
+|36068|valet            |1        |
+|36069|valetudinarian   |1        |
+|36070|valiantness      |1        |
+|36071|vallances        |1        |
+|36072|vallant          |1        |
+|36073|vally            |1        |
+|36074|valmiki          |1        |
+|36075|valois           |1        |
+|36076|valuing          |1        |
+|36077|valuka           |1        |
+|36078|vambrace         |1        |
+|36079|vanavasi         |1        |
+|36080|vanguard         |1        |
+|36081|vanisheth        |1        |
+|36082|vanquishest      |1        |
+|36083|vanquisheth      |1        |
+|36084|vant             |1        |
+|36085|vanyas           |1        |
+|36086|vapians          |1        |
+|36087|vara             |1        |
+|36088|variest          |1        |
+|36089|varld            |1        |
+|36090|varletry         |1        |
+|36091|varletto         |1        |
+|36092|varry            |1        |
+|36093|varshakari       |1        |
+|36094|vassaile         |1        |
+|36095|vaste            |1        |
+|36096|vastidity        |1        |
+|36097|vastness         |1        |
+|36098|vater            |1        |
+|36099|vates            |1        |
+|36100|vatodbhranta     |1        |
+|36101|vaultages        |1        |
+|36102|vaulted          |1        |
+|36103|vaumond          |1        |
+|36104|vaunter          |1        |
+|36105|vauntingly       |1        |
+|36106|vauvado          |1        |
+|36107|vauxhall         |1        |
+|36108|ve               |1        |
+|36109|vechapati        |1        |
+|36110|vecinguerra      |1        |
+|36111|vede             |1        |
+|36112|vegetable        |1        |
+|36113|vegetives        |1        |
+|36114|vehicle          |1        |
+|36115|vehm             |1        |
+|36116|vehmgericht      |1        |
+|36117|vehor            |1        |
+|36118|veiling          |1        |
+|36119|veinous          |1        |
+|36120|veintiquatro     |1        |
+|36121|velazquez        |1        |
+|36122|vellum           |1        |
+|36123|velocity         |1        |
+|36124|velure           |1        |
+|36125|veluti           |1        |
+|36126|venditur         |1        |
+|36127|vendors          |1        |
+|36128|venerating       |1        |
+|36129|venereal         |1        |
+|36130|veneys           |1        |
+|36131|vengeances       |1        |
+|36132|venial           |1        |
+|36133|venit            |1        |
+|36134|ventages         |1        |
+|36135|ventero          |1        |
+|36136|ventilation      |1        |
+|36137|ventricle        |1        |
+|36138|ventriloquist    |1        |
+|36139|venturd          |1        |
+|36140|venudutta        |1        |
+|36141|venue            |1        |
+|36142|verandah         |1        |
+|36143|verbatim         |1        |
+|36144|verbiage         |1        |
+|36145|verbosity        |1        |
+|36146|verdun           |1        |
+|36147|verefore         |1        |
+|36148|vergers          |1        |
+|36149|verging          |1        |
+|36150|verification     |1        |
+|36151|verino           |1        |
+|36152|verisimilitude   |1        |
+|36153|veritably        |1        |
+|36154|veritie          |1        |
+|36155|verities         |1        |
+|36156|veroles          |1        |
+|36157|veronesa         |1        |
+|36158|verrez           |1        |
+|36159|vers             |1        |
+|36160|versal           |1        |
+|36161|versification    |1        |
+|36162|versing          |1        |
+|36163|verum            |1        |
+|36164|vespers          |1        |
+|36165|vessell          |1        |
+|36166|vessells         |1        |
+|36167|vestall          |1        |
+|36168|vestibule        |1        |
+|36169|vestros          |1        |
+|36170|vestry           |1        |
+|36171|vetch            |1        |
+|36172|vetches          |1        |
+|36173|veto             |1        |
+|36174|veux             |1        |
+|36175|vexest           |1        |
+|36176|vexeth           |1        |
+|36177|viand            |1        |
+|36178|vibrated         |1        |
+|36179|vibrates         |1        |
+|36180|vicaria          |1        |
+|36181|vicariously      |1        |
+|36182|vicecount        |1        |
+|36183|vicegerent       |1        |
+|36184|viciousness      |1        |
+|36185|vickram          |1        |
+|36186|victoress        |1        |
+|36187|victoriously     |1        |
+|36188|victours         |1        |
+|36189|victualling      |1        |
+|36190|vida             |1        |
+|36191|vident           |1        |
+|36192|video            |1        |
+|36193|vides            |1        |
+|36194|videsne          |1        |
+|36195|vidushekas       |1        |
+|36196|vieweth          |1        |
+|36197|viewless         |1        |
+|36198|vigitant         |1        |
+|36199|viler            |1        |
+|36200|vilia            |1        |
+|36201|villa            |1        |
+|36202|villadiego       |1        |
+|36203|villagery        |1        |
+|36204|villanies        |1        |
+|36205|villanovas       |1        |
+|36206|villian          |1        |
+|36207|villianda        |1        |
+|36208|villians         |1        |
+|36209|vinaigre         |1        |
+|36210|vincere          |1        |
+|36211|vincit           |1        |
+|36212|vindicative      |1        |
+|36213|vinedressing     |1        |
+|36214|violating        |1        |
+|36215|violator         |1        |
+|36216|violenteth       |1        |
+|36217|violins          |1        |
+|36218|vir              |1        |
+|36219|virata           |1        |
+|36220|virginalling     |1        |
+|36221|virginals        |1        |
+|36222|virgine          |1        |
+|36223|virginities      |1        |
+|36224|viriatus         |1        |
+|36225|virtual          |1        |
+|36226|virtually        |1        |
+|36227|virues           |1        |
+|36228|virulence        |1        |
+|36229|virulency        |1        |
+|36230|visagd           |1        |
+|36231|visalnagur       |1        |
+|36232|visard           |1        |
+|36233|viscount         |1        |
+|36234|vishnu           |1        |
+|36235|visitating       |1        |
+|36236|visite           |1        |
+|36237|viso             |1        |
+|36238|vitally          |1        |
+|36239|vitement         |1        |
+|36240|vitrol           |1        |
+|36241|vittails         |1        |
+|36242|vituperation     |1        |
+|36243|vitx             |1        |
+|36244|vivaciously      |1        |
+|36245|vivant           |1        |
+|36246|vivar            |1        |
+|36247|vividness        |1        |
+|36248|vivified         |1        |
+|36249|vivisection      |1        |
+|36250|vivo             |1        |
+|36251|vizaments        |1        |
+|36252|vizor            |1        |
+|36253|vnclaspe         |1        |
+|36254|vncle            |1        |
+|36255|vnderstand       |1        |
+|36256|vnderstanding    |1        |
+|36257|vnearthed        |1        |
+|36258|vnjustly         |1        |
+|36259|vnlesse          |1        |
+|36260|vnlike           |1        |
+|36261|vnto             |1        |
+|36262|vnworthy         |1        |
+|36263|vobis            |1        |
+|36264|vocabularies     |1        |
+|36265|vocabulary       |1        |
+|36266|vocally          |1        |
+|36267|vocativo         |1        |
+|36268|vocatur          |1        |
+|36269|vociferate       |1        |
+|36270|vociferated      |1        |
+|36271|vociferating     |1        |
+|36272|voiced           |1        |
+|36273|voided           |1        |
+|36274|voiding          |1        |
+|36275|volable          |1        |
+|36276|volant           |1        |
+|36277|volatile         |1        |
+|36278|volcanic         |1        |
+|36279|volens           |1        |
+|36280|volente          |1        |
+|36281|volivorco        |1        |
+|36282|volke            |1        |
+|36283|volleys          |1        |
+|36284|volquessen       |1        |
+|36285|voluntaries      |1        |
+|36286|voluptuaries     |1        |
+|36287|voluptuous       |1        |
+|36288|voluptuously     |1        |
+|36289|vomissement      |1        |
+|36290|vomited          |1        |
+|36291|von              |1        |
+|36292|voracious        |1        |
+|36293|voraciously      |1        |
+|36294|vortnight        |1        |
+|36295|votaress         |1        |
+|36296|votarists        |1        |
+|36297|vote             |1        |
+|36298|voucher          |1        |
+|36299|vouching         |1        |
+|36300|vouchsafes       |1        |
+|36301|vour             |1        |
+|36302|voutsafe         |1        |
+|36303|vowel            |1        |
+|36304|vowes            |1        |
+|36305|vox              |1        |
+|36306|voyager          |1        |
+|36307|voyce            |1        |
+|36308|voydest          |1        |
+|36309|vozmediano       |1        |
+|36310|vrge             |1        |
+|36311|vrijalala        |1        |
+|36312|vrikshadhirudhaka|1        |
+|36313|vrnes            |1        |
+|36314|vs               |1        |
+|36315|vsurers          |1        |
+|36316|vtterly          |1        |
+|36317|vulgarities      |1        |
+|36318|vulgarly         |1        |
+|36319|vulgars          |1        |
+|36320|vulgo            |1        |
+|36321|vulnerable       |1        |
+|36322|vurther          |1        |
+|36323|vyasa            |1        |
+|36324|vying            |1        |
+|36325|wacancy          |1        |
+|36326|waddled          |1        |
+|36327|wafers           |1        |
+|36328|wafted           |1        |
+|36329|wafting          |1        |
+|36330|wafture          |1        |
+|36331|waggling         |1        |
+|36332|wagon            |1        |
+|36333|wagoner          |1        |
+|36334|wagtail          |1        |
+|36335|wah              |1        |
+|36336|wahsatch         |1        |
+|36337|waie             |1        |
+|36338|waif             |1        |
+|36339|waifs            |1        |
+|36340|wailful          |1        |
+|36341|wailings         |1        |
+|36342|wainropes        |1        |
+|36343|waistcoated      |1        |
+|36344|waistcoats       |1        |
+|36345|waite            |1        |
+|36346|waiteth          |1        |
+|36347|waives           |1        |
+|36348|wakening         |1        |
+|36349|wakest           |1        |
+|36350|wakt             |1        |
+|36351|wallet           |1        |
+|36352|wallets          |1        |
+|36353|wallflowers      |1        |
+|36354|wallises         |1        |
+|36355|wallon           |1        |
+|36356|waltz            |1        |
+|36357|waltzes          |1        |
+|36358|wanderingly      |1        |
+|36359|waned            |1        |
+|36360|wanes            |1        |
+|36361|wanion           |1        |
+|36362|warding          |1        |
+|36363|wardlaw          |1        |
+|36364|wardrobes        |1        |
+|36365|warehouse        |1        |
+|36366|wark             |1        |
+|36367|warks            |1        |
+|36368|warld            |1        |
+|36369|warme            |1        |
+|36370|warped           |1        |
+|36371|warpt            |1        |
+|36372|warranteth       |1        |
+|36373|warranting       |1        |
+|36374|warrantise       |1        |
+|36375|warrantize       |1        |
+|36376|warranto         |1        |
+|36377|warre            |1        |
+|36378|warren           |1        |
+|36379|warrener         |1        |
+|36380|warring          |1        |
+|36381|washd            |1        |
+|36382|washer           |1        |
+|36383|washford         |1        |
+|36384|washoe           |1        |
+|36385|wasters          |1        |
+|36386|wat              |1        |
+|36387|watchdog         |1        |
+|36388|watchfully       |1        |
+|36389|watchings        |1        |
+|36390|watchmaker       |1        |
+|36391|watchword        |1        |
+|36392|watercourse      |1        |
+|36393|watercress       |1        |
+|36394|waterdrops       |1        |
+|36395|waterfly         |1        |
+|36396|waterford        |1        |
+|36397|waterman         |1        |
+|36398|watermen         |1        |
+|36399|waterrugs        |1        |
+|36400|waterson         |1        |
+|36401|waterton         |1        |
+|36402|waverer          |1        |
+|36403|waverings        |1        |
+|36404|waw              |1        |
+|36405|wawl             |1        |
+|36406|waxeth           |1        |
+|36407|wayes            |1        |
+|36408|wayfarer         |1        |
+|36409|waygh            |1        |
+|36410|waylaid          |1        |
+|36411|waylay           |1        |
+|36412|waylaying        |1        |
+|36413|waywarder        |1        |
+|36414|weakenes         |1        |
+|36415|weaklings        |1        |
+|36416|wealsmen         |1        |
+|36417|weare            |1        |
+|36418|wearie           |1        |
+|36419|wearily          |1        |
+|36420|wearisomest      |1        |
+|36421|weasels          |1        |
+|36422|weathercocks     |1        |
+|36423|weathers         |1        |
+|36424|weazen           |1        |
+|36425|wedged           |1        |
+|36426|wedging          |1        |
+|36427|wedlocke         |1        |
+|36428|weeder           |1        |
+|36429|weedes           |1        |
+|36430|weeding          |1        |
+|36431|weell            |1        |
+|36432|weeper           |1        |
+|36433|weepingly        |1        |
+|36434|weepings         |1        |
+|36435|weet             |1        |
+|36436|wegetable        |1        |
+|36437|weighable        |1        |
+|36438|weightless       |1        |
+|36439|weirs            |1        |
+|36440|wel              |1        |
+|36441|welcomer         |1        |
+|36442|welcomest        |1        |
+|36443|welded           |1        |
+|36444|welled           |1        |
+|36445|wellingborough   |1        |
+|36446|wellington       |1        |
+|36447|welnigh          |1        |
+|36448|welshwomen       |1        |
+|36449|weltering        |1        |
+|36450|welwet           |1        |
+|36451|wemmicks         |1        |
+|36452|wen              |1        |
+|36453|wenching         |1        |
+|36454|wenchless        |1        |
+|36455|werry            |1        |
+|36456|wets             |1        |
+|36457|wettest          |1        |
+|36458|wetting          |1        |
+|36459|wezand           |1        |
+|36460|whalebone        |1        |
+|36461|wharfs           |1        |
+|36462|wheare           |1        |
+|36463|wheedle          |1        |
+|36464|wheedled         |1        |
+|36465|wheedling        |1        |
+|36466|wheeler          |1        |
+|36467|wheelwright      |1        |
+|36468|wheeson          |1        |
+|36469|wheezing         |1        |
+|36470|whelks           |1        |
+|36471|whelm            |1        |
+|36472|whelped          |1        |
+|36473|whelphood        |1        |
+|36474|whem             |1        |
+|36475|whencesoever     |1        |
+|36476|wherefrom        |1        |
+|36477|whereinto        |1        |
+|36478|whereout         |1        |
+|36479|wheres           |1        |
+|36480|wherfore         |1        |
+|36481|wherries         |1        |
+|36482|wherry           |1        |
+|36483|wherto           |1        |
+|36484|whetteth         |1        |
+|36485|whew             |1        |
+|36486|whiffler         |1        |
+|36487|whiled           |1        |
+|36488|whimper          |1        |
+|36489|whimpered        |1        |
+|36490|whimpering       |1        |
+|36491|whined           |1        |
+|36492|whines           |1        |
+|36493|whippings        |1        |
+|36494|whipster         |1        |
+|36495|whipstocke       |1        |
+|36496|whirligig        |1        |
+|36497|whirlpool        |1        |
+|36498|whirring         |1        |
+|36499|whisked          |1        |
+|36500|whisking         |1        |
+|36501|whisperd         |1        |
+|36502|whisperers       |1        |
+|36503|whitakers        |1        |
+|36504|whitebread       |1        |
+|36505|whitechapel      |1        |
+|36506|whitehall        |1        |
+|36507|whitely          |1        |
+|36508|whiten           |1        |
+|36509|whitening        |1        |
+|36510|whitesmith       |1        |
+|36511|whiting          |1        |
+|36512|whitlow          |1        |
+|36513|whitsters        |1        |
+|36514|whittle          |1        |
+|36515|whizzing         |1        |
+|36516|whoiver          |1        |
+|36517|wholesale        |1        |
+|36518|wholesomely      |1        |
+|36519|wholesomeness    |1        |
+|36520|wholesomer       |1        |
+|36521|whored           |1        |
+|36522|whoremasterly    |1        |
+|36523|whoremonger      |1        |
+|36524|whoresons        |1        |
+|36525|whoring          |1        |
+|36526|whorish          |1        |
+|36527|whosomever       |1        |
+|36528|wicious          |1        |
+|36529|wickeder         |1        |
+|36530|wickednes        |1        |
+|36531|wickednesses     |1        |
+|36532|wicky            |1        |
+|36533|widdow           |1        |
+|36534|widdowes         |1        |
+|36535|widdows          |1        |
+|36536|widening         |1        |
+|36537|widens           |1        |
+|36538|widowhood        |1        |
+|36539|wielded          |1        |
+|36540|wiffe            |1        |
+|36541|wigmakers        |1        |
+|36542|wildcats         |1        |
+|36543|wilde            |1        |
+|36544|wildered         |1        |
+|36545|wildfowl         |1        |
+|36546|wilfulnes        |1        |
+|36547|wilfulness       |1        |
+|36548|willage          |1        |
+|36549|willer           |1        |
+|36550|willers          |1        |
+|36551|willissimus      |1        |
+|36552|wily             |1        |
+|36553|wimpled          |1        |
+|36554|wincing          |1        |
+|36555|wincot           |1        |
+|36556|windefand        |1        |
+|36557|winder           |1        |
+|36558|windfall         |1        |
+|36559|windgalls        |1        |
+|36560|windlasses       |1        |
+|36561|windowes         |1        |
+|36562|winegar          |1        |
+|36563|wineglasses      |1        |
+|36564|wingham          |1        |
+|36565|winke            |1        |
+|36566|winne            |1        |
+|36567|winnow           |1        |
+|36568|winnows          |1        |
+|36569|winterly         |1        |
+|36570|wintertime       |1        |
+|36571|wiolent          |1        |
+|36572|wisedome         |1        |
+|36573|wiselier         |1        |
+|36574|wiseness         |1        |
+|36575|wishd            |1        |
+|36576|wishers          |1        |
+|36577|wisheth          |1        |
+|36578|wishtly          |1        |
+|36579|wisit            |1        |
+|36580|wisiting         |1        |
+|36581|wisitors         |1        |
+|36582|wisits           |1        |
+|36583|wisps            |1        |
+|36584|wist             |1        |
+|36585|witching         |1        |
+|36586|witcrackers      |1        |
+|36587|withdrawal       |1        |
+|36588|withdraws        |1        |
+|36589|withouten        |1        |
+|36590|withstanding     |1        |
+|36591|witting          |1        |
+|36592|wittol           |1        |
+|36593|wittolly         |1        |
+|36594|wo               |1        |
+|36595|woa              |1        |
+|36596|wobble           |1        |
+|36597|wod              |1        |
+|36598|woefull          |1        |
+|36599|woefullest       |1        |
+|36600|woful            |1        |
+|36601|wold             |1        |
+|36602|wolds            |1        |
+|36603|wolfe            |1        |
+|36604|wolfishly        |1        |
+|36605|wollsome         |1        |
+|36606|wombed           |1        |
+|36607|womby            |1        |
+|36608|woncot           |1        |
+|36609|wonderer         |1        |
+|36610|wonderings       |1        |
+|36611|wonderstruck     |1        |
+|36612|wonton           |1        |
+|36613|woodland         |1        |
+|36614|woodmonger       |1        |
+|36615|woodwork         |1        |
+|36616|woof             |1        |
+|36617|wooingly         |1        |
+|36618|wooings          |1        |
+|36619|woolcarders      |1        |
+|36620|woolfe           |1        |
+|36621|woolsack         |1        |
+|36622|woolsey          |1        |
+|36623|woolward         |1        |
+|36624|worded           |1        |
+|36625|wording          |1        |
+|36626|wordless         |1        |
+|36627|wordy            |1        |
+|36628|workbags         |1        |
+|36629|workbasket       |1        |
+|36630|workes           |1        |
+|36631|workingman       |1        |
+|36632|workmanly        |1        |
+|36633|workshop         |1        |
+|36634|worky            |1        |
+|36635|wormy            |1        |
+|36636|worne            |1        |
+|36637|worrit           |1        |
+|36638|worshipfully     |1        |
+|36639|worshippest      |1        |
+|36640|worthie          |1        |
+|36641|worthied         |1        |
+|36642|wotting          |1        |
+|36643|wouid            |1        |
+|36644|woundings        |1        |
+|36645|woundless        |1        |
+|36646|wrackful         |1        |
+|36647|wrangler         |1        |
+|36648|wranglers        |1        |
+|36649|wrapper          |1        |
+|36650|wraps            |1        |
+|36651|wrathfully       |1        |
+|36652|wreake           |1        |
+|36653|wreaked          |1        |
+|36654|wreaks           |1        |
+|36655|wreathen         |1        |
+|36656|wrecking         |1        |
+|36657|wresting         |1        |
+|36658|wrestlers        |1        |
+|36659|wrestles         |1        |
+|36660|wretchcd         |1        |
+|36661|wretcheder       |1        |
+|36662|wretchedest      |1        |
+|36663|wriggling        |1        |
+|36664|wrighter         |1        |
+|36665|wrightia         |1        |
+|36666|wrinching        |1        |
+|36667|wrinckled        |1        |
+|36668|wringer          |1        |
+|36669|wriothesley      |1        |
+|36670|wriothesly       |1        |
+|36671|wristbands       |1        |
+|36672|writhled         |1        |
+|36673|writs            |1        |
+|36674|wrongdoing       |1        |
+|36675|wrongly          |1        |
+|36676|wronk            |1        |
+|36677|wrying           |1        |
+|36678|wul              |1        |
+|36679|wynning          |1        |
+|36680|xanthippe        |1        |
+|36681|xanthus          |1        |
+|36682|xarifa           |1        |
+|36683|xenophon         |1        |
+|36684|ximenez          |1        |
+|36685|xn               |1        |
+|36686|xvith            |1        |
+|36687|yadnikas         |1        |
+|36688|yanguesan        |1        |
+|36689|yarmouth         |1        |
+|36690|yashodhara       |1        |
+|36691|yaughan          |1        |
+|36692|yaw              |1        |
+|36693|yawns            |1        |
+|36694|ycleped          |1        |
+|36695|ycliped          |1        |
+|36696|yead             |1        |
+|36697|yeah             |1        |
+|36698|yeares           |1        |
+|36699|yeas             |1        |
+|36700|yeast            |1        |
+|36701|yeasty           |1        |
+|36702|yedward          |1        |
+|36703|yeelded          |1        |
+|36704|yeelds           |1        |
+|36705|yeild            |1        |
+|36706|yelled           |1        |
+|36707|yelling          |1        |
+|36708|yellowed         |1        |
+|36709|yellower         |1        |
+|36710|yellowing        |1        |
+|36711|yellowish        |1        |
+|36712|yellowness       |1        |
+|36713|yellowstone      |1        |
+|36714|yelped           |1        |
+|36715|yeomanry         |1        |
+|36716|yerk             |1        |
+|36717|yester           |1        |
+|36718|yesterdays       |1        |
+|36719|yesty            |1        |
+|36720|yicld            |1        |
+|36721|yielders         |1        |
+|36722|yieldeth         |1        |
+|36723|yieldings        |1        |
+|36724|yoak             |1        |
+|36725|yokefellow       |1        |
+|36726|yoketh           |1        |
+|36727|yoking           |1        |
+|36728|yonis            |1        |
+|36729|yorick           |1        |
+|36730|yorkers          |1        |
+|36731|yorks            |1        |
+|36732|younglings       |1        |
+|36733|yourseln         |1        |
+|36734|youthfulness     |1        |
+|36735|youtli           |1        |
+|36736|yrons            |1        |
+|36737|yseult           |1        |
+|36738|yslaked          |1        |
+|36739|zagals           |1        |
+|36740|zanies           |1        |
+|36741|zanoguera        |1        |
+|36742|zany             |1        |
+|36743|zaquizami        |1        |
+|36744|zeale            |1        |
+|36745|zealously        |1        |
+|36746|zeals            |1        |
+|36747|zeca             |1        |
+|36748|zed              |1        |
+|36749|zenana           |1        |
+|36750|zenelophon       |1        |
+|36751|zenith           |1        |
+|36752|zephyrs          |1        |
+|36753|zerbino          |1        |
+|36754|zeuxis           |1        |
+|36755|zigzags          |1        |
+|36756|zo               |1        |
+|36757|zoilus           |1        |
+|36758|zola             |1        |
+|36759|zoltanis         |1        |
+|36760|zone             |1        |
+|36761|zonzorino        |1        |
+|36762|zopyrus          |1        |
+|36763|zoroaster        |1        |
+|36764|zoroastric       |1        |
+|36765|zorruna          |1        |
+|36766|zulema           |1        |
+|36767|zwaggered        |1        |
++-----+-----------------+---------+
+
+---------------------------------------------------------------------------------------------
+('total number of distinct letters=', 26)
+('popular_threshold_letter=', 2.0)
+('common_threshold_l_letter=', 12.0)
+('common_threshold_u_letter=', 14.0)
+('rare_threshold_letter=', 24.0)
+---------------------------------------------------------------------------------------------
+
+Popular Letters
++----+------+---------+
+|Rank|Letter|Frequency|
++----+------+---------+
+|1   |e     |1103156  |
+|2   |t     |806660   |
++----+------+---------+
+
+Common Letters
++----+------+---------+
+|Rank|Letter|Frequency|
++----+------+---------+
+|12  |u     |280157   |
+|13  |m     |253088   |
+|14  |w     |212983   |
++----+------+---------+
+
+Rare Letters
++----+------+---------+
+|Rank|Letter|Frequency|
++----+------+---------+
+|24  |j     |12352    |
+|25  |q     |11640    |
+|26  |z     |3968     |
++----+------+---------+
+
+---------------------------------------------------------------------------------------------
