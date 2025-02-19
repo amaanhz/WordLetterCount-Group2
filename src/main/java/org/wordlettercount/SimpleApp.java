@@ -3,6 +3,11 @@ package org.wordlettercount;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
 
+/**
+ *  Class to run distributed Spark job to count words.
+ * 
+ *  Weights word frequency as specified in deliverable. 
+ */
 public class SimpleApp {
     public static void main(String[] args) {
         String logFile = "/opt/spark/README.md"; // Should be some file on your system
