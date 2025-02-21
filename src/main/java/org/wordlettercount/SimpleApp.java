@@ -47,13 +47,9 @@ public class SimpleApp {
         // }
 
         // Define input and output files
-        // TODO: change out input file path for args[1], and change outputs to match where we need to write to
         String inputFilePath = args[1];
         String wordOutputFilePath = "words_spark.csv";
         String letterOutputFilePath = "letters_spark.csv"; // TODO: spark is really weird and outputs a directory with this path that contains part-00.. and _SUCCESS
-
-        // Remove previous
-
 
         SparkSession sparkSession = SparkSession
                 .builder()
@@ -73,25 +69,10 @@ public class SimpleApp {
         }
 
         // then do the work
-        // TODO: uncomment letterCount func call when implemented
         wordCountImplementation(sparkSession, inputFilePath, wordOutputFilePath);
         letterCountImplementation(sparkSession, inputFilePath, letterOutputFilePath);
 
         sparkSession.stop();
-
-
-
-
-        // String logFile = "/opt/spark/README.md"; // Should be some file on your system
-        // SparkSession spark = SparkSession.builder().appName("SimpleApp").config("spark.master", "local").getOrCreate();
-        // Dataset<String> logData = spark.read().textFile(logFile).cache();
-
-        // long numAs = logData.filter((org.apache.spark.api.java.function.FilterFunction<String>)s -> s.contains("a")).count();
-        // long numBs = logData.filter((org.apache.spark.api.java.function.FilterFunction<String>)s -> s.contains("b")).count();
-
-        // System.out.println("Lines with a: " + numAs + ", lines with b: " + numBs);
-
-        // spark.stop();
     }
 
     /**
@@ -115,12 +96,10 @@ public class SimpleApp {
                 .cache();                   // TODO: do we need to store 500MB in memory? i.e. is cache overkill here
 
         Dataset<Row> wordCountsDataset = textDataset
-                // TODO: check if the below logic yields the correct results or not on test data
                 // For each line, we can split into words with all of the following punctuation marks
                 // , . ; : ? ! " ( ) [ ] { } _
                 // Note we do not split using - or ' as this is in the middle of words, and we want to
                 // omit words with non-alphabetic chars such as "that's" or "non-alphabetic".
-                // TODO: I think it's wrong that we don't split on "-", when you do split it matches the sample output
                 .flatMap(
                         (String line) -> Arrays.asList(line.split("[\\s,.;:?!\"()\\[\\]{}!_-]+")).iterator(),
                         Encoders.STRING()
@@ -175,12 +154,12 @@ public class SimpleApp {
 
         // and write to memory.
         wordCountsWithCategoryDataset
-                .select("rank", "word", "category", "frequency")
-                .repartition(1)
-                .write()
-                .option("header", "true")
-                .option("delimiter", ",")       // NOTE: important that the delimiter does not have spaces
-                .csv(outputFilePath);
+            .select("rank", "word", "category", "frequency")
+            .repartition(1)
+            .write()
+            .option("header", "true")
+            .option("delimiter", ",")       // NOTE: important that the delimiter does not have spaces
+            .csv(outputFilePath);
     }
 
     /**
