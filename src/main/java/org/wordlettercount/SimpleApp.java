@@ -12,6 +12,7 @@ import org.apache.spark.sql.expressions.Window;
 
 import java.io.File;
 import java.lang.Exception;
+import java.util.regex.Pattern;
 
 import org.apache.spark.sql.Encoders;
 import java.util.Arrays;
@@ -40,12 +41,6 @@ public class SimpleApp {
             throw new Exception("Invalid arguments. USAGE: jar -i /file/to/input/path.txt");
         }
 
-        // Check path to input file given is valid
-        // TODO: uncomment
-        // if (!(new File(args[1]).isFile())) {
-        //     throw new Exception("Given path to file is not valid.");
-        // }
-
         // Define input and output files
         String inputFilePath = args[1];
         String wordOutputFilePath = "words_spark.csv";
@@ -55,6 +50,8 @@ public class SimpleApp {
                 .builder()
                 .appName("SimpleApp")
                 .config("spark.master", "local")
+                .config("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
+                .config("spark.sql.adaptive.enabled", "true")   // AQE for optimising skewed data performance
                 .getOrCreate();
 
         // Remove any existing outputs ( TODO: because spark is outputting a directory weirdly you have to delete the directory of the output path )
@@ -68,9 +65,15 @@ public class SimpleApp {
             fs.delete(letteroutputPath, true);
         }
 
+        // Read in intermediate dataset and cache it
+        Dataset<String> textDataset = sparkSession
+                .read()
+                .textFile(inputFilePath)
+                .cache();
+
         // then do the work
-        wordCountImplementation(sparkSession, inputFilePath, wordOutputFilePath);
-        letterCountImplementation(sparkSession, inputFilePath, letterOutputFilePath);
+        wordCountImplementation(sparkSession, textDataset, wordOutputFilePath);
+        letterCountImplementation(sparkSession, textDataset, letterOutputFilePath);
 
         sparkSession.stop();
     }
@@ -81,27 +84,23 @@ public class SimpleApp {
      *  Should pass in session, and also stop session after (i.e. this is not handled by the function).
      *
      *  @param sparkSession - the spark session to use
-     *  @param inputFilePath
+     *  @param textDataset
      *  @param outputFilePath
      */
     public static void wordCountImplementation(
             SparkSession sparkSession,
-            String inputFilePath,
+            Dataset<String> textDataset,
             String outputFilePath
     ) {
-        // Read in the text to the Dataset object.
-        Dataset<String> textDataset = sparkSession
-                .read()
-                .textFile(inputFilePath)
-                .cache();                   // TODO: do we need to store 500MB in memory? i.e. is cache overkill here
+        // Precompile the regex
+        // For each line, we can split into words with all of the following punctuation marks
+        // , . ; : ? ! " ( ) [ ] { } _
+        Pattern wordSplitByPunctuation = Pattern.compile("[\\s,.;:?!\"()\\[\\]{}!_-]+");
 
         Dataset<Row> wordCountsDataset = textDataset
-                // For each line, we can split into words with all of the following punctuation marks
-                // , . ; : ? ! " ( ) [ ] { } _
-                // Note we do not split using - or ' as this is in the middle of words, and we want to
-                // omit words with non-alphabetic chars such as "that's" or "non-alphabetic".
+                // Split by precompiled regex
                 .flatMap(
-                        (String line) -> Arrays.asList(line.split("[\\s,.;:?!\"()\\[\\]{}!_-]+")).iterator(),
+                        (String line) -> Arrays.asList(wordSplitByPunctuation.split(line)).iterator(),
                         Encoders.STRING()
                 )
                 // Then we filter out words with non-alphabetic chars
@@ -167,15 +166,9 @@ public class SimpleApp {
      */
     public static void letterCountImplementation(
             SparkSession sparkSession,
-            String inputFilePath,
+            Dataset<String> textDataset,
             String outputFilePath
     ) {
-        // Read in the text to the Dataset object.
-        Dataset<String> textDataset = sparkSession
-                .read()
-                .textFile(inputFilePath)
-                .cache();
-
         Dataset<Row> letterCountsDataset = textDataset
                 .flatMap(
                         (String line) -> Arrays.asList(line.split("")).iterator(),
