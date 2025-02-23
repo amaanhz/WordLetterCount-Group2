@@ -43,8 +43,8 @@ public class SimpleApp {
 
         // Define input and output files
         String inputFilePath = args[1];
-        String wordOutputFilePath = "words_spark.csv";
-        String letterOutputFilePath = "letters_spark.csv"; // TODO: spark is really weird and outputs a directory with this path that contains part-00.. and _SUCCESS
+        String wordOutputFilePath = "test-data/CloudComputingCoursework_Group2/words_spark";
+        String letterOutputFilePath = "test-data/CloudComputingCoursework_Group2/letters_spark"; // TODO: spark is really weird and outputs a directory with this path that contains part-00.. and _SUCCESS
 
         SparkSession sparkSession = SparkSession
                 .builder()
