@@ -1,7 +1,9 @@
 package org.wordlettercount;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
+import org.apache.orc.DataMask;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
@@ -11,7 +13,11 @@ import org.apache.spark.api.java.function.MapFunction;
 import org.apache.spark.sql.expressions.Window;
 
 import java.io.File;
+import java.io.FilenameFilter;
 import java.lang.Exception;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.regex.Pattern;
 
 import org.apache.spark.sql.Encoders;
@@ -77,6 +83,24 @@ public class SimpleApp {
         letterCountImplementation(sparkSession, textDataset, letterOutputFilePath);
 
         sparkSession.stop();
+
+        // clear junk
+        File folder = new File("test-data/CloudComputingCoursework_Group2");
+        String[] names = { "letters_spark", "words_spark" };
+
+        for (String s : names) {
+            String subdir = String.format("%s/%s", folder.getPath(), s);
+            File temp = new File(subdir);
+            String[] filter = temp.list(new FilenameFilter() {
+                @Override
+                public boolean accept(File dir, String name) {
+                    return name.substring(name.length() - 3).equals("csv");
+                }
+            });
+            String finalpath = String.format("%s/%s", subdir, filter[0]);
+            Files.move(Paths.get(finalpath), Paths.get(folder.getPath(), String.format("%s.csv", s)), StandardCopyOption.REPLACE_EXISTING);
+            FileUtils.deleteDirectory(temp);
+        }
     }
 
     /**
