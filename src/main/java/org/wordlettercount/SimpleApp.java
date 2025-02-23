@@ -22,16 +22,12 @@ import java.util.Objects;
  *
  *  Weights word frequency as specified in deliverable.
  *
- *  TODO: modify so that the code takes in argument of input file
- *  i.e. call like ./example.jar -i ./input/file/path.txt
- *
  *  TODO: modify so that the code writes to mounted volume, specifically
  *  to ./test-data/CloudComputingCoursework_Group2/
  *  which should contain both words_spark.csv and letters_spark.csv
  */
 public class SimpleApp {
     public static void main(String[] args) throws Exception {
-        // TODO: implement check that -i flag is present, and path to file exists and is valid type
 
         // We actually only need two arguments: the flag and the input file path
         // So check that there are exactly two arguments, and raise an exception if not
@@ -40,11 +36,10 @@ public class SimpleApp {
             throw new Exception("Invalid arguments. USAGE: jar -i /file/to/input/path.txt");
         }
 
-        // Check path to input file given is valid
-        // TODO: uncomment
-        // if (!(new File(args[1]).isFile())) {
-        //     throw new Exception("Given path to file is not valid.");
-        // }
+         // Check path to input file given is valid
+         if (!(new File(args[1]).isFile())) {
+             throw new Exception("Given path to file is not valid.");
+         }
 
         // Define input and output files
         String inputFilePath = args[1];
