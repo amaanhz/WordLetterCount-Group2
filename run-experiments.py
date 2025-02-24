@@ -37,6 +37,7 @@ print("Created directories to write to.")
 
 # TODO: get the data file names properly i.e. so that they are from the mounted volume
 DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
+# DATA_FILES = ["/test-data/sample.txt"]
 # Output for timings
 OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
 
@@ -111,8 +112,8 @@ for file_index in range(len(DATA_FILES)):
 
 			# Then get rid of the pod
 			# TODO: check this command works
-			# command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
-			# _ = subprocess.run(command, shell=True, capture_output=True)
+			command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
+			_ = subprocess.run(command, shell=True, capture_output=True)
 
 			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
 
