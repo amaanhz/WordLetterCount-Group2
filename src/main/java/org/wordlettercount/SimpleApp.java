@@ -179,7 +179,7 @@ public class SimpleApp {
         // and write to memory.
         wordCountsWithCategoryDataset
             .select("rank", "word", "category", "frequency")
-            .repartition(1)
+            .coalesce(1)
             .write()
             .option("header", "true")
             .option("delimiter", ",")       // NOTE: important that the delimiter does not have spaces
@@ -252,7 +252,7 @@ public class SimpleApp {
         // and write to memory.
         letterCountsWithCategoryDataset
                 .select("rank", "letter", "category", "frequency")
-                .repartition(1)
+                .coalesce(1)
                 .write()
                 .option("header", "true")
                 .option("delimiter", ",")

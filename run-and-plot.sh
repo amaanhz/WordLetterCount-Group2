@@ -11,6 +11,9 @@
 # ./run-and-plot
 #
 
+# to make the python programs actually print
+export PYTHONUNBUFFERED=1
+
 # TODO: maybe add a bit here that will move the jar to the kubectl pod
 
 
