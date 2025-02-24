@@ -92,7 +92,7 @@ for file_index in range(len(DATA_FILES)):
 			--conf spark.kubernetes.executor.volumes.persistentVolumeClaim.nfs-cc-group2.mount.path=/test-data \
 			--conf spark.kubernetes.executor.volumes.persistentVolumeClaim.nfs-cc-group2.mount.readOnly=false \
 			--conf spark.kubernetes.executor.volumes.persistentVolumeClaim.nfs-cc-group2.options.claimName=nfs-cc-group2 \
-			local:///test-data/WordLetterCount.jar -i /test-data/{data_file}
+			local:///test-data/WordLetterCount.jar -i {data_file}
 			"""
 
 			# TODO: CHANGE THIS TO USE time ... AS SPECIFIED
