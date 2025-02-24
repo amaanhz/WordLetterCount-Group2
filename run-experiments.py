@@ -111,8 +111,8 @@ for file_index in range(len(DATA_FILES)):
 
 			# Then get rid of the pod
 			# TODO: check this command works
-			command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
-			_ = subprocess.run(command, shell=True, capture_output=True)
+			# command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
+			# _ = subprocess.run(command, shell=True, capture_output=True)
 
 			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
 
