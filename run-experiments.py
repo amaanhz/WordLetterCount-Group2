@@ -91,7 +91,6 @@ for file_index in range(len(DATA_FILES)):
 			--name wordlettercount \
 			--class org.wordlettercount.SimpleApp \
 			--conf spark.executor.instances={executor_count} \
-			--conf spark.executor.cores={str(12 / int(executor_count))} \
 			--conf spark.kubernetes.namespace=cc-group2 \
 			--conf spark.kubernetes.authenticate.driver.serviceAccountName=cc-group2-user \
 			--conf spark.kubernetes.container.image=andylamp/spark:v3.5.4-amd64 \
