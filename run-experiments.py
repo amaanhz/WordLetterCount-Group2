@@ -34,7 +34,7 @@ os.chdir("..")
 
 
 # TODO: get the data file names properly i.e. so that they are from the mounted volume
-DATA_FILES: list[str] = ["data_100MB.txt", "data_200MB.txt", "data_500MB.txt"]
+DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
 # Output for timings
 OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
 
@@ -47,6 +47,7 @@ REPETITIONS: int = 3
 # For each experiment we get the multiline string for command, and then we run it
 for file_index in range(len(DATA_FILES)):
 
+	# We get a data file
 	data_file = DATA_FILES[file_index]
 
 	# We prepare the results table
@@ -71,16 +72,26 @@ for file_index in range(len(DATA_FILES)):
 	for i, executor_count in enumerate(EXECUTORS):
 		for repetition in range(1, REPETITIONS + 1):
 
-			# TODO: Add the spark submit command here, should look similar to 
-			# TODO: Change the ./bin/spark-submit to wherever the spark-submit is relative to the home dir of our cloud server (they unzip in there and cd into it)
-			command: str = f"""./bin/spark-submit \
-				PLEASE ADD THE RELEVANT STUFF HERE NOT SURE
-				LOOK AT https://www.vle.cam.ac.uk/mod/page/view.php?id=19306719
-				AND MAKE SURE THAT IT RUNS
-				AND INJECT THE EXECUTOR COUNT AS --conf spark.executor.instances={executor_count}
-				AND INJECT THE DATA FILE INPUT (REMEMBER JAR TAKES INPUT -i {data_file})
+			# Spark submit command
+			command: str = f"""../spark-3.5.4-bin-hadoop3/bin/spark-submit \
+			--master k8s://128.232.80.18:6443 \
+			--deploy-mode cluster \
+			--name wordlettercount \
+			--class org.wordlettercount.SimpleApp \
+			--conf spark.executor.instances={executor_count} \
+			--conf spark.kubernetes.namespace=cc-group2 \
+			--conf spark.kubernetes.authenticate.driver.serviceAccountName=cc-group2-user \
+			--conf spark.kubernetes.container.image=andylamp/spark:v3.5.4-amd64 \
+			--conf spark.kubernetes.driver.volumes.persistentVolumeClaim.nfs-cc-group2.mount.path=/test-data \
+			--conf spark.kubernetes.driver.volumes.persistentVolumeClaim.nfs-cc-group2.mount.readOnly=false \
+			--conf spark.kubernetes.driver.volumes.persistentVolumeClaim.nfs-cc-group2.options.claimName=nfs-cc-group2 \
+			--conf spark.kubernetes.executor.volumes.persistentVolumeClaim.nfs-cc-group2.mount.path=/test-data \
+			--conf spark.kubernetes.executor.volumes.persistentVolumeClaim.nfs-cc-group2.mount.readOnly=false \
+			--conf spark.kubernetes.executor.volumes.persistentVolumeClaim.nfs-cc-group2.options.claimName=nfs-cc-group2 \
+			local:///test-data/WordLetterCount.jar -i /test-data/{data_file}
 			"""
 
+			# TODO: CHANGE THIS TO USE time ... AS SPECIFIED
 			# Use python's time module to get start time
 			start_time: float = time.time()
 
@@ -94,8 +105,13 @@ for file_index in range(len(DATA_FILES)):
 			# And we store the value in data_results
 			results[i+1][repetition] = str(elapsed_time)
 
-			# We then wait 10 mins before running the next experiment to let the system recover
-			time.sleep(10*60)
+			# Then get rid of the pod
+			# TODO: check this command works
+			command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
+			_ = subprocess.run(command, shell=True, capture_output=True)
+
+			# We then wait 1 minute before running the next experiment to let the system recover
+			time.sleep(1*60)
 
 
 	# Finally we attempt to write this data_results to memory

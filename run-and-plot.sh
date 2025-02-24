@@ -11,7 +11,7 @@
 # ./run-and-plot
 #
 
-# TODO: move jar to test-data dir
+# TODO: maybe add a bit here that will move the jar to the kubectl pod
 
 
 # then activate venv, download dependencies, and run plotting script
@@ -27,5 +27,4 @@ python plot-experiments.py "$TIMESTAMP"
 # and deactivate 
 deactivate
 
-# TODO: then move jar back
 
