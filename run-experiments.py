@@ -20,6 +20,7 @@ from datetime import datetime
 
 # First get the timestamp in ISO-8601 fashion
 timestamp: str = datetime.utcnow().strftime("%Y%m%dT%H%M%S")
+print(f"Got timestamp {timestamp}.")
 
 
 # Then create experiments directory if not present, and then the timestamp dir, and then measurements dir
@@ -31,6 +32,7 @@ os.chdir(timestamp)
 os.makedirs("measurements")
 os.chdir("..")
 os.chdir("..")
+print("Created directories to write to.")
 
 
 # TODO: get the data file names properly i.e. so that they are from the mounted volume
@@ -72,6 +74,8 @@ for file_index in range(len(DATA_FILES)):
 	for i, executor_count in enumerate(EXECUTORS):
 		for repetition in range(1, REPETITIONS + 1):
 
+			print(f"Attempting word and letter count for {data_file}, for {executor_count} executors, on repetition {repetition}.")
+
 			# Spark submit command
 			command: str = f"""../spark-3.5.4-bin-hadoop3/bin/spark-submit \
 			--master k8s://128.232.80.18:6443 \
@@ -110,10 +114,12 @@ for file_index in range(len(DATA_FILES)):
 			command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
 			_ = subprocess.run(command, shell=True, capture_output=True)
 
+			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
+
 			# We then wait 1 minute before running the next experiment to let the system recover
 			time.sleep(1*60)
 
-
+	print(f"Writing results for {data_file} to memory.")
 	# Finally we attempt to write this data_results to memory
 	input_file = data_file
 	output_file_path = OUTPUT_FILES[file_index]
@@ -122,6 +128,7 @@ for file_index in range(len(DATA_FILES)):
 		writer = csv.writer(file, delimiter=",")
 		for row in results:
 			writer.writerow([value if value is not None else "" for value in row])
+	prnt(f"Results for {data_file} written to csv file in memory.")
 
 
 # And output timestamp to command line so next script can pick it up

@@ -19,7 +19,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 
 # run experiments script
-TIMESTAMP=$(python ./run-experiments.py)
+TIMESTAMP=$(python ./run-experiments.py | tail -n 1)  # tail captures the last line
 
 # run plotting script
 python plot-experiments.py "$TIMESTAMP"
