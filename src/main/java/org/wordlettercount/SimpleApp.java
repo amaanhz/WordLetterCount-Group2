@@ -28,10 +28,11 @@ import java.util.Objects;
  *  Class to run distributed Spark job to count words.
  *
  *  Weights word frequency as specified in deliverable.
+ * 
+ *  Since this is built into a jar that is moved to the test-data dir for execution,
+ *  we can actually refer to inputs and outputs in same directory i.e. ./file.txt
  *
- *  TODO: modify so that the code writes to mounted volume, specifically
- *  to ./test-data/CloudComputingCoursework_Group2/
- *  which should contain both words_spark.csv and letters_spark.csv
+ *  Outputs should contain both words_spark.csv and letters_spark.csv
  */
 public class SimpleApp {
     public static void main(String[] args) throws Exception {
@@ -50,8 +51,8 @@ public class SimpleApp {
       
         // Define input and output files
         String inputFilePath = args[1];
-        String wordOutputFilePath = "test-data/CloudComputingCoursework_Group2/words_spark";
-        String letterOutputFilePath = "test-data/CloudComputingCoursework_Group2/letters_spark"; // TODO: spark is really weird and outputs a directory with this path that contains part-00.. and _SUCCESS
+        String wordOutputFilePath = "./words_spark";
+        String letterOutputFilePath = "./letters_spark"; // TODO: spark is really weird and outputs a directory with this path that contains part-00.. and _SUCCESS
 
         SparkSession sparkSession = SparkSession
                 .builder()
@@ -85,7 +86,7 @@ public class SimpleApp {
         sparkSession.stop();
 
         // clear junk
-        File folder = new File("test-data/CloudComputingCoursework_Group2");
+        File folder = new File(".");
         String[] names = { "letters_spark", "words_spark" };
 
         for (String s : names) {
