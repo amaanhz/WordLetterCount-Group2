@@ -35,19 +35,20 @@ os.chdir("..")
 
 print("Created directories to write to.")
 
+# TODO: revert
 
 # Get data from the mounted volume
-DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
+#DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
+DATA_FILES = ["/test-data/sample.txt"]
 # Output for timings
-OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
+#OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
+OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["sample.csv"]]
 
 
 # Defining executors and repetitions for experiment
-# EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
-# REPETITIONS: int = 3
-# TODO: REMOVE
-EXECUTORS: list[str] = [str(i) for i in [6]]
-REPETITIONS: int = 1
+EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
+REPETITIONS: int = 3
+
 
 
 # Record starting times for each experiment
@@ -142,7 +143,7 @@ for file_index in range(len(DATA_FILES)):
 			writer.writerow([value if value is not None else "" for value in row])
 	print(f"Results for {data_file} written to csv file in memory.")
 
-with open(f"./experiments/{timestamp}/measurements/{starting_times_for_report}.txt", mode="w") as file:
+with open(f"./experiments/{timestamp}/measurements/starting_times_for_report.txt", mode="w") as file:
 	for i in starting_times_for_report:
 		file.write(i+"\n")
 
