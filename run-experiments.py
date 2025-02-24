@@ -43,11 +43,11 @@ OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for f
 
 
 # Defining executors and repetitions for experiment
-EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
-REPETITIONS: int = 3
+# EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
+# REPETITIONS: int = 3
 # TODO: REMOVE
-# EXECUTORS: list[str] = [str(i) for i in [6]]
-# REPETITIONS: int = 1
+EXECUTORS: list[str] = [str(i) for i in [6]]
+REPETITIONS: int = 1
 
 
 # Record starting times for each experiment
@@ -128,7 +128,8 @@ for file_index in range(len(DATA_FILES)):
 			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
 
 			# We then wait 1 minute before running the next experiment to let the system recover
-			time.sleep(1*60)
+			# TODO: add back
+			# time.sleep(1*60)
 
 	print(f"Writing results for {data_file} to memory.")
 	# Finally we attempt to write this data_results to memory
