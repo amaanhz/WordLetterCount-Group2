@@ -11,6 +11,11 @@
 # ./run-and-plot
 #
 
+kubectl create -f deployment.yaml
+sleep 10
+kubectl cp jars/WordLetterCount.jar cc-group2/group-2-ubuntu-volume:/test-data/WordLetterCount.jar
+kubectl delete pod group-2-ubuntu-volume
+
 # to make the python programs actually print
 export PYTHONUNBUFFERED=1
 
