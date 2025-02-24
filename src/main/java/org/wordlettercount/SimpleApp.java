@@ -57,7 +57,6 @@ public class SimpleApp {
         SparkSession sparkSession = SparkSession
                 .builder()
                 .appName("SimpleApp")
-                .config("spark.master", "local")
                 .config("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
                 .config("spark.sql.adaptive.enabled", "true")   // AQE for optimising skewed data performance
                 .getOrCreate();
