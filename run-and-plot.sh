@@ -14,9 +14,6 @@
 # to make the python programs actually print
 export PYTHONUNBUFFERED=1
 
-# TODO: maybe add a bit here that will move the jar to the kubectl pod
-
-
 # then activate venv, download dependencies, and run plotting script
 source .venv/bin/activate
 pip install -r requirements.txt
