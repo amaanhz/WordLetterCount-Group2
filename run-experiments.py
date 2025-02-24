@@ -24,7 +24,6 @@ print(f"Got timestamp {timestamp}.")
 
 
 # Then create experiments directory if not present, and then the timestamp dir, and then measurements dir
-os.chdir("test-data")
 if not os.path.exists("experiments"):
 	os.makedirs("experiments")
 os.chdir("experiments")
@@ -33,23 +32,26 @@ os.chdir(timestamp)
 os.makedirs("measurements")
 os.chdir("..")
 os.chdir("..")
-os.chdir("..")
+
 print("Created directories to write to.")
 
 
-# TODO: get the data file names properly i.e. so that they are from the mounted volume
+# Get data from the mounted volume
 DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
-# DATA_FILES = ["/test-data/sample.txt"]
 # Output for timings
 OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
 
 
 # Defining executors and repetitions for experiment
-# EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
-# REPETITIONS: int = 3
-# TODO: REVERT
-EXECUTORS: list[str] = [str(i) for i in [6]]
-REPETITIONS: int = 1
+EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
+REPETITIONS: int = 3
+# TODO: REMOVE
+# EXECUTORS: list[str] = [str(i) for i in [6]]
+# REPETITIONS: int = 1
+
+
+# Record starting times for each experiment
+starting_times_for_report = []
 
 
 # For each experiment we get the multiline string for command, and then we run it
@@ -102,6 +104,9 @@ for file_index in range(len(DATA_FILES)):
 			local:///test-data/WordLetterCount.jar -i {data_file}
 			"""
 
+			# Add starting times for report
+			starting_times_for_report.append(datetime.utcnow().strftime("%Y%m%dT%H%M%S"))
+
 			# TODO: CHANGE THIS TO USE time ... AS SPECIFIED
 			# Use python's time module to get start time
 			start_time: float = time.time()
@@ -137,6 +142,9 @@ for file_index in range(len(DATA_FILES)):
 			writer.writerow([value if value is not None else "" for value in row])
 	print(f"Results for {data_file} written to csv file in memory.")
 
+with open(f"./experiments/{timestamp}/measurements/{starting_times_for_report}.txt", mode="w") as file:
+	for i in starting_times_for_report:
+		file.write(i+"\n")
 
 # And output timestamp to command line so next script can pick it up
 print(timestamp)
