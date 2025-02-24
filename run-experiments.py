@@ -38,17 +38,14 @@ print("Created directories to write to.")
 # TODO: revert
 
 # Get data from the mounted volume
-#DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
-DATA_FILES = ["/test-data/sample.txt"]
+DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
 # Output for timings
-#OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
-OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["sample.csv"]]
+OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
 
 
 # Defining executors and repetitions for experiment
 EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
 REPETITIONS: int = 3
-
 
 
 # Record starting times for each experiment
