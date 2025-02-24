@@ -11,13 +11,21 @@
 # ./run-and-plot
 #
 
-# TODO: add downloading requirements
+# TODO: move jar to test-data dir
 
-# run experiments script
-TIMESTAMP=$(./run-experiments)
 
 # then activate venv, download dependencies, and run plotting script
 source .venv/bin/activate
 pip install -r requirements.txt
+
+# run experiments script
+TIMESTAMP=$(python ./run-experiments.py)
+
+# run plotting script
 python plot-experiments.py "$TIMESTAMP"
+
+# and deactivate 
 deactivate
+
+# TODO: then move jar back
+
