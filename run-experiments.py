@@ -24,12 +24,14 @@ print(f"Got timestamp {timestamp}.")
 
 
 # Then create experiments directory if not present, and then the timestamp dir, and then measurements dir
+os.chdir("test-data")
 if not os.path.exists("experiments"):
 	os.makedirs("experiments")
 os.chdir("experiments")
 os.makedirs(timestamp, exist_ok=True)
 os.chdir(timestamp)
 os.makedirs("measurements")
+os.chdir("..")
 os.chdir("..")
 os.chdir("..")
 print("Created directories to write to.")
@@ -43,8 +45,11 @@ OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for f
 
 
 # Defining executors and repetitions for experiment
-EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
-REPETITIONS: int = 3
+# EXECUTORS: list[str] = [str(i) for i in [2, 4, 6]]
+# REPETITIONS: int = 3
+# TODO: REVERT
+EXECUTORS: list[str] = [str(i) for i in [6]]
+REPETITIONS: int = 1
 
 
 # For each experiment we get the multiline string for command, and then we run it
@@ -84,6 +89,7 @@ for file_index in range(len(DATA_FILES)):
 			--name wordlettercount \
 			--class org.wordlettercount.SimpleApp \
 			--conf spark.executor.instances={executor_count} \
+			--conf spark.executor.cores={str(12 / int(executor_count))} \
 			--conf spark.kubernetes.namespace=cc-group2 \
 			--conf spark.kubernetes.authenticate.driver.serviceAccountName=cc-group2-user \
 			--conf spark.kubernetes.container.image=andylamp/spark:v3.5.4-amd64 \
@@ -129,7 +135,7 @@ for file_index in range(len(DATA_FILES)):
 		writer = csv.writer(file, delimiter=",")
 		for row in results:
 			writer.writerow([value if value is not None else "" for value in row])
-	prnt(f"Results for {data_file} written to csv file in memory.")
+	print(f"Results for {data_file} written to csv file in memory.")
 
 
 # And output timestamp to command line so next script can pick it up
