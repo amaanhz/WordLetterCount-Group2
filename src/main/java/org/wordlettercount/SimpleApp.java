@@ -60,6 +60,7 @@ public class SimpleApp {
 
         SparkSession sparkSession = SparkSession
                 .builder()
+                .master("local")
                 .appName("SimpleApp")
                 .config("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
                 .config("spark.sql.adaptive.enabled", "true")   // AQE for optimising skewed data performance
@@ -408,7 +409,7 @@ public class SimpleApp {
 
         // Finally we can write these to memory
         lettersWithCategory
-                .select("rank", "word", "category", "frequency")
+                .select("rank", "letter", "category", "frequency")
                 .coalesce(1)
                 .write()
                 .option("header", "true")
