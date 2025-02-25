@@ -364,15 +364,15 @@ public class SimpleApp {
                         "category",
                         functions
                                 .when(
-                                        functions.col("rank").leq(0.05 * distinctWordCount),
+                                        functions.col("rank").leq(Math.ceil(0.05 * distinctWordCount)),
                                         "popular"
                                 ).when(
-                                        functions.col("rank").geq(0.95 * distinctWordCount),
+                                        functions.col("rank").geq(Math.floor(0.95 * distinctWordCount)),
                                         "rare"
                                 ).when(
                                         functions.col("rank").between(
-                                                0.475 * distinctWordCount,
-                                                0.525 * distinctWordCount
+                                                Math.floor(0.475 * distinctWordCount),
+                                                Math.ceil(0.525 * distinctWordCount)
                                         ),
                                         "common"
                                 ).otherwise("")
