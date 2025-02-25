@@ -1,20 +1,15 @@
 package org.wordlettercount;
 
-import org.apache.commons.io.FileUtils;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.functions;
-import org.apache.spark.sql.catalyst.encoders.RowEncoder;
-import org.apache.spark.api.java.function.FilterFunction;
-import org.apache.spark.api.java.function.MapFunction;
 import org.apache.spark.sql.expressions.Window;
 import org.apache.spark.sql.expressions.WindowSpec;
 import org.apache.spark.sql.types.StructType;
 import org.apache.spark.sql.types.DataTypes;
-import org.apache.spark.sql.RowFactory;
 
 import java.io.File;
 import java.lang.Exception;
@@ -23,7 +18,6 @@ import java.util.regex.Pattern;
 import org.apache.spark.sql.Encoders;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -264,6 +258,7 @@ public class SimpleApp {
 //                 .csv(outputFilePath);
 //     }
 
+
     /**
      * Word and letter count at the same time. Here we attempt to streamline the process by performing all regexes
      * on one pass of each line.
@@ -284,27 +279,27 @@ public class SimpleApp {
         
         // We call words and characters tokens, and this dataset is intermediate, containing both,
         // with two columns: "value" i.e. the word / char, and "type" which is "w" and "l" for word / char respectively
-        StructType rowSchema = new StructType()
-                .add("token", DataTypes.StringType, false)
-                .add("type", DataTypes.StringType, false);
+        // StructType rowSchema = new StructType()
+        //         .add("token", DataTypes.StringType, false)
+        //         .add("type", DataTypes.StringType, false);
         Dataset<Row> tokenDataset = textDataset
                 .flatMap(
                         (String line) -> {
                                 // list of word/char and type "w"/"l"
-                                List<Row> list = new ArrayList<>();
+                                List<TokenDatasetRow> list = new ArrayList<>();
                                 String[] words = wordSplitByPunctuation.split(line);
 
                                 // We get the words, and for each check to add as a word or not, and get chars from it
                                 // whether it is a valid word or not, thus completing everything on one pass
                                 for (String w: words) {
                                         if (alphabeticCharsOnly.matcher(w).matches()) {
-                                                list.add(RowFactory.create(w.toLowerCase(), "w"));
+                                                list.add(new TokenDatasetRow(w.toLowerCase(), "w"));
                                         }
                                         // then we split word up into chars, and add each char if it is a-z or A-Z
                                         for (char c: w.toCharArray()) {
                                                 String s_c = String.valueOf(c);
                                                 if (alphabeticCharsOnly.matcher(s_c).matches()) {
-                                                        list.add(RowFactory.create(s_c.toLowerCase(), "l"));
+                                                        list.add(new TokenDatasetRow(s_c.toLowerCase(), "l"));
                                                 }
                                         }
                                 }
@@ -312,7 +307,7 @@ public class SimpleApp {
                                 // We are required to return an iterator over the list
                                 return list.iterator();
                         },
-                        Encoders.bean(Row.class)
+                        Encoders.bean(TokenDatasetRow.class)
                 )
                 .toDF("token", "type")
                 .cache();                               // useful to cache this as we will be using for both word and letter count
