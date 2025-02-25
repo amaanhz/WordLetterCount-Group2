@@ -124,8 +124,7 @@ for file_index in range(len(DATA_FILES)):
 			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
 
 			# We then wait 5 minutes before running the next experiment to let the system recover
-			# TODO: CHANGE BACK TO 5 * 60
-			time.sleep(1*60)
+			time.sleep(5*60)
 
 	print(f"Writing results for {data_file} to memory.")
 	# Finally we attempt to write this data_results to memory

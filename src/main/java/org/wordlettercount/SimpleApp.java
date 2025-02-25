@@ -8,8 +8,6 @@ import org.apache.spark.sql.Row;
 import org.apache.spark.sql.functions;
 import org.apache.spark.sql.expressions.Window;
 import org.apache.spark.sql.expressions.WindowSpec;
-import org.apache.spark.sql.types.StructType;
-import org.apache.spark.sql.types.DataTypes;
 
 import java.io.File;
 import java.lang.Exception;
@@ -50,7 +48,6 @@ public class SimpleApp {
 
         SparkSession sparkSession = SparkSession
                 .builder()
-                .master("local")
                 .appName("SimpleApp")
                 .config("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
                 .config("spark.sql.adaptive.enabled", "true")   // AQE for optimising skewed data performance
@@ -71,10 +68,8 @@ public class SimpleApp {
         Dataset<String> textDataset = sparkSession
                 .read()
                 .textFile(inputFilePath);
-                // .cache();
 
         // then do the work
-        // TODO: CHECK THAT THIS WORKS, DEBUG, AND THEN REMOVE THIS COMMENT
         wordAndLetterCountStreamlinedImplementation(sparkSession, textDataset, wordOutputFilePath, letterOutputFilePath);
         // wordCountImplementation(sparkSession, textDataset, wordOutputFilePath);
         // letterCountImplementation(sparkSession, textDataset, letterOutputFilePath);
@@ -82,24 +77,6 @@ public class SimpleApp {
         // remember to remove dataset from cache
         textDataset.unpersist();
         sparkSession.stop();
-
-        // Clear any outputted junk folders
-        /*File folder = new File(".");
-        String[] names = { "letters_spark", "words_spark" };
-
-        for (String s : names) {
-            String subdir = String.format("%s/%s", folder.getPath(), s);
-            File temp = new File(subdir);
-            String[] filter = temp.list(new FilenameFilter() {
-                @Override
-                public boolean accept(File dir, String name) {
-                    return name.substring(name.length() - 3).equals("csv");
-                }
-            });
-            String finalpath = String.format("%s/%s", subdir, filter[0]);
-            Files.move(Paths.get(finalpath), Paths.get(folder.getPath(), String.format("%s.csv", s)), StandardCopyOption.REPLACE_EXISTING);
-            FileUtils.deleteDirectory(temp);
-        }*/
     }
 
     /**
@@ -279,9 +256,6 @@ public class SimpleApp {
         
         // We call words and characters tokens, and this dataset is intermediate, containing both,
         // with two columns: "value" i.e. the word / char, and "type" which is "w" and "l" for word / char respectively
-        // StructType rowSchema = new StructType()
-        //         .add("token", DataTypes.StringType, false)
-        //         .add("type", DataTypes.StringType, false);
         Dataset<Row> tokenDataset = textDataset
                 .flatMap(
                         (String line) -> {
@@ -309,8 +283,7 @@ public class SimpleApp {
                         },
                         Encoders.bean(TokenDatasetRow.class)
                 )
-                .toDF("token", "type")
-                .cache();                               // useful to cache this as we will be using for both word and letter count
+                .toDF("token", "type");                               // useful to cache this as we will be using for both word and letter count
         
         // So now the intermediate dataset is a list of rows e.g. "hello", "w" then "h", "l" etc.
 
@@ -331,8 +304,7 @@ public class SimpleApp {
                         functions.col("token").asc()
                 )
                 .withColumn("rank", functions.row_number().over(rankWindow))
-                .withColumnRenamed("token", "word")
-                .cache();
+                .withColumnRenamed("token", "word");
         long distinctWordCount = wordCounts.count();
 
         // And letter count
@@ -346,8 +318,7 @@ public class SimpleApp {
                         functions.col("token").asc()
                 )
                 .withColumn("rank", functions.row_number().over(rankWindow))
-                .withColumnRenamed("token", "letter")
-                .cache();
+                .withColumnRenamed("token", "letter");
         long distinctLetterCount = letterCounts.count();
 
         // And categorize for word and letter counts
