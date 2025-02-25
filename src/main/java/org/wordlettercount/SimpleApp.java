@@ -17,11 +17,7 @@ import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.RowFactory;
 
 import java.io.File;
-import java.io.FilenameFilter;
 import java.lang.Exception;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
 import java.util.regex.Pattern;
 
 import org.apache.spark.sql.Encoders;
@@ -121,152 +117,152 @@ public class SimpleApp {
      *  @param textDataset
      *  @param outputFilePath
      */
-    public static void wordCountImplementation(
-            SparkSession sparkSession,
-            Dataset<String> textDataset,
-            String outputFilePath
-    ) {
-        // Precompile the regex
-        // For each line, we can split into words with all of the following punctuation marks
-        // , . ; : ? ! " ( ) [ ] { } _
-        Pattern wordSplitByPunctuation = Pattern.compile("[\\s,.;:?!\"()\\[\\]{}!_-]+");
+//     public static void wordCountImplementation(
+//             SparkSession sparkSession,
+//             Dataset<String> textDataset,
+//             String outputFilePath
+//     ) {
+//         // Precompile the regex
+//         // For each line, we can split into words with all of the following punctuation marks
+//         // , . ; : ? ! " ( ) [ ] { } _
+//         Pattern wordSplitByPunctuation = Pattern.compile("[\\s,.;:?!\"()\\[\\]{}!_-]+");
 
-        Dataset<Row> wordCountsDataset = textDataset
-                // Split by precompiled regex
-                .flatMap(
-                        (String line) -> Arrays.asList(wordSplitByPunctuation.split(line)).iterator(),
-                        Encoders.STRING()
-                )
-                // Then we filter out words with non-alphabetic chars
-                .filter((FilterFunction<String>) (String word) -> word.matches("[a-zA-Z]+"))
-                // Then we make everything lowercase
-                .map(
-                        (MapFunction<String, String>) (String word) -> word.toLowerCase(),
-                        Encoders.STRING()
-                )
-                // Finally we group words together
-                .groupBy("value")
-                // And then count frequencies and rename columns to what we need
-                .count()
-                .withColumnRenamed("value", "word")
-                .withColumnRenamed("count", "frequency")
-                // Now we add rank column (ranking by frequency first, then alphabetic order second)
-                .orderBy(functions.col("frequency").desc(), functions.col("word").asc())
-                .withColumn(
-                        "rank",
-                        functions.row_number().over(
-                                Window.orderBy(
-                                        functions.col("frequency").desc(),
-                                        functions.col("word").asc()
-                                )
-                        )
-                );
+//         Dataset<Row> wordCountsDataset = textDataset
+//                 // Split by precompiled regex
+//                 .flatMap(
+//                         (String line) -> Arrays.asList(wordSplitByPunctuation.split(line)).iterator(),
+//                         Encoders.STRING()
+//                 )
+//                 // Then we filter out words with non-alphabetic chars
+//                 .filter((FilterFunction<String>) (String word) -> word.matches("[a-zA-Z]+"))
+//                 // Then we make everything lowercase
+//                 .map(
+//                         (MapFunction<String, String>) (String word) -> word.toLowerCase(),
+//                         Encoders.STRING()
+//                 )
+//                 // Finally we group words together
+//                 .groupBy("value")
+//                 // And then count frequencies and rename columns to what we need
+//                 .count()
+//                 .withColumnRenamed("value", "word")
+//                 .withColumnRenamed("count", "frequency")
+//                 // Now we add rank column (ranking by frequency first, then alphabetic order second)
+//                 .orderBy(functions.col("frequency").desc(), functions.col("word").asc())
+//                 .withColumn(
+//                         "rank",
+//                         functions.row_number().over(
+//                                 Window.orderBy(
+//                                         functions.col("frequency").desc(),
+//                                         functions.col("word").asc()
+//                                 )
+//                         )
+//                 );
 
-        // Count rows in dataset, required for categories (an exact count isn necessary here to calculate exact percentiles)
-        long rowCount = wordCountsDataset.count();
+//         // Count rows in dataset, required for categories (an exact count isn necessary here to calculate exact percentiles)
+//         long rowCount = wordCountsDataset.count();
 
-        // Then categorise data
-        Dataset<Row> wordCountsWithCategoryDataset = wordCountsDataset
-                .withColumn(
-                        "category",
-                        functions
-                                .when(
-                                        functions.col("rank").leq(Math.ceil(0.05 * rowCount)),
-                                        "popular"
-                                ).when(
-                                        functions.col("rank").geq(Math.floor(0.95 * rowCount)),
-                                        "rare"
-                                ).when(
-                                        functions.col("rank").between(
-                                                Math.floor(0.475 * rowCount),
-                                                Math.ceil(0.525 * rowCount)
-                                        ),
-                                        "common"
-                                ).otherwise("")
-                ).filter(functions.col("category").notEqual(""));
+//         // Then categorise data
+//         Dataset<Row> wordCountsWithCategoryDataset = wordCountsDataset
+//                 .withColumn(
+//                         "category",
+//                         functions
+//                                 .when(
+//                                         functions.col("rank").leq(Math.ceil(0.05 * rowCount)),
+//                                         "popular"
+//                                 ).when(
+//                                         functions.col("rank").geq(Math.floor(0.95 * rowCount)),
+//                                         "rare"
+//                                 ).when(
+//                                         functions.col("rank").between(
+//                                                 Math.floor(0.475 * rowCount),
+//                                                 Math.ceil(0.525 * rowCount)
+//                                         ),
+//                                         "common"
+//                                 ).otherwise("")
+//                 ).filter(functions.col("category").notEqual(""));
 
-        // and write to memory.
-        wordCountsWithCategoryDataset
-            .select("rank", "word", "category", "frequency")
-            .coalesce(1)
-            .write()
-            .option("header", "true")
-            .option("delimiter", ",")       // NOTE: important that the delimiter does not have spaces
-            .csv(outputFilePath);
-    }
+//         // and write to memory.
+//         wordCountsWithCategoryDataset
+//             .select("rank", "word", "category", "frequency")
+//             .coalesce(1)
+//             .write()
+//             .option("header", "true")
+//             .option("delimiter", ",")       // NOTE: important that the delimiter does not have spaces
+//             .csv(outputFilePath);
+//     }
 
     /**
      * Implementation of letter count.
      */
-    public static void letterCountImplementation(
-            SparkSession sparkSession,
-            Dataset<String> textDataset,
-            String outputFilePath
-    ) {
-        Dataset<Row> letterCountsDataset = textDataset
-                .flatMap(
-                        (String line) -> Arrays.asList(line.split("")).iterator(),
-                        Encoders.STRING()
-                )
-                // Then we filter out non alphabetic characters
-                .filter((FilterFunction<String>) (String letter) -> letter.matches("[a-zA-Z]+"))
-                // Then we make everything lowercase
-                .map(
-                        (MapFunction<String, String>) (String letter) -> letter.toLowerCase(),
-                        Encoders.STRING()
-                )
-                // Finally we group letters together
-                .groupBy("value")
-                // And then count frequencies and rename columns to what we need
-                .count()
-                .withColumnRenamed("value", "letter")
-                .withColumnRenamed("count", "frequency")
-                // Now we add rank column (ranking by frequency first, then alphabetic order second)
-                .orderBy(functions.col("frequency").desc(), functions.col("letter").asc())
-                .withColumn(
-                        "rank",
-                        functions.row_number().over(
-                                Window.orderBy(
-                                        functions.col("frequency").desc(),
-                                        functions.col("letter").asc()
-                                )
-                        )
-                );
+//     public static void letterCountImplementation(
+//             SparkSession sparkSession,
+//             Dataset<String> textDataset,
+//             String outputFilePath
+//     ) {
+//         Dataset<Row> letterCountsDataset = textDataset
+//                 .flatMap(
+//                         (String line) -> Arrays.asList(line.split("")).iterator(),
+//                         Encoders.STRING()
+//                 )
+//                 // Then we filter out non alphabetic characters
+//                 .filter((FilterFunction<String>) (String letter) -> letter.matches("[a-zA-Z]+"))
+//                 // Then we make everything lowercase
+//                 .map(
+//                         (MapFunction<String, String>) (String letter) -> letter.toLowerCase(),
+//                         Encoders.STRING()
+//                 )
+//                 // Finally we group letters together
+//                 .groupBy("value")
+//                 // And then count frequencies and rename columns to what we need
+//                 .count()
+//                 .withColumnRenamed("value", "letter")
+//                 .withColumnRenamed("count", "frequency")
+//                 // Now we add rank column (ranking by frequency first, then alphabetic order second)
+//                 .orderBy(functions.col("frequency").desc(), functions.col("letter").asc())
+//                 .withColumn(
+//                         "rank",
+//                         functions.row_number().over(
+//                                 Window.orderBy(
+//                                         functions.col("frequency").desc(),
+//                                         functions.col("letter").asc()
+//                                 )
+//                         )
+//                 );
 
-        // Count rows in dataset, required for categories
-        long rowCount = letterCountsDataset.count();
+//         // Count rows in dataset, required for categories
+//         long rowCount = letterCountsDataset.count();
 
-        // Then categorise data
-        // To match the sample outputs, the popular theshold and upper common threshold must be ceilinged,
-        // and the rare threshold and lower common threshold must be floored
-        Dataset<Row> letterCountsWithCategoryDataset = letterCountsDataset
-                .withColumn(
-                        "category",
-                        functions
-                                .when(
-                                        functions.col("rank").leq(Math.ceil(0.05 * rowCount)),
-                                        "popular"
-                                ).when(
-                                        functions.col("rank").geq(Math.floor(0.95 * rowCount)),
-                                        "rare"
-                                ).when(
-                                        functions.col("rank").between(
-                                                Math.floor(0.475 * rowCount),
-                                                Math.ceil(0.525 * rowCount)
-                                        ),
-                                        "common"
-                                ).otherwise("")
-                ).filter(functions.col("category").notEqual(""));
+//         // Then categorise data
+//         // To match the sample outputs, the popular theshold and upper common threshold must be ceilinged,
+//         // and the rare threshold and lower common threshold must be floored
+//         Dataset<Row> letterCountsWithCategoryDataset = letterCountsDataset
+//                 .withColumn(
+//                         "category",
+//                         functions
+//                                 .when(
+//                                         functions.col("rank").leq(Math.ceil(0.05 * rowCount)),
+//                                         "popular"
+//                                 ).when(
+//                                         functions.col("rank").geq(Math.floor(0.95 * rowCount)),
+//                                         "rare"
+//                                 ).when(
+//                                         functions.col("rank").between(
+//                                                 Math.floor(0.475 * rowCount),
+//                                                 Math.ceil(0.525 * rowCount)
+//                                         ),
+//                                         "common"
+//                                 ).otherwise("")
+//                 ).filter(functions.col("category").notEqual(""));
 
-        // and write to memory.
-        letterCountsWithCategoryDataset
-                .select("rank", "letter", "category", "frequency")
-                .coalesce(1)
-                .write()
-                .option("header", "true")
-                .option("delimiter", ",")
-                .csv(outputFilePath);
-    }
+//         // and write to memory.
+//         letterCountsWithCategoryDataset
+//                 .select("rank", "letter", "category", "frequency")
+//                 .coalesce(1)
+//                 .write()
+//                 .option("header", "true")
+//                 .option("delimiter", ",")
+//                 .csv(outputFilePath);
+//     }
 
     /**
      * Word and letter count at the same time. Here we attempt to streamline the process by performing all regexes
@@ -384,15 +380,15 @@ public class SimpleApp {
                         "category",
                         functions
                                 .when(
-                                        functions.col("rank").leq(0.05 * distinctLetterCount),
+                                        functions.col("rank").leq(Math.ceil(0.05 * distinctLetterCount)),
                                         "popular"
                                 ).when(
-                                        functions.col("rank").geq(0.95 * distinctLetterCount),
+                                        functions.col("rank").geq(Math.floor(0.95 * distinctLetterCount)),
                                         "rare"
                                 ).when(
                                         functions.col("rank").between(
-                                                0.475 * distinctLetterCount,
-                                                0.525 * distinctLetterCount
+                                                Math.floor(0.475 * distinctLetterCount),
+                                                Math.ceil(0.525 * distinctLetterCount)
                                         ),
                                         "common"
                                 ).otherwise("")
