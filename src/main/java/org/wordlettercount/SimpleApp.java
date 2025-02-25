@@ -60,6 +60,7 @@ public class SimpleApp {
 
         SparkSession sparkSession = SparkSession
                 .builder()
+                .master("local")
                 .appName("SimpleApp")
                 .config("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
                 .config("spark.sql.adaptive.enabled", "true")   // AQE for optimising skewed data performance
@@ -93,7 +94,7 @@ public class SimpleApp {
         sparkSession.stop();
 
         // Clear any outputted junk folders
-        File folder = new File(".");
+        /*File folder = new File(".");
         String[] names = { "letters_spark", "words_spark" };
 
         for (String s : names) {
@@ -108,7 +109,7 @@ public class SimpleApp {
             String finalpath = String.format("%s/%s", subdir, filter[0]);
             Files.move(Paths.get(finalpath), Paths.get(folder.getPath(), String.format("%s.csv", s)), StandardCopyOption.REPLACE_EXISTING);
             FileUtils.deleteDirectory(temp);
-        }
+        }*/
     }
 
     /**
@@ -408,7 +409,7 @@ public class SimpleApp {
 
         // Finally we can write these to memory
         lettersWithCategory
-                .select("rank", "word", "category", "frequency")
+                .select("rank", "letter", "category", "frequency")
                 .coalesce(1)
                 .write()
                 .option("header", "true")
