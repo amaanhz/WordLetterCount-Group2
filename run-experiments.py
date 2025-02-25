@@ -12,7 +12,7 @@ import csv
 from datetime import datetime
 
 
-# TODO: once jar is complete and built, run as follows sequentially (i.e. one of these every hour)
+# Once jar is complete and built, run as follows: sequentially
 # For every data file (3 files), for every number of executors ({2, 4, 6}), run three times.
 # Remember to pass in the data file as a command line argument with flag -i
 # And then change the number of executors in the command line argument of number of executors.
@@ -34,8 +34,6 @@ os.chdir("..")
 os.chdir("..")
 
 print("Created directories to write to.")
-
-# TODO: revert
 
 # Get data from the mounted volume
 DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
@@ -83,7 +81,7 @@ for file_index in range(len(DATA_FILES)):
 			print(f"Attempting word and letter count for {data_file}, for {executor_count} executors, on repetition {repetition}.")
 
 			# Spark submit command
-			command: str = f"""../spark-3.5.4-bin-hadoop3/bin/spark-submit \
+			command: str = f"""/usr/bin/time -f %e ../spark-3.5.4-bin-hadoop3/bin/spark-submit \
 			--master k8s://128.232.80.18:6443 \
 			--deploy-mode cluster \
 			--name wordlettercount \
@@ -104,29 +102,30 @@ for file_index in range(len(DATA_FILES)):
 			# Add starting times for report
 			starting_times_for_report.append(datetime.utcnow().strftime("%Y%m%dT%H%M%S"))
 
-			# TODO: CHANGE THIS TO USE time ... AS SPECIFIED
-			# Use python's time module to get start time
-			start_time: float = time.time()
-
-			# Then we run the command in blocking fashion such that the program does not move on
+			# We run the command in blocking fashion such that the program does not move on
+			# Now such that proc formats and takes in the elapsed time with time in command line
 			proc = subprocess.run(command, shell=True, text=True, capture_output=True)
 
-			# And finally we get the end time, and calculate time elapsed in seconds
-			end_time: float = time.time()
-			elapsed_time: float = end_time - start_time
+			# Extract the time from proc, it will be on the last line of shell output, where the command writes
+			# to stdout and time's output writes to stderr
+			try:
+				elapsed_time: float = float(proc.stderr.strip().split("\n")[-1])
+			except ValueError:
+				print("Could not convert elapsed time.")
+				print("Stderr: \n", proc.stderr)
 
 			# And we store the value in data_results
 			results[i+1][repetition] = str(elapsed_time)
 
 			# Then get rid of the pod
-			# TODO: check this command works
 			command = "kubectl get pods --no-headers=true | awk '/wordlettercount*/{print $1}' | xargs kubectl delete pod"
 			_ = subprocess.run(command, shell=True, capture_output=True)
 
 			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
 
 			# We then wait 5 minutes before running the next experiment to let the system recover
-			time.sleep(5*60)
+			# TODO: CHANGE BACK TO 5 * 60
+			time.sleep(1*60)
 
 	print(f"Writing results for {data_file} to memory.")
 	# Finally we attempt to write this data_results to memory
