@@ -8,6 +8,7 @@ import java.io.Serializable;
 public class TokenDatasetRow implements Serializable {
     private String token;
     private String type;
+    public TokenDatasetRow() {}
     public TokenDatasetRow(String token, String type) { this.token = token; this.type = type; }
     public String getToken() { return this.token; }
     public String getType() { return this.type; }
