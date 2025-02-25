@@ -113,7 +113,7 @@ for file_index in range(len(DATA_FILES)):
 
 			# And finally we get the end time, and calculate time elapsed in seconds
 			end_time: float = time.time()
-			elapsed_time: int = round(end_time - start_time)
+			elapsed_time: float = end_time - start_time
 
 			# And we store the value in data_results
 			results[i+1][repetition] = str(elapsed_time)
@@ -125,9 +125,8 @@ for file_index in range(len(DATA_FILES)):
 
 			print("Completed execution, and deleted pod. Attempting to wait before next experiment.")
 
-			# We then wait 1 minute before running the next experiment to let the system recover
-			# TODO: add back
-			# time.sleep(1*60)
+			# We then wait 5 minutes before running the next experiment to let the system recover
+			time.sleep(5*60)
 
 	print(f"Writing results for {data_file} to memory.")
 	# Finally we attempt to write this data_results to memory
