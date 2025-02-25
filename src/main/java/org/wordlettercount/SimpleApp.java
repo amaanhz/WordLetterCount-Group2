@@ -93,7 +93,7 @@ public class SimpleApp {
         sparkSession.stop();
 
         // Clear any outputted junk folders
-        File folder = new File(".");
+        /*File folder = new File(".");
         String[] names = { "letters_spark", "words_spark" };
 
         for (String s : names) {
@@ -108,7 +108,7 @@ public class SimpleApp {
             String finalpath = String.format("%s/%s", subdir, filter[0]);
             Files.move(Paths.get(finalpath), Paths.get(folder.getPath(), String.format("%s.csv", s)), StandardCopyOption.REPLACE_EXISTING);
             FileUtils.deleteDirectory(temp);
-        }
+        }*/
     }
 
     /**
