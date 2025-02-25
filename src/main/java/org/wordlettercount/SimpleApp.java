@@ -312,7 +312,7 @@ public class SimpleApp {
                                 // We are required to return an iterator over the list
                                 return list.iterator();
                         },
-                        RowEncoder.apply(rowSchema)
+                        Encoders.bean(Row.class)
                 )
                 .toDF("token", "type")
                 .cache();                               // useful to cache this as we will be using for both word and letter count
