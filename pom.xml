@@ -50,6 +50,11 @@
       <artifactId>spark-sql_2.13</artifactId>
       <version>3.5.4</version> <!-- Changed to match version on server. -->
     </dependency>
+    <dependency> <!-- SLF4J for spark logging. -->
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>1.4.14</version>
+    </dependency>
   </dependencies>
   <name>Archetype - WordLetterCount</name>
   <url>http://maven.apache.org</url>
