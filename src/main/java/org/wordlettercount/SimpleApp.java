@@ -17,8 +17,14 @@ import org.apache.spark.broadcast.Broadcast;
 import scala.Tuple2;
 import scala.Tuple3;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.Exception;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.regex.Pattern;
 
 import org.apache.spark.sql.Encoders;
@@ -54,7 +60,14 @@ public class SimpleApp {
         else if (!(new File(args[1]).isFile())) {
                 throw new Exception("Given path to file is not valid.");
         }
-      
+
+        Path path = Paths.get("./CloudComputingCoursework_Group2");
+
+
+        if (!Files.exists(path)) {
+            Files.createDirectory(path);
+        }
+
         // Define input and output files
         String inputFilePath = args[1];
         String wordOutputFilePath = "./words_spark.csv";        // NOTE: i've changed this from directory to csv file so we remove overhead of messing with folders etc.
@@ -66,7 +79,7 @@ public class SimpleApp {
         // JavaRDD's avoid the schema processing overhead of Datasets, which we do not need as our input data is unstructured.
         SparkConf sparkConf = new SparkConf()
                 .setAppName("SimpleApp")
-                .setMaster("local")                             // TODO: remove, and add the below back later
+                //.setMaster("local")                             // TODO: remove, and add the below back later
                 .set("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
                 .set("spark.sql.adaptive.enabled", "true");  // AQE for optimising skewed data performance
         JavaSparkContext sparkContext = new JavaSparkContext(sparkConf);
@@ -185,7 +198,17 @@ public class SimpleApp {
                 .filter(row -> row != null);
 
         // Finally we write RDD to given path, using repartition to keep overall order of ranks
-        outputRDD.repartition(1).saveAsTextFile(wordCountOutputCsvPath);
+        List<String> output = outputRDD.collect();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(wordCountOutputCsvPath))) {
+            for (String line : output) {
+                writer.write(line);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        //outputRDD.repartition(1).saveAsTextFile(wordCountOutputCsvPath);
 
         // TODO: still writes as a directory instead of a file, do tbis instead
     }
@@ -274,7 +297,17 @@ public class SimpleApp {
                 .filter(row -> row != null);
 
         // Finally we write RDD to given path, using repartition to keep overall order of ranks
-        outputRDD.repartition(1).saveAsTextFile(letterCountOutputCsvPath);
+        //outputRDD.repartition(1).saveAsTextFile(letterCountOutputCsvPath);
+        List<String> output = outputRDD.collect();
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(letterCountOutputCsvPath))) {
+            for (String line : output) {
+                writer.write(line);
+                writer.newLine();
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
 
         // TODO: still writes as a directory instead of a file, do tbis instead
     }
