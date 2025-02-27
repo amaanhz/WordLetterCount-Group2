@@ -119,7 +119,7 @@ for data_file in os.listdir(MEASUREMENTS_DIR):
 	# And finally save the graph to graphs directory
 	output_file = os.path.join(
 		GRAPHS_DIR,
-		f"{data_file[:-4]}.png"
+		f"{data_file[:-4]}.pdf"
 	)
 	plot.get_figure().savefig(output_file)
 
