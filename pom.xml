@@ -55,6 +55,11 @@
         <artifactId>logback-classic</artifactId>
         <version>1.4.14</version>
     </dependency>
+    <dependency> <!-- Scala for tuples etc. (remember that this is what Spark uses under the hood, so this is optimised).-->
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.13.11</version>
+    </dependency>
   </dependencies>
   <name>Archetype - WordLetterCount</name>
   <url>http://maven.apache.org</url>

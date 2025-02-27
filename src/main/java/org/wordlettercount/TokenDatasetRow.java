@@ -5,6 +5,7 @@ import java.io.Serializable;
 /**
      * Class for defining rows in streamlined approach.
      * Spark uses this with Encoder to be able to iterate over rows and convert to DataFrame.
+     * @deprecated
      */
 public class TokenDatasetRow implements Serializable {
     private String token;
