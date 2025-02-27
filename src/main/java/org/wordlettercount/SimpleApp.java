@@ -92,6 +92,7 @@ public class SimpleApp {
         // then do the work
         // NOTE: moved logic to a new function
         optimisedWordCount(textRDD, wordOutputFilePath, sparkContext);
+        optimisedLetterCount(textRDD, letterOutputFilePath, sparkContext);
         // wordAndLetterCountStreamlinedImplementation(sparkSession, textDataset, wordOutputFilePath, letterOutputFilePath);
 
         // NOTE: we do not actually need to cache any items since we do not come back to them, and there is a slight overhead
@@ -194,7 +195,89 @@ public class SimpleApp {
 
 
     // TODO: create an almost identical function for letter count, and run this
+    public static void optimisedLetterCount(
+            JavaRDD<String> textRDD,
+            String letterCountOutputCsvPath,
+            JavaSparkContext sparkContext
+    ) {
+        // As before, precompile regexes
+        Pattern letterSplitByPunctuation = Pattern.compile("");
+        Pattern alphabeticCharsOnly = Pattern.compile("[a-zA-Z]");
 
+        // NOTE: letter count is made more efficient here by using only functions that are lazily evaluated in a pipeline.
+        // We avoid materialising the pipeline till we have to, when we have to count the rows.
+        // Get initial letter counts
+        JavaPairRDD<String, Integer> letterCountRDD = textRDD
+                .flatMap(line -> Arrays.asList(letterSplitByPunctuation.split(line.toLowerCase())).iterator())
+                .filter(letter -> alphabeticCharsOnly.matcher(letter).matches())
+                .mapToPair(letter -> new Tuple2<>(letter, 1))
+                .reduceByKey(Integer::sum)
+                // NOTE: here we swap the values so that the frequency becomes the key, and then we sort with our own custom
+                // comparator (as Spark has no built in mechanism yet for primary and secondary sorting, see TuplePrimarySecondaryComparator).
+                // When finished, we swap back so that the letter is first, and frequency is second.
+                // Approach is similar to an article on StackOverflow (see TuplePrimarySecondaryComparator).
+                .mapToPair(row -> new Tuple2<>(new Tuple2<>(-1 * row._2, row._1), null))
+                .sortByKey(new TuplePrimarySecondaryComparator(), true, textRDD.getNumPartitions())
+                .mapToPair(row -> new Tuple2<>(row._1._2, -1 * row._1._1));
+
+
+        // NOTE: Since we've sorted, there's no need to apply a window or other time consuming function, and we can just use
+        // zipWithIndex to add the index. We make it 1-based indexing to match the output samples.
+        // In addition, we can use Tuple2 and Tuple3 items as recommended by Spark in the following documentation:
+        // https://spark.apache.org/docs/latest/api/java/org/apache/spark/api/java/JavaPairRDD.html
+        // Note that JavaPairRDD is an abstraction over JavaRDD<Tuple2<_, _>>.
+
+        // Now we assign rank, by default zipWithIndex should return a Long rank item.
+        JavaRDD<Tuple3<Long, String, Integer>> rankedLettersRDD = letterCountRDD
+                .zipWithIndex()         // Actually produces a Tuple2 of the initial tuple, then rank i.e. ((letter, freq), zero-indexed rank)
+                .map(row -> new Tuple3<>(row._2+1, row._1._1, row._1._2));      // and add 1 to make it 1-indexed rank
+
+
+        // Now we count and calculate thresholds as specified in deliverables. We can safely cast to long as Math.ceil and floor return integers always.
+        // Remember that this is probably the bottleneck of the program as it triggers computation i.e. is not lazy.
+        long totalDistinctLetterCount = rankedLettersRDD.count();
+
+        long popular = (long) Math.ceil(0.05 * totalDistinctLetterCount);
+        long rare = (long) Math.floor(0.95 * totalDistinctLetterCount);
+        long commonLowerBound = (long) Math.ceil(0.525 * totalDistinctLetterCount);
+        long commonUpperBound = (long) Math.floor(0.475 * totalDistinctLetterCount);
+
+        // NOTE: we can broadcast values to workers, so that we do not have to send values each time they are needed
+        // i.e. we can keep them in memory. This speeds up operations.
+        Broadcast<Long> popularBroadcast = sparkContext.broadcast(popular);
+        Broadcast<Long> rareBroadcast = sparkContext.broadcast(rare);
+        Broadcast<Long> commonLowerBoundBroadcast = sparkContext.broadcast(commonLowerBound);
+        Broadcast<Long> commonUpperBoundBroadcast = sparkContext.broadcast(commonUpperBound);
+
+        // We also can broadcast the delimiter, this may be overkill but useful for modularity of code.
+        Broadcast<String> delimiterBroadcast = sparkContext.broadcast(",");
+
+        // Then using the thresholds, we combine tuples into a string whilst adding category name.
+        JavaRDD<String> outputRDD = rankedLettersRDD
+                .map(row -> {
+                    // Get the row and the delimiter as these are the broadcasted values that are used more than once
+                    // i.e. the rest can be lazily called as they are only called once.
+                    // Reminder, here row is rank, letter, category, frequency
+                    long rowRank = row._1();
+                    String delimiter = delimiterBroadcast.value();
+
+                    if (rowRank <= popularBroadcast.value()) {
+                        return rowRank + delimiter + row._2() + delimiter + "popular" + delimiter + row._3();
+                    } else if (rowRank <= commonLowerBoundBroadcast.value() && rowRank >= commonUpperBoundBroadcast.value()) {
+                        return rowRank + delimiter + row._2() + delimiter + "common" + delimiter + row._3();
+                    } else if (rowRank >= rareBroadcast.value()) {
+                        return rowRank + delimiter + row._2() + delimiter + "rare" + delimiter + row._3();
+                    } else {
+                        return null;      // Equivalent to discarding row, we filter out below
+                    }
+                })
+                .filter(row -> row != null);
+
+        // Finally we write RDD to given path, using repartition to keep overall order of ranks
+        outputRDD.repartition(1).saveAsTextFile(letterCountOutputCsvPath);
+
+        // TODO: still writes as a directory instead of a file, do tbis instead
+    }
 
 
 
