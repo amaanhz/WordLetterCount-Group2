@@ -38,7 +38,7 @@ print("Created directories to write to.")
 # Get data from the mounted volume
 DATA_FILES: list[str] = ["/test-data/data_100MB.txt", "/test-data/data_200MB.txt", "/test-data/data_500MB.txt"]
 # Output for timings
-OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data_100MB.csv", "data_200MB.csv", "data_500MB.csv"]]
+OUTPUT_FILES: list[str] = [f"./experiments/{timestamp}/measurements/"+file for file in ["data-100MB.csv", "data-200MB.csv", "data-500MB.csv"]]
 
 
 # Defining executors and repetitions for experiment
