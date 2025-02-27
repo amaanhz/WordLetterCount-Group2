@@ -2,14 +2,13 @@ package org.wordlettercount;
 
 // import org.apache.hadoop.fs.FileSystem;
 // import org.apache.hadoop.fs.Path;
-import org.apache.spark.sql.SparkSession;
+import org.apache.commons.io.FileUtils;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.spark.sql.*;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaPairRDD;
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
-import org.apache.spark.sql.functions;
 import org.apache.spark.sql.expressions.Window;
 import org.apache.spark.sql.expressions.WindowSpec;
 import org.apache.spark.broadcast.Broadcast;
@@ -17,17 +16,13 @@ import org.apache.spark.broadcast.Broadcast;
 import scala.Tuple2;
 import scala.Tuple3;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.lang.Exception;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.regex.Pattern;
-
-import org.apache.spark.sql.Encoders;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -61,7 +56,7 @@ public class SimpleApp {
                 throw new Exception("Given path to file is not valid.");
         }
 
-        Path path = Paths.get("./CloudComputingCoursework_Group2");
+        Path path = Paths.get("/test-data/CloudComputingCoursework_Group2");
 
 
         if (!Files.exists(path)) {
@@ -70,8 +65,8 @@ public class SimpleApp {
 
         // Define input and output files
         String inputFilePath = args[1];
-        String wordOutputFilePath = "./words_spark.csv";        // NOTE: i've changed this from directory to csv file so we remove overhead of messing with folders etc.
-        String letterOutputFilePath = "./letters_spark.csv";    // NOTE: i've changed this from directory to csv file so we remove overhead of messing with folders etc.
+        String wordOutputFilePath = "/test-data/CloudComputingCoursework_Group2/words_spark";        // NOTE: i've changed this from directory to csv file so we remove overhead of messing with folders etc.
+        String letterOutputFilePath = "/test-data/CloudComputingCoursework_Group2/letters_spark";    // NOTE: i've changed this from directory to csv file so we remove overhead of messing with folders etc.
 
 
         // NOTE: originally we used SparkSession, but if we are using JavaRDD's, then JavaSparkContext automatically loads an RDD
@@ -83,6 +78,7 @@ public class SimpleApp {
                 .set("spark.speculation", "true")            // Speculative execution of duplicated straggler tasks
                 .set("spark.sql.adaptive.enabled", "true");  // AQE for optimising skewed data performance
         JavaSparkContext sparkContext = new JavaSparkContext(sparkConf);
+        SparkSession sparkSession = SparkSession.builder().config(sparkConf).getOrCreate();
 
 
         // TODO: check if necessary
@@ -104,8 +100,28 @@ public class SimpleApp {
 
         // then do the work
         // NOTE: moved logic to a new function
-        optimisedWordCount(textRDD, wordOutputFilePath, sparkContext);
-        optimisedLetterCount(textRDD, letterOutputFilePath, sparkContext);
+        optimisedWordCount(textRDD, wordOutputFilePath, sparkContext, sparkSession);
+        optimisedLetterCount(textRDD, letterOutputFilePath, sparkContext, sparkSession);
+
+        File folder = new File("/test-data/CloudComputingCoursework_Group2");
+        String[] names = { "letters_spark", "words_spark" };
+
+        for (String s : names) {
+            String subdir = String.format("%s/%s", folder.getPath(), s);
+            File temp = new File(subdir);
+            String[] filter = temp.list(new FilenameFilter() {
+                @Override
+                public boolean accept(File dir, String name) {
+                    return name.substring(name.length() - 3).equals("csv");
+                }
+            });
+            String finalpath = String.format("%s/%s", subdir, filter[0]);
+            Files.move(Paths.get(finalpath), Paths.get(folder.getPath(), String.format("%s.csv", s)), StandardCopyOption.REPLACE_EXISTING);
+            FileUtils.deleteDirectory(temp);
+            //Runtime.getRuntime().exec(String.format("tr -d '\000' < /test-data/CloudComputingCoursework_Group2/%s1.csv > %s.csv", s, s));
+        }
+
+
         // wordAndLetterCountStreamlinedImplementation(sparkSession, textDataset, wordOutputFilePath, letterOutputFilePath);
 
         // NOTE: we do not actually need to cache any items since we do not come back to them, and there is a slight overhead
@@ -122,7 +138,8 @@ public class SimpleApp {
     public static void optimisedWordCount(
         JavaRDD<String> textRDD,
         String wordCountOutputCsvPath,
-        JavaSparkContext sparkContext
+        JavaSparkContext sparkContext,
+        SparkSession session
     ) {
         // As before, precompile regexes
         Pattern wordSplitByPunctuation = Pattern.compile("[\\s,.;:?!\"()\\[\\]{}!_-]+");
@@ -198,15 +215,19 @@ public class SimpleApp {
                 .filter(row -> row != null);
 
         // Finally we write RDD to given path, using repartition to keep overall order of ranks
-        List<String> output = outputRDD.collect();
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(wordCountOutputCsvPath))) {
-            for (String line : output) {
-                writer.write(line);
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+
+        //List<String> output = outputRDD.collect();
+
+        Dataset<String> out = session.createDataset(outputRDD.rdd(), Encoders.STRING());
+        out
+                .coalesce(1)
+                .write()
+                .mode("overwrite")
+                .option("header", false)
+                .option("delimiter", ",")
+                .option("sep", ";")
+                .csv(wordCountOutputCsvPath);
+
 
         //outputRDD.repartition(1).saveAsTextFile(wordCountOutputCsvPath);
 
@@ -221,7 +242,8 @@ public class SimpleApp {
     public static void optimisedLetterCount(
             JavaRDD<String> textRDD,
             String letterCountOutputCsvPath,
-            JavaSparkContext sparkContext
+            JavaSparkContext sparkContext,
+            SparkSession session
     ) {
         // As before, precompile regexes
         Pattern letterSplitByPunctuation = Pattern.compile("");
@@ -298,15 +320,15 @@ public class SimpleApp {
 
         // Finally we write RDD to given path, using repartition to keep overall order of ranks
         //outputRDD.repartition(1).saveAsTextFile(letterCountOutputCsvPath);
-        List<String> output = outputRDD.collect();
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(letterCountOutputCsvPath))) {
-            for (String line : output) {
-                writer.write(line);
-                writer.newLine();
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Dataset<String> out = session.createDataset(outputRDD.rdd(), Encoders.STRING());
+        out
+                .coalesce(1)
+                .write()
+                .mode("overwrite")
+                .option("header", false)
+                .option("delimiter", ",")
+                .option("sep", ";")
+                .csv(letterCountOutputCsvPath);
 
 
         // TODO: still writes as a directory instead of a file, do tbis instead
